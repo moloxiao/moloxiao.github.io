@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cloudflare on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/cloudflare/</link>
+    <description>Recent content in Cloudflare on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Aug 2024 15:29:03 +1200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Set Up Google Analytics a Step by Step Guide to Getting Your Measurement Id</title>
+      <link>http://localhost:1313/posts/how-to-set-up-google-analytics-a-step-by-step-guide-to-getting-your-measurement-id/</link>
+      <pubDate>Wed, 07 Aug 2024 15:29:03 +1200</pubDate>
+      <guid>http://localhost:1313/posts/how-to-set-up-google-analytics-a-step-by-step-guide-to-getting-your-measurement-id/</guid>
+      <description>&lt;p&gt;We use Google Analytics to track the number of visitors to our website, including information about when they visit and how they interact with our site. This helps us understand our audience better and improve our online presence.&lt;br&gt;
+when you have a website and want your software engineer to support it with Google Analytics, You need to do two things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a New Property&lt;/li&gt;
+&lt;li&gt;Get the Measurement ID and Send It to Your Software Engineer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;here is a step-by-step guide&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Move Your GoDaddy Domain to Cloudflare a Step by Step Guide</title>
+      <link>http://localhost:1313/posts/how-to-move-your-godaddy-domain-to-cloudflare-a-step-by-step-guide/</link>
+      <pubDate>Tue, 06 Aug 2024 20:00:29 +1200</pubDate>
+      <guid>http://localhost:1313/posts/how-to-move-your-godaddy-domain-to-cloudflare-a-step-by-step-guide/</guid>
+      <description>&lt;p&gt;Managing your domain through Cloudflare offers numerous benefits, including enhanced security, improved website performance, and easy DNS management. &lt;strong&gt;These are not the most important factors. The main reason is that you might need my help with day-to-day management, and personally, I prefer Cloudflare.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you have a domain registered with GoDaddy and want to move it to Cloudflare, follow this detailed step-by-step guide.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-create-a-cloudflare-account-and-add-your-site&#34;&gt;Step 1: Create a Cloudflare Account and Add Your Site&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a Cloudflare Account&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Visit the &lt;a href=&#34;https://dash.cloudflare.com/&#34;&gt;Cloudflare website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Click on “Sign Up” to register if you don’t already have an account.&lt;/li&gt;
+&lt;li&gt;Once registered, log in to your Cloudflare account.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Add Your Domain to Cloudflare&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;After logging in, click on “Add a Site” on the Cloudflare dashboard.&lt;/li&gt;
+&lt;li&gt;Enter your GoDaddy domain (e.g., “yourdomain.com”).&lt;/li&gt;
+&lt;li&gt;Click “Continue”.&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-01.png&#34; alt=&#34;Add Your Domain to Cloudflare  &#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-2-choose-a-cloudflare-plan&#34;&gt;Step 2: Choose a Cloudflare Plan&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudflare offers various plans, including a free plan and several paid plans. Choose the one that best fits your needs.&lt;/li&gt;
+&lt;li&gt;Click “Continue”.&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-02.png&#34; alt=&#34;Add Your Domain to Cloudflare&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-3-review-and-confirm-dns-records&#34;&gt;Step 3: Review and Confirm DNS Records&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;DNS Record Scanning&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudflare will automatically scan your current DNS records and list them for you.&lt;/li&gt;
+&lt;li&gt;Review these records to ensure they are accurate. You can modify or add records as needed at this stage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Confirm DNS Records&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Once you have confirmed that all DNS records are correct, click “Continue”.
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-03.png&#34; alt=&#34;Confirm DNS Records &#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-4-update-your-domains-nameservers&#34;&gt;Step 4: Update Your Domain’s Nameservers&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Get Cloudflare Nameservers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudflare will provide you with two nameservers, such as addyson.ns.cloudflare.com and norman.ns.cloudflare.com.&lt;/li&gt;
+&lt;li&gt;copy nameservers.
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-04.png&#34; alt=&#34;Update Your Domain’s Nameservers&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Log in to Your GoDaddy Account&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Visit the &lt;a href=&#34;&#34;&gt;GoDaddy website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Log in to your GoDaddy account.&lt;/li&gt;
+&lt;li&gt;Click &amp;lsquo;My Products&amp;rsquo;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-05.png&#34; alt=&#34;Go to Godaddy Dashboard&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Access Domain Management&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;On the GoDaddy dashboard, find and click on “Domains”.&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-06.png&#34; alt=&#34;find and click on “Domains”&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;Locate the domain you want to manage and click on “Domain Name”.&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-07.png&#34; alt=&#34;click on “Domain Name”&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Change Nameservers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;In the DNS Management page, find the “Nameservers” section and click “Change”.
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-08.png&#34; alt=&#34;find the “Nameservers”&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;Select the “Custom” option.&lt;/li&gt;
+&lt;li&gt;Enter the nameservers provided by Cloudflare.&lt;/li&gt;
+&lt;li&gt;Save your changes.
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-09.png&#34; alt=&#34;find the “Nameservers”&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;Confirm
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-10.png&#34; alt=&#34;find the “Nameservers”&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;step-5-wait-for-dns-propagation&#34;&gt;Step 5: Wait for DNS Propagation&lt;/h2&gt;
+&lt;p&gt;The changes to the nameservers may take 24-48 hours to propagate across the internet.  &lt;strong&gt;I only waited for 10 minutes.&lt;/strong&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-11.png&#34; alt=&#34;find the “Nameservers”&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Minified React Error #130</title>
+      <link>http://localhost:1313/posts/minified-react-error-%23130/</link>
+      <pubDate>Fri, 19 Jul 2024 15:57:51 +1200</pubDate>
+      <guid>http://localhost:1313/posts/minified-react-error-%23130/</guid>
+      <description>how to fix Minified React error #130</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>System Administration and IT Infrastructure Services on Shan&#39;s blog</title>
+    <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/</link>
+    <description>Recent content in System Administration and IT Infrastructure Services on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Aug 2024 19:12:12 +1200</lastBuildDate>
+    <atom:link href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preface</title>
+      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/preface/</link>
+      <pubDate>Wed, 21 Aug 2024 10:53:43 +1200</pubDate>
+      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/preface/</guid>
+      <description>&lt;p&gt;I wrote this book while preparing for a System Administration job. It serves as a structured summary of my previous work, developed through studying Google&amp;rsquo;s course on &amp;lsquo;&lt;a href=&#34;https://www.coursera.org/learn/system-administration-it-infrastructure-services&#34;&gt;System Administration and IT Infrastructure Services&lt;/a&gt;&amp;rsquo; and it also functions as a quick-reference guide.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;I&amp;#39;m trying to understand what success looks like and how we can achieve it, so that we can repeat those patterns over and over again.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/books/saaiis/success.png&#34; alt=&#34;Active Directory&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is System Administration</title>
+      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/what-is-system-administration/</link>
+      <pubDate>Wed, 21 Aug 2024 11:30:43 +1200</pubDate>
+      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/what-is-system-administration/</guid>
+      <description>&lt;p&gt;The basics of system administration :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;organizational policies&lt;/li&gt;
+&lt;li&gt;IT infrastructure services&lt;/li&gt;
+&lt;li&gt;user and hardware provisioning&lt;/li&gt;
+&lt;li&gt;routine maintenance&lt;/li&gt;
+&lt;li&gt;troubleshooting&lt;/li&gt;
+&lt;li&gt;managing potential issues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Not contains in this book, like :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;automate workflow&lt;/li&gt;
+&lt;li&gt;managed configrations&lt;/li&gt;
+&lt;li&gt;computer settings automatically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;what-is-systems-administration&#34;&gt;What is systems administration&lt;/h1&gt;
+&lt;h1 id=&#34;servers-revisited&#34;&gt;Servers Revisited&lt;/h1&gt;
+&lt;p&gt;Basically, a sys admin is responsible for their company&amp;rsquo;s IT service. Employees need these IT services so that they can be productive.&lt;/p&gt;
+&lt;h1 id=&#34;system-administration-tasks&#34;&gt;System Administration Tasks&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Organizational Policies&lt;/li&gt;
+&lt;li&gt;IT infrastructure&lt;/li&gt;
+&lt;li&gt;User and Hardware Provisioning(Procurement-&amp;gt;Deployment-&amp;gt;Maintenance-&amp;gt;Retirement)&lt;/li&gt;
+&lt;li&gt;Routine Maintenance&lt;/li&gt;
+&lt;li&gt;Vendors&lt;/li&gt;
+&lt;li&gt;Troubleshooting and Managing Issues&lt;/li&gt;
+&lt;li&gt;In Case of Fire, Break Glass(You can&amp;rsquo;t account for everything but you can be prepared to recover from it.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are just a few of the policy questions(organizational policies) that can come up  :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Network and infrastructure services</title>
+      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/</link>
+      <pubDate>Wed, 21 Aug 2024 11:30:43 +1200</pubDate>
+      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/</guid>
+      <description>&lt;p&gt;We will cover what IT infrastructure services are and what their role is in system administration. We&amp;rsquo;ll also learn about server operating systems, virtualization, network services, DNS for web services, and how to troubleshoot network services.&lt;/p&gt;
+&lt;h1 id=&#34;physical-infrastructure-services&#34;&gt;Physical infrastructure services&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Server Operating System&lt;/li&gt;
+&lt;li&gt;Virtuallization(There are two ways you can run your services, either on dedicated hardware or on a virtualized instance on a server)&lt;/li&gt;
+&lt;li&gt;Remote Access(the ability to connect to your infrastructure from anywhere in the world. A popular tool to access the CLI remotely is WinRM or Putty. RDP is also popular if you want to access the GUI remotely.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;network-services&#34;&gt;Network Services&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;FTP, SFTP, TFTP&lt;/li&gt;
+&lt;li&gt;PXE(Preboot eXecution Environment, pre boot execution)&lt;/li&gt;
+&lt;li&gt;NTP(Network time protocol : it&amp;rsquo;s used to keep the clock synchronized on machines connected to a network)&lt;/li&gt;
+&lt;li&gt;Intranets, Proxy Servers&lt;/li&gt;
+&lt;li&gt;DNS(DNS is what maps human understandable names to IP addresses). Methods of Mapping : Local Host File, Local DNS Server&lt;/li&gt;
+&lt;li&gt;DHCP(Dynamic Host Configuration Protocol)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Network Support Services Revisited(a couple of network services essential for enhancing employee productivity, privacy, and security within a company&amp;rsquo;s IT infrastructure) :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software and Platform Services</title>
+      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/software-and-platform-services/</link>
+      <pubDate>Thu, 22 Aug 2024 14:17:43 +1200</pubDate>
+      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/software-and-platform-services/</guid>
+      <description>&lt;p&gt;Software services are the services that employs use that allow them to do their daily job functions. This can include applications like Word processors, Internet browsers, email clients, chat clients, and so on.&lt;/p&gt;
+&lt;h1 id=&#34;software-service&#34;&gt;Software Service&lt;/h1&gt;
+&lt;p&gt;Communication Services  :&lt;br&gt;
+The 5 best team chat apps for the workplace :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Slack for a chat-powered workplace&lt;/li&gt;
+&lt;li&gt;Microsoft Teams for large organizations broken down into teams&lt;/li&gt;
+&lt;li&gt;Google Chat for Google Workspace users&lt;/li&gt;
+&lt;li&gt;Discord for always-on voice chat&lt;/li&gt;
+&lt;li&gt;Element for self-hosted team chat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Open IM chat applications click &lt;a href=&#34;https://jabber.at/clients/?os=any&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Directory Service</title>
+      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/directory-service/</link>
+      <pubDate>Thu, 22 Aug 2024 16:40:12 +1200</pubDate>
+      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/directory-service/</guid>
+      <description>&lt;p&gt;we&amp;rsquo;ll cover how two of the most popular directory services, &lt;strong&gt;Active Directory&lt;/strong&gt; and &lt;strong&gt;OpenLDAP&lt;/strong&gt;, work in action. We&amp;rsquo;ll explore the concept of centralized management and how this can help SysAdmins maintain and support all the different parts of an IT infrastructure.&lt;/p&gt;
+&lt;h1 id=&#34;introduction-to-directory-services&#34;&gt;Introduction to Directory Services&lt;/h1&gt;
+&lt;p&gt;What is a Directory Service?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s akin to a phone directory for a network, mapping resources like user accounts and network shares to their network addresses.&lt;/li&gt;
+&lt;li&gt;Centralizes information management, eliminating the need for local management on every machine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Structure and Benefits of Directory Services :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Data Recovery and Backups</title>
+      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/data-recovery-and-backups/</link>
+      <pubDate>Fri, 23 Aug 2024 09:30:12 +1200</pubDate>
+      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/data-recovery-and-backups/</guid>
+      <description>&lt;p&gt;we&amp;rsquo;re going to arm you with tools you need to be prepared for these accidents, so you can minimize the impact and loss of data.&lt;br&gt;
+Data recovery, in general terms, is the process of trying to restore data after an unexpected event that results in data loss or corruption.&lt;/p&gt;
+&lt;h1 id=&#34;planning-for-data-recovery&#34;&gt;Planning for Data Recovery&lt;/h1&gt;
+&lt;p&gt;Backing Up Your Data :  you should only be backing up data that&amp;rsquo;s absolutely necessary for operations and can be found in another source.&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/books/saaiis/backup-data.png&#34; alt=&#34;backup-data&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>System Administration Consultation</title>
+      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/system-administration-consultation/</link>
+      <pubDate>Fri, 23 Aug 2024 19:12:12 +1200</pubDate>
+      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/system-administration-consultation/</guid>
+      <description>&lt;h2 id=&#34;scenario-1&#34;&gt;Scenario 1&lt;/h2&gt;
+&lt;p&gt;You’re doing systems administration work for Network Funtime Company. Evaluate their current IT infrastructure needs and limitations, then provide at least five process improvements and rationale behind those improvements. Write a 200-400 word process review for this consultation. Remember, there’s no right or wrong answer, but make sure to provide your reasoning.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Software Company&lt;/strong&gt; :&lt;/p&gt;
+&lt;p&gt;Network Funtime Company is a small company that builds open-source software. The company is made up software engineers, a few designers, one person in Human Resources (HR), and a small sales team. Altogether, there are 100 employees. They recently hired you as a system administrator to come in and become their IT department.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SystemThinking on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/systemthinking/</link>
+    <description>Recent content in SystemThinking on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Aug 2024 15:40:20 +1200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/systemthinking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a Continuous Improvement System</title>
+      <link>http://localhost:1313/posts/creating-a-continuous-improvement-system/</link>
+      <pubDate>Tue, 20 Aug 2024 15:40:20 +1200</pubDate>
+      <guid>http://localhost:1313/posts/creating-a-continuous-improvement-system/</guid>
+      <description>&lt;p&gt;When we want to accomplish something or achieve a goal, sometimes we succeed, and sometimes we face challenges. Can we find a method that makes it easier to succeed? My answer is PDCA(plan–do–check–adjust). &lt;br&gt;
+Just do it, let it fail if necessary, and then find a new way to fix it.&lt;/p&gt;
+&lt;h1 id=&#34;what-is-a-system&#34;&gt;What is a system&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The goal of all science, is to substitute visible complexity for invisible simplicity.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;John Baptiste Perrin&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;p&gt;a system contains 5 part :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

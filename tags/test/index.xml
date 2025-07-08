@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Test on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/test/</link>
+    <description>Recent content in Test on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Apr 2025 16:10:00 +1300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SaaS Test 2 : Test Case</title>
+      <link>http://localhost:1313/posts/saas-test-2/</link>
+      <pubDate>Sun, 20 Apr 2025 16:10:00 +1300</pubDate>
+      <guid>http://localhost:1313/posts/saas-test-2/</guid>
+      <description>&lt;h2 id=&#34;1-principle&#34;&gt;1 Principle&lt;/h2&gt;
+&lt;h2 id=&#34;-what-each-testing-layer-should-do&#34;&gt;✅ What Each Testing Layer Should Do&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Testing Layer&lt;/th&gt;
+          &lt;th&gt;What to Test&lt;/th&gt;
+          &lt;th&gt;Example&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟩 Unit Test&lt;/td&gt;
+          &lt;td&gt;Test &lt;strong&gt;core logic&lt;/strong&gt; of individual functions or classes, without external dependencies&lt;/td&gt;
+          &lt;td&gt;Validate password strength: &lt;code&gt;PasswordValidator::isStrong()&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟨 Integration Test&lt;/td&gt;
+          &lt;td&gt;Test how modules/services &lt;strong&gt;interact&lt;/strong&gt;, often with real DB or services&lt;/td&gt;
+          &lt;td&gt;Check if user registration inserts into DB and sends email&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟥 End-to-End (E2E) Test&lt;/td&gt;
+          &lt;td&gt;Simulate &lt;strong&gt;real user behavior&lt;/strong&gt; across the full stack&lt;/td&gt;
+          &lt;td&gt;Fill out registration form in browser → submit → redirect to dashboard&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-what-each-testing-layer-should-not-do&#34;&gt;❌ What Each Testing Layer Should NOT Do&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Testing Layer&lt;/th&gt;
+          &lt;th&gt;Don&amp;rsquo;t Do This&lt;/th&gt;
+          &lt;th&gt;Reason&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟩 Unit Test&lt;/td&gt;
+          &lt;td&gt;Don&amp;rsquo;t access DB, network, or real APIs&lt;/td&gt;
+          &lt;td&gt;Unit tests should be fast, isolated, and logic-only&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟨 Integration Test&lt;/td&gt;
+          &lt;td&gt;Don’t test UI rendering or button positions&lt;/td&gt;
+          &lt;td&gt;Integration tests focus on backend/data flow, not UI components&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟥 End-to-End (E2E) Test&lt;/td&gt;
+          &lt;td&gt;Don’t test detailed field validations (e.g., regex)&lt;/td&gt;
+          &lt;td&gt;E2E tests should verify core flows, not internal validation rules&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-test-layer-summary&#34;&gt;🧠 Test Layer Summary&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Layer&lt;/th&gt;
+          &lt;th&gt;DO&lt;/th&gt;
+          &lt;th&gt;DON’T&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Unit&lt;/td&gt;
+          &lt;td&gt;Test logic in isolation&lt;/td&gt;
+          &lt;td&gt;No DB, no API calls&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Integration&lt;/td&gt;
+          &lt;td&gt;Test module cooperation&lt;/td&gt;
+          &lt;td&gt;No UI component tests&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;E2E&lt;/td&gt;
+          &lt;td&gt;Test full user flow&lt;/td&gt;
+          &lt;td&gt;No detailed field logic or validation&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;2-minimum-viable-test-plan&#34;&gt;2 Minimum Viable Test Plan&lt;/h2&gt;
+&lt;p&gt;based on the Test Pyramid model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SaaS Test 1 : Phased Testing Strategy for a SaaS System</title>
+      <link>http://localhost:1313/posts/saas-test-1/</link>
+      <pubDate>Sun, 20 Apr 2025 15:10:00 +1300</pubDate>
+      <guid>http://localhost:1313/posts/saas-test-1/</guid>
+      <description>This document outlines a practical, phased approach to testing login and registration features in a SaaS application. It balances manual testing and E2E automation based on development stage.</description>
+    </item>
+  </channel>
+</rss>

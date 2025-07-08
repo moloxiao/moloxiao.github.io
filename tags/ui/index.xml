@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>UI on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/ui/</link>
+    <description>Recent content in UI on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Apr 2025 20:02:09 +1300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Designing Better Web Request Interactions</title>
+      <link>http://localhost:1313/posts/designing-better-web-request-interactions/</link>
+      <pubDate>Mon, 28 Apr 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/posts/designing-better-web-request-interactions/</guid>
+      <description>&lt;h1 id=&#34;designing-better-web-request-interactions-with-mui&#34;&gt;Designing Better Web Request Interactions with MUI&lt;/h1&gt;
+&lt;p&gt;When designing web applications, handling user interactions during network requests is crucial for delivering a smooth, responsive, and professional experience. In this blog post, we&amp;rsquo;ll explore the purpose behind request interaction design, the six recommended interaction patterns (with Material-UI components), and how to apply them to typical scenarios.&lt;/p&gt;
+&lt;h2 id=&#34;1-purpose-core-goals-of-web-request-interaction-design&#34;&gt;1. Purpose: Core Goals of Web Request Interaction Design&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Clearly Communicate System Status&lt;/strong&gt;: Users should always know whether an action is processing, succeeded, or failed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduce User Anxiety During Waiting&lt;/strong&gt;: Use visual cues to make waiting times feel shorter.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prevent Duplicate Operations&lt;/strong&gt;: Disable controls during requests to avoid repeated submissions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maintain Responsive Interfaces&lt;/strong&gt;: Even during slow backend operations, keep the frontend feeling fluid.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Guide Users Through Complex Flows&lt;/strong&gt;: Break down complex operations into clear, manageable steps.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-interaction-patterns-and-key-components&#34;&gt;2. Interaction Patterns and Key Components&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Pattern&lt;/th&gt;
+          &lt;th&gt;Key MUI Components&lt;/th&gt;
+          &lt;th&gt;Main Purpose&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Loading Indicators&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;CircularProgress&lt;/code&gt;, &lt;code&gt;LinearProgress&lt;/code&gt;, &lt;code&gt;LoadingButton&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Show ongoing processing status&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Disable Controls&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;disabled&lt;/code&gt; attribute&lt;/td&gt;
+          &lt;td&gt;Prevent repeated clicks or submissions&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Feedback Mechanism&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Snackbar&lt;/code&gt; + &lt;code&gt;Alert&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Clearly notify success or failure&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Skeleton Loading&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Skeleton&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Maintain layout and reduce perceived waiting time&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Full-Screen Loading Mask&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Backdrop&lt;/code&gt; + &lt;code&gt;CircularProgress&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Block all interactions during critical operations&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Progressive Steps&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Stepper&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Guide users step-by-step through complex flows&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-pattern-application-across-typical-scenarios&#34;&gt;3. Pattern Application Across Typical Scenarios&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Scenario&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Loading Indicator&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Disable Controls&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Feedback Mechanism&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Skeleton Loading&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Full-Screen Mask&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Progressive Steps&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Form Submission&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;File Upload&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Delete Confirmation&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅ (small delete)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅ (batch refresh)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Registration/Login&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Bulk Data Loading&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Multi-Step Process&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅ (per step)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅ (per step)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅ (per step)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-typical-scenario-examples&#34;&gt;4. Typical Scenario Examples&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Scenario&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Form Submission&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;When a user submits a form, the button shows a loading state, the form is disabled, and a Snackbar provides success or failure feedback.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;File Upload&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;During file uploads, a Backdrop with a loading spinner blocks user interactions. Upon completion or failure, a Snackbar notification is shown.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Delete Confirmation&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;For a single delete action, a loading state can be shown on the button. For bulk deletes, a Skeleton screen can temporarily replace the refreshed data.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Registration/Login&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Submitting login or registration forms triggers a LoadingButton, disables the inputs, and gives clear success or error feedback.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Bulk Data Loading&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;When loading lists or dashboards, use Skeleton components as placeholders until real data arrives.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Multi-Step Process&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Use a Stepper to break registration, checkout, or onboarding into multiple steps, with loading indicators and feedback at each stage.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;By combining the right interaction patterns based on user actions, you can greatly enhance the perceived quality and responsiveness of your web application.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

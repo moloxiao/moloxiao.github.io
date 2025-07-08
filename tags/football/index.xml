@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Football on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/football/</link>
+    <description>Recent content in Football on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jul 2024 14:52:22 +1200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/football/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Yolo to Analyze Youth Football Matches</title>
+      <link>http://localhost:1313/posts/use-yolo-to-analyze-youth-football-matches/</link>
+      <pubDate>Wed, 03 Jul 2024 14:52:22 +1200</pubDate>
+      <guid>http://localhost:1313/posts/use-yolo-to-analyze-youth-football-matches/</guid>
+      <description>&lt;p&gt;I discuss youth soccer games with my 10-year-old son. I think it&amp;rsquo;s important to first help him understand when making certain decisions is beneficial. So, I&amp;rsquo;m looking for a way to help young athletes develop their decision-making skills.&lt;br&gt;
+One important tool for this is watching game videos.&lt;/p&gt;
+&lt;p&gt;While watching and learning from game videos together, I started thinking about some questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is there a connection between teams that run more and winning?&lt;/li&gt;
+&lt;li&gt;What is the relationship between ball possession and winning?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So I used Python, along with YOLO and OpenCV, to create a prototype, like this :&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/football_game_kids_01.png&#34; alt=&#34;oduio&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

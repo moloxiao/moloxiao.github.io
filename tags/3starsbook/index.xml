@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>3StarsBook on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/3starsbook/</link>
+    <description>Recent content in 3StarsBook on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Dec 2024 11:01:04 +1300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/3starsbook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Year Holiday Reading Book 2 Design and Build Great Web Apis</title>
+      <link>http://localhost:1313/posts/new-year-holiday-reading-book-2-design-and-build-great-web-apis/</link>
+      <pubDate>Thu, 26 Dec 2024 11:01:04 +1300</pubDate>
+      <guid>http://localhost:1313/posts/new-year-holiday-reading-book-2-design-and-build-great-web-apis/</guid>
+      <description>.</description>
+    </item>
+    <item>
+      <title>New Year Holiday Reading Book 1 : Business Intelligence Analytics Data Science and Ai</title>
+      <link>http://localhost:1313/posts/new-year-holiday-reading-book-1-business-intelligence-analytics-data-science-and-ai/</link>
+      <pubDate>Wed, 25 Dec 2024 20:36:02 +1300</pubDate>
+      <guid>http://localhost:1313/posts/new-year-holiday-reading-book-1-business-intelligence-analytics-data-science-and-ai/</guid>
+      <description>This is a comprehensive book (Business Intelligence Analytics and Data Science : A Managerial Perspective), perfect for browsing through.</description>
+    </item>
+  </channel>
+</rss>

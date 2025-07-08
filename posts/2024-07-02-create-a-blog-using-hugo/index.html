@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Create a blog using Hugo | Shan&#39;s blog</title>
+<meta name="keywords" content="Website Building, Google Adsense, Google Analytics, Hugo, SEO">
+<meta name="description" content="How I created my blog using Hugo and the tools I used.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/2024-07-02-create-a-blog-using-hugo/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2024-07-02-create-a-blog-using-hugo/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
+     crossorigin="anonymous"></script>
+     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
+    </script>
+     
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Create a blog using Hugo
+    </h1>
+    <div class="post-description">
+      How I created my blog using Hugo and the tools I used.
+    </div>
+    <div class="post-meta"><span title='2024-07-02 20:57:29 +1200 NZST'>July 2, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Just like you see, this blog you are visiting is created using Hugo and hosted on GitHub Pages. In the process of using Hugo, I researched a lot to answer my questions. Here are some common issues.</p>
+<h2 id="how-to-create-pages-and-posts-with-hugo-commands">How to Create Pages and Posts with Hugo Commands<a hidden class="anchor" aria-hidden="true" href="#how-to-create-pages-and-posts-with-hugo-commands">#</a></h2>
+<p>To create a new post in Hugo, you can use the following command:</p>
+<pre tabindex="0"><code>hugo new posts/your-post-title.md
+</code></pre><p>For example, if you want to create a new post titled &ldquo;my-first-post,&rdquo; you would run:</p>
+<pre tabindex="0"><code>hugo new posts/my-first-post.md
+</code></pre><p>This command will create a file named my-first-post.md in the content/posts directory. The file will include predefined front matter, such as the title, date, and other metadata.</p>
+<p>Ensure that your Hugo project structure contains the content/posts directory. If it doesn&rsquo;t, you can manually create the directory or adjust the command path according to your project&rsquo;s structure.</p>
+<p>If you want to create a new page instead of a post, you can modify the command path. For example, to create a new page:</p>
+<pre tabindex="0"><code>hugo new about.md
+</code></pre><p>This will create a file named about.md in the content directory.</p>
+<h2 id="add-google-analytics">add google analytics<a hidden class="anchor" aria-hidden="true" href="#add-google-analytics">#</a></h2>
+<p>visit <a href="https://analytics.google.com/">google analytics</a> to generate Google Analytics parameter.</p>
+<ol>
+<li>Update config.toml<br>
+Open your config.toml file. Add the Google Analytics parameter:</li>
+</ol>
+<pre tabindex="0"><code>[params]
+  google_analytics = &#34;G-XXXXXXXX&#34;
+</code></pre><ol start="2">
+<li>Locate and Edit baseof.html<br>
+Navigate to &ldquo;themes/your-theme-name/layouts/_default/&rdquo;.
+Open baseof.html for editing :</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    {{- partial &#34;head.html&#34; . }}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    {{- partial &#34;head.html&#34; . }}
+</span></span><span style="display:flex;"><span>    {{ if .Site.Params.google_analytics }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google_analytics }}&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>      window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">||</span> [];
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">gtag</span>(){<span style="color:#a6e22e">dataLayer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arguments</span>);}
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;js&#39;</span>, <span style="color:#66d9ef">new</span> Date());
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;config&#39;</span>, <span style="color:#e6db74">&#39;{{ .Site.Params.google_analytics }}&#39;</span>);
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span></code></pre></div><h2 id="configure-hugo-to-generate-a-sitemap">Configure Hugo to Generate a Sitemap<a hidden class="anchor" aria-hidden="true" href="#configure-hugo-to-generate-a-sitemap">#</a></h2>
+<p>Hugo has built-in support for generating XML sitemaps. You just need to enable it in your configuration file.
+Open your Hugo project’s configuration file config.toml(or config.yaml). Add or update the following configuration to enable the sitemap :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>[<span style="color:#ae81ff">outputs]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;SITEMAP&#34;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">sitemap]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">changefreq = &#34;weekly&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">priority = 0.5</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">filename = &#34;sitemap.xml&#34;</span>
+</span></span></code></pre></div><p>vist check :</p>
+<pre tabindex="0"><code>http://127.0.0.1:1313/sitemap.xml
+</code></pre><p>To optimize your Hugo-based blog for SEO using Google Search Console and Bing Webmaster Tools :</p>
+<ul>
+<li><a href="https://search.google.com/search-console">Google Search Console</a></li>
+<li><a href="https://www.bing.com/webmasters/">Bing Webmaster Tools</a></li>
+</ul>
+<h2 id="programmable-search-engine">programmable search engine<a hidden class="anchor" aria-hidden="true" href="#programmable-search-engine">#</a></h2>
+<p>I support blog search using Google <a href="https://programmablesearchengine.google.com/">Programmable Search Engine, previously known as Google Custom Search</a>.</p>
+<h2 id="add-robotstxt">add robots.txt<a hidden class="anchor" aria-hidden="true" href="#add-robotstxt">#</a></h2>
+<pre tabindex="0"><code>User-agent: *
+Disallow: /tags/
+
+Sitemap: https://moloxiao.github.io/sitemap.xml
+</code></pre><h2 id="build-by-github-action">Build by github action<a hidden class="anchor" aria-hidden="true" href="#build-by-github-action">#</a></h2>
+<pre tabindex="0"><code>Start building sites … 
+hugo v0.146.5-61328976e11cbb9d906b4a790b8a7cd25b2a914f linux/amd64 BuildDate=2025-04-15T17:54:38Z VendorInfo=gohugoio
+
+WARN  Partial name &#34;partials/templates/_funcs/get-page-images&#34; starting with &#39;partials/&#39; (as in {{ partial &#34;partials/templates/_funcs/get-page-images&#34;}}) is most likely not what you want. Before 0.146.0 we did a double lookup in this situation.
+You can suppress this warning by adding the following to your site configuration:
+ignoreLogs = [&#39;warning-partial-superfluous-prefix&#39;]
+ERROR render of &#34;/&#34; failed: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/_default/baseof.html:9:8&#34;: execute of template failed: template: list.html:9:8: executing &#34;list.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/partials/head.html:13:15&#34;: execute of template failed: template: _partials/templates/opengraph.html:13:15: executing &#34;partials/templates/opengraph.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+ERROR render of &#34;/home/runner/work/shanblog/shanblog/content/books/modern-woodworking/_index.md&#34; failed: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/_default/baseof.html:9:8&#34;: execute of template failed: template: list.html:9:8: executing &#34;list.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/partials/head.html:13:15&#34;: execute of template failed: template: _partials/templates/opengraph.html:13:15: executing &#34;partials/templates/opengraph.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+ERROR render of &#34;/home/runner/work/shanblog/shanblog/content/books/modern-woodworking/common-woodworking-products.md&#34; failed: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/_default/baseof.html:9:8&#34;: execute of template failed: template: single.html:9:8: executing &#34;single.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/partials/head.html:13:15&#34;: execute of template failed: template: _partials/templates/opengraph.html:13:15: executing &#34;partials/templates/opengraph.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+ERROR render of &#34;/404&#34; failed: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/_default/baseof.html:9:8&#34;: execute of template failed: template: 404.html:9:8: executing &#34;404.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/partials/head.html:13:15&#34;: execute of template failed: template: _partials/templates/opengraph.html:13:15: executing &#34;partials/templates/opengraph.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+Total in 112 ms
+Error: error building site: render: failed to render pages: render of &#34;/books&#34; failed: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/_default/baseof.html:9:8&#34;: execute of template failed: template: list.html:9:8: executing &#34;list.html&#34; at &lt;partial &#34;head.html&#34; .&gt;: error calling partial: &#34;/home/runner/work/shanblog/shanblog/themes/PaperMod/layouts/partials/head.html:13:15&#34;: execute of template failed: template: _partials/templates/opengraph.html:13:15: executing &#34;partials/templates/opengraph.html&#34; at &lt;partial &#34;partials/templates/_funcs/get-page-images&#34; .&gt;: error calling partial: partial &#34;partials/templates/_funcs/get-page-images&#34; not found
+Error: Process completed with exit code 1.
+</code></pre><h1 id="changelog">Changelog<a hidden class="anchor" aria-hidden="true" href="#changelog">#</a></h1>
+<ul>
+<li>2024-09-16  <a href="https://www.google.com/adsense">Google AdSense</a> , <strong>rejected</strong></li>
+<li>2024-09-11 add robots.txt</li>
+<li>2024-09-11 add google programmable search engine</li>
+<li>2024-09-09 resubmit <a href="https://www.google.com/adsense">Google AdSense</a></li>
+<li>2024-09-09 add Bing Webmaster Tools</li>
+<li>2024-07-04 submit <a href="https://www.google.com/adsense">Google AdSense</a> , <strong>reject</strong></li>
+<li>2024-07-02 add google search console</li>
+<li>2024-07-02 add google analytics</li>
+<li>2024-07-01 create blog</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/website-building/">Website Building</a></li>
+      <li><a href="http://localhost:1313/tags/google-adsense/">Google Adsense</a></li>
+      <li><a href="http://localhost:1313/tags/google-analytics/">Google Analytics</a></li>
+      <li><a href="http://localhost:1313/tags/hugo/">Hugo</a></li>
+      <li><a href="http://localhost:1313/tags/seo/">SEO</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

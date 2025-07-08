@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Directory Service | Shan&#39;s blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="we&rsquo;ll cover how two of the most popular directory services, Active Directory and OpenLDAP, work in action. We&rsquo;ll explore the concept of centralized management and how this can help SysAdmins maintain and support all the different parts of an IT infrastructure.
+Introduction to Directory Services
+What is a Directory Service?
+
+It&rsquo;s akin to a phone directory for a network, mapping resources like user accounts and network shares to their network addresses.
+Centralizes information management, eliminating the need for local management on every machine.
+
+Structure and Benefits of Directory Services :">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/directory-service/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/directory-service/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
+     crossorigin="anonymous"></script>
+     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
+    </script>
+     
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Directory Service
+    </h1>
+    <div class="post-meta"><span title='2024-08-22 16:40:12 +1200 NZST'>August 22, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>we&rsquo;ll cover how two of the most popular directory services, <strong>Active Directory</strong> and <strong>OpenLDAP</strong>, work in action. We&rsquo;ll explore the concept of centralized management and how this can help SysAdmins maintain and support all the different parts of an IT infrastructure.</p>
+<h1 id="introduction-to-directory-services">Introduction to Directory Services<a hidden class="anchor" aria-hidden="true" href="#introduction-to-directory-services">#</a></h1>
+<p>What is a Directory Service?</p>
+<ul>
+<li>It&rsquo;s akin to a phone directory for a network, mapping resources like user accounts and network shares to their network addresses.</li>
+<li>Centralizes information management, eliminating the need for local management on every machine.</li>
+</ul>
+<p>Structure and Benefits of Directory Services :</p>
+<ul>
+<li>Employs a hierarchical structure with Organizational Units (OUs) acting as containers for objects (like files in folders), enabling organized data management.</li>
+<li>Replication ensures redundancy and reduces latency by distributing data across multiple servers.</li>
+</ul>
+<p>Administration and Importance :</p>
+<ul>
+<li>System administrators are responsible for setting up, configuring, and maintaining the directory service.</li>
+<li>Directory services are crucial for organizing, searching, and managing network resources efficiently.</li>
+</ul>
+<p>In 1988, the X.500 directory standard was approved and included protocols like directory access protocol or DAP. Directory system protocol or DSP, directory information shadowing protocol or DISP and directory operational bindings management protocol or DOP.</p>
+<h1 id="centralized-management">centralized management<a hidden class="anchor" aria-hidden="true" href="#centralized-management">#</a></h1>
+<p>This section dives into the world of directory services and how they bring order to the potential chaos of managing numerous users and resources in IT infrastructures.</p>
+<p>Centralized Management with Directory Services :</p>
+<ul>
+<li>Instead of manually configuring each computer and user account individually, directory services let you manage authentication, authorization, and accounting (AAA) from a central location.</li>
+<li>This means you can create a user account once, and it&rsquo;s accessible across the entire network, saving time and ensuring consistency.</li>
+</ul>
+<p>Role-Based Access Control (RBAC) :</p>
+<ul>
+<li>Directory services allow you to grant access to resources based on a user&rsquo;s role rather than their individual identity.</li>
+<li>This is achieved by creating user groups (e.g., &lsquo;System Administrators&rsquo;, &lsquo;Marketing Team&rsquo;) and assigning permissions to those groups, simplifying user management and improving security.</li>
+</ul>
+<p>Centralized Configuration Management :</p>
+<ul>
+<li>Beyond user accounts, directory services can centralize configuration management for computers and software across your network.</li>
+<li>This ensures consistency, reduces manual errors, and allows for easier updates and changes through tools like logon scripts, which run every time a user logs in.</li>
+</ul>
+<p>For more information about centralized management, check out the following links:
+<a href="https://en.wikipedia.org/wiki/Role-based_access_control">Role-based access control</a>
+<a href="https://www.chef.io/products/chef-infra">Chef</a>
+<a href="https://www.puppet.com/">Puppet</a>
+<a href="https://learn.microsoft.com/en-us/mem/configmgr/core/understand/introduction">Introduction to System Center Configuration Manager</a></p>
+<h1 id="ldap">LDAP<a hidden class="anchor" aria-hidden="true" href="#ldap">#</a></h1>
+<p>Lightweight Directory Access Protocol.  <a href="https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format">LDAP Data Interchange Format</a>.</p>
+<p><a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc780469(v=ws.10)?redirectedfrom=MSDN">Kerberos and Authentication</a></p>
+<h1 id="active-directory">Active Directory<a hidden class="anchor" aria-hidden="true" href="#active-directory">#</a></h1>
+<p><img loading="lazy" src="/images/books/saaiis/ad.png" alt="Active Directory"  />
+
+Active Directory or AD, the native directory service for Microsoft Windows.</p>
+<p>What is Active Directory :</p>
+<ul>
+<li>Active Directory acts like a digital phonebook for a network, managing users, computers, and resources. It&rsquo;s been a core part of Windows environments since Windows Server 2000.</li>
+<li>While designed for Windows, AD can interact with other systems like Linux and macOS using the LDAP protocol.</li>
+</ul>
+<p>Key Components and Features :</p>
+<ul>
+<li>Active Directory uses a hierarchical structure, much like a family tree. &ldquo;Organizational Units&rdquo; or OUs help organize objects within this structure.</li>
+<li>Domain Controllers (DCs) are servers that hold the Active Directory database and manage crucial tasks like user authentication and resource access.</li>
+</ul>
+<p>For more information about Active Directory, check out the link <a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc977985(v=technet.10)">here</a></p>
+<p>Managing Active Directory :</p>
+<p>Understanding Default Groups :</p>
+<ul>
+<li>Domain Admins: Possess complete control over the domain, equivalent to a local administrator or root user. Adding accounts to this group should be done cautiously due to their extensive privileges.</li>
+<li>Domain Users: Encompasses all user accounts within the domain, simplifying permission management for network resources.</li>
+</ul>
+<p>Security and Best Practices :</p>
+<ul>
+<li>Enterprise Admins: Hold domain-wide permissions affecting multiple domains within a forest, typically used for significant tasks like AD upgrades.</li>
+<li>Daily Operations: Avoid using domain admin accounts for routine tasks. Delegate specific permissions for regular administrative duties to maintain security and prevent accidental system-wide changes.</li>
+</ul>
+<h1 id="openldap">OpenLDAP<a hidden class="anchor" aria-hidden="true" href="#openldap">#</a></h1>
+<p>OpenLDAP, a free and open-source alternative to Microsoft&rsquo;s Active Directory.</p>
+<ul>
+<li>For more information about installing and configuring OpenLDAP and phpLDAPAdmin on Ubuntu 16.04, click <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-ubuntu-16-04">here</a></li>
+<li>or check out this article on <a href="https://www.openldap.org/doc/admin24/slapdconf2.html">openldap.org</a></li>
+<li>For information about the data interchange format, click <a href="https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format">here</a>.</li>
+<li>For information about how to use LDIF files to make changes to an OpenLDAP system, click <a href="https://www.digitalocean.com/community/tutorials/how-to-use-ldif-files-to-make-changes-to-an-openldap-system">here</a></li>
+</ul>
+<p>Data Recovery and Backups</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Interview on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/interview/</link>
+    <description>Recent content in Interview on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jul 2024 15:36:34 +1200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shan&#39;s Responses to Common Interview Questions</title>
+      <link>http://localhost:1313/posts/shan-responses-to-common-interview-questions/</link>
+      <pubDate>Wed, 24 Jul 2024 15:36:34 +1200</pubDate>
+      <guid>http://localhost:1313/posts/shan-responses-to-common-interview-questions/</guid>
+      <description>Shan&amp;#39;s suggest Responses to Common Interview Questions.</description>
+    </item>
+  </channel>
+</rss>

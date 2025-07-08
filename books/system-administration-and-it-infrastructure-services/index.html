@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>System Administration and IT Infrastructure Services | Shan&#39;s blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Systems administration is the field of IT that’s responsible for maintaining reliable computers systems in a multi-user environment. In this book, we focus on how just one person, Single-handedly manage an IT infrastructure(focus on systems administration in a small organization).  ">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
+     crossorigin="anonymous"></script>
+     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
+    </script>
+     
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    System Administration and IT Infrastructure Services
+  </h1>
+  <div class="post-description">
+    Systems administration is the field of IT that’s responsible for maintaining reliable computers systems in a multi-user environment. In this book, we focus on how just one person, Single-handedly manage an IT infrastructure(focus on systems administration in a small organization).
+  </div>
+</header>
+<div class="gcse-search"></div>
+<br/>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Preface
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I wrote this book while preparing for a System Administration job. It serves as a structured summary of my previous work, developed through studying Google’s course on ‘System Administration and IT Infrastructure Services’ and it also functions as a quick-reference guide.
+I&#39;m trying to understand what success looks like and how we can achieve it, so that we can repeat those patterns over and over again. </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-21 10:53:43 +1200 NZST'>August 21, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Preface" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/preface/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">What is System Administration
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The basics of system administration :
+organizational policies IT infrastructure services user and hardware provisioning routine maintenance troubleshooting managing potential issues Not contains in this book, like :
+automate workflow managed configrations computer settings automatically What is systems administration Servers Revisited Basically, a sys admin is responsible for their company’s IT service. Employees need these IT services so that they can be productive.
+System Administration Tasks Organizational Policies IT infrastructure User and Hardware Provisioning(Procurement-&gt;Deployment-&gt;Maintenance-&gt;Retirement) Routine Maintenance Vendors Troubleshooting and Managing Issues In Case of Fire, Break Glass(You can’t account for everything but you can be prepared to recover from it.) There are just a few of the policy questions(organizational policies) that can come up :
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-21 11:30:43 +1200 NZST'>August 21, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to What is System Administration" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/what-is-system-administration/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Network and infrastructure services
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>We will cover what IT infrastructure services are and what their role is in system administration. We’ll also learn about server operating systems, virtualization, network services, DNS for web services, and how to troubleshoot network services.
+Physical infrastructure services Server Operating System Virtuallization(There are two ways you can run your services, either on dedicated hardware or on a virtualized instance on a server) Remote Access(the ability to connect to your infrastructure from anywhere in the world. A popular tool to access the CLI remotely is WinRM or Putty. RDP is also popular if you want to access the GUI remotely.) Network Services FTP, SFTP, TFTP PXE(Preboot eXecution Environment, pre boot execution) NTP(Network time protocol : it’s used to keep the clock synchronized on machines connected to a network) Intranets, Proxy Servers DNS(DNS is what maps human understandable names to IP addresses). Methods of Mapping : Local Host File, Local DNS Server DHCP(Dynamic Host Configuration Protocol) Network Support Services Revisited(a couple of network services essential for enhancing employee productivity, privacy, and security within a company’s IT infrastructure) :
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-21 11:30:43 +1200 NZST'>August 21, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Network and infrastructure services" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Software and Platform Services
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Software services are the services that employs use that allow them to do their daily job functions. This can include applications like Word processors, Internet browsers, email clients, chat clients, and so on.
+Software Service Communication Services :
+The 5 best team chat apps for the workplace :
+Slack for a chat-powered workplace Microsoft Teams for large organizations broken down into teams Google Chat for Google Workspace users Discord for always-on voice chat Element for self-hosted team chat Open IM chat applications click here.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-22 14:17:43 +1200 NZST'>August 22, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Software and Platform Services" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/software-and-platform-services/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Directory Service
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>we’ll cover how two of the most popular directory services, Active Directory and OpenLDAP, work in action. We’ll explore the concept of centralized management and how this can help SysAdmins maintain and support all the different parts of an IT infrastructure.
+Introduction to Directory Services What is a Directory Service?
+It’s akin to a phone directory for a network, mapping resources like user accounts and network shares to their network addresses. Centralizes information management, eliminating the need for local management on every machine. Structure and Benefits of Directory Services :
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-22 16:40:12 +1200 NZST'>August 22, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Directory Service" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/directory-service/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Data Recovery and Backups
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>we’re going to arm you with tools you need to be prepared for these accidents, so you can minimize the impact and loss of data.
+Data recovery, in general terms, is the process of trying to restore data after an unexpected event that results in data loss or corruption.
+Planning for Data Recovery Backing Up Your Data : you should only be backing up data that’s absolutely necessary for operations and can be found in another source.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-23 09:30:12 +1200 NZST'>August 23, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Data Recovery and Backups" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/data-recovery-and-backups/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">System Administration Consultation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Scenario 1 You’re doing systems administration work for Network Funtime Company. Evaluate their current IT infrastructure needs and limitations, then provide at least five process improvements and rationale behind those improvements. Write a 200-400 word process review for this consultation. Remember, there’s no right or wrong answer, but make sure to provide your reasoning.
+Software Company :
+Network Funtime Company is a small company that builds open-source software. The company is made up software engineers, a few designers, one person in Human Resources (HR), and a small sales team. Altogether, there are 100 employees. They recently hired you as a system administrator to come in and become their IT department.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-23 19:12:12 +1200 NZST'>August 23, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to System Administration Consultation" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/system-administration-consultation/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

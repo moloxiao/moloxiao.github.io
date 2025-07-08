@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Jul 2025 10:00:00 +1200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ProblemSolving</title>
+      <link>http://localhost:1313/tags/problemsolving/</link>
+      <pubDate>Tue, 08 Jul 2025 10:00:00 +1200</pubDate>
+      <guid>http://localhost:1313/tags/problemsolving/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thinking</title>
+      <link>http://localhost:1313/tags/thinking/</link>
+      <pubDate>Tue, 08 Jul 2025 10:00:00 +1200</pubDate>
+      <guid>http://localhost:1313/tags/thinking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Education</title>
+      <link>http://localhost:1313/tags/education/</link>
+      <pubDate>Thu, 05 Jun 2025 20:16:04 +1300</pubDate>
+      <guid>http://localhost:1313/tags/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ICAS</title>
+      <link>http://localhost:1313/tags/icas/</link>
+      <pubDate>Tue, 03 Jun 2025 15:28:19 +1300</pubDate>
+      <guid>http://localhost:1313/tags/icas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>KhanAcademy</title>
+      <link>http://localhost:1313/tags/khanacademy/</link>
+      <pubDate>Tue, 03 Jun 2025 15:28:19 +1300</pubDate>
+      <guid>http://localhost:1313/tags/khanacademy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mathematics</title>
+      <link>http://localhost:1313/tags/mathematics/</link>
+      <pubDate>Tue, 03 Jun 2025 15:28:19 +1300</pubDate>
+      <guid>http://localhost:1313/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Tue, 27 May 2025 15:28:19 +1300</pubDate>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chatbot</title>
+      <link>http://localhost:1313/tags/chatbot/</link>
+      <pubDate>Tue, 27 May 2025 15:28:19 +1300</pubDate>
+      <guid>http://localhost:1313/tags/chatbot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Tue, 27 May 2025 15:28:19 +1300</pubDate>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>http://localhost:1313/tags/workflow/</link>
+      <pubDate>Tue, 27 May 2025 15:28:19 +1300</pubDate>
+      <guid>http://localhost:1313/tags/workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent</title>
+      <link>http://localhost:1313/tags/agent/</link>
+      <pubDate>Tue, 20 May 2025 14:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ThoughtManager</title>
+      <link>http://localhost:1313/tags/thoughtmanager/</link>
+      <pubDate>Tue, 20 May 2025 14:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/thoughtmanager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Sun, 18 May 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
+      <pubDate>Sun, 18 May 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Laravel</title>
+      <link>http://localhost:1313/tags/laravel/</link>
+      <pubDate>Sun, 18 May 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/laravel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nginx</title>
+      <link>http://localhost:1313/tags/nginx/</link>
+      <pubDate>Sun, 18 May 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Wed, 30 Apr 2025 20:00:01 +1300</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UI</title>
+      <link>http://localhost:1313/tags/ui/</link>
+      <pubDate>Mon, 28 Apr 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SaaS</title>
+      <link>http://localhost:1313/tags/saas/</link>
+      <pubDate>Sun, 20 Apr 2025 16:10:00 +1300</pubDate>
+      <guid>http://localhost:1313/tags/saas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/tags/test/</link>
+      <pubDate>Sun, 20 Apr 2025 16:10:00 +1300</pubDate>
+      <guid>http://localhost:1313/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding</title>
+      <link>http://localhost:1313/tags/coding/</link>
+      <pubDate>Mon, 14 Apr 2025 20:00:00 +1300</pubDate>
+      <guid>http://localhost:1313/tags/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JWT</title>
+      <link>http://localhost:1313/tags/jwt/</link>
+      <pubDate>Mon, 14 Apr 2025 20:00:00 +1300</pubDate>
+      <guid>http://localhost:1313/tags/jwt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Joinery</title>
+      <link>http://localhost:1313/tags/joinery/</link>
+      <pubDate>Tue, 08 Apr 2025 15:10:00 +1300</pubDate>
+      <guid>http://localhost:1313/tags/joinery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SlowerQuery</title>
+      <link>http://localhost:1313/tags/slowerquery/</link>
+      <pubDate>Tue, 01 Apr 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/slowerquery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>http://localhost:1313/tags/sql/</link>
+      <pubDate>Tue, 01 Apr 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PTE</title>
+      <link>http://localhost:1313/tags/pte/</link>
+      <pubDate>Wed, 19 Mar 2025 20:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/tags/pte/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nextjs</title>
+      <link>http://localhost:1313/tags/nextjs/</link>
+      <pubDate>Tue, 04 Mar 2025 11:04:01 +1300</pubDate>
+      <guid>http://localhost:1313/tags/nextjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PHP</title>
+      <link>http://localhost:1313/tags/php/</link>
+      <pubDate>Tue, 04 Mar 2025 11:04:01 +1300</pubDate>
+      <guid>http://localhost:1313/tags/php/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>API</title>
+      <link>http://localhost:1313/tags/api/</link>
+      <pubDate>Wed, 19 Feb 2025 20:20:01 +1300</pubDate>
+      <guid>http://localhost:1313/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QuickStart</title>
+      <link>http://localhost:1313/tags/quickstart/</link>
+      <pubDate>Wed, 19 Feb 2025 20:20:01 +1300</pubDate>
+      <guid>http://localhost:1313/tags/quickstart/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DailyBrainstorming</title>
+      <link>http://localhost:1313/tags/dailybrainstorming/</link>
+      <pubDate>Tue, 07 Jan 2025 14:53:00 +1300</pubDate>
+      <guid>http://localhost:1313/tags/dailybrainstorming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TechStack</title>
+      <link>http://localhost:1313/tags/techstack/</link>
+      <pubDate>Wed, 01 Jan 2025 20:01:01 +1300</pubDate>
+      <guid>http://localhost:1313/tags/techstack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2StarsBook</title>
+      <link>http://localhost:1313/tags/2starsbook/</link>
+      <pubDate>Tue, 31 Dec 2024 16:15:31 +1300</pubDate>
+      <guid>http://localhost:1313/tags/2starsbook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HolidayReading</title>
+      <link>http://localhost:1313/tags/holidayreading/</link>
+      <pubDate>Tue, 31 Dec 2024 16:15:31 +1300</pubDate>
+      <guid>http://localhost:1313/tags/holidayreading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>3StarsBook</title>
+      <link>http://localhost:1313/tags/3starsbook/</link>
+      <pubDate>Thu, 26 Dec 2024 11:01:04 +1300</pubDate>
+      <guid>http://localhost:1313/tags/3starsbook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Replicate</title>
+      <link>http://localhost:1313/tags/replicate/</link>
+      <pubDate>Thu, 05 Dec 2024 18:53:31 +1300</pubDate>
+      <guid>http://localhost:1313/tags/replicate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ShanThinking</title>
+      <link>http://localhost:1313/tags/shanthinking/</link>
+      <pubDate>Tue, 03 Dec 2024 15:25:30 +1300</pubDate>
+      <guid>http://localhost:1313/tags/shanthinking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>http://localhost:1313/tags/software/</link>
+      <pubDate>Tue, 03 Dec 2024 15:25:30 +1300</pubDate>
+      <guid>http://localhost:1313/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Accounting</title>
+      <link>http://localhost:1313/tags/accounting/</link>
+      <pubDate>Mon, 25 Nov 2024 16:40:33 +1300</pubDate>
+      <guid>http://localhost:1313/tags/accounting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SmallBusiness</title>
+      <link>http://localhost:1313/tags/smallbusiness/</link>
+      <pubDate>Mon, 25 Nov 2024 16:40:33 +1300</pubDate>
+      <guid>http://localhost:1313/tags/smallbusiness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CAMPING</title>
+      <link>http://localhost:1313/tags/camping/</link>
+      <pubDate>Wed, 13 Nov 2024 22:11:45 +1300</pubDate>
+      <guid>http://localhost:1313/tags/camping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ReadingNotes</title>
+      <link>http://localhost:1313/tags/readingnotes/</link>
+      <pubDate>Tue, 12 Nov 2024 15:30:57 +1300</pubDate>
+      <guid>http://localhost:1313/tags/readingnotes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ChildEducation</title>
+      <link>http://localhost:1313/tags/childeducation/</link>
+      <pubDate>Mon, 14 Oct 2024 22:05:28 +1300</pubDate>
+      <guid>http://localhost:1313/tags/childeducation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SideProject</title>
+      <link>http://localhost:1313/tags/sideproject/</link>
+      <pubDate>Sun, 13 Oct 2024 17:12:19 +1300</pubDate>
+      <guid>http://localhost:1313/tags/sideproject/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ICT</title>
+      <link>http://localhost:1313/tags/ict/</link>
+      <pubDate>Thu, 10 Oct 2024 10:04:36 +1300</pubDate>
+      <guid>http://localhost:1313/tags/ict/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cornerstonecongregational.org</title>
+      <link>http://localhost:1313/tags/cornerstonecongregational.org/</link>
+      <pubDate>Tue, 10 Sep 2024 15:11:01 +1200</pubDate>
+      <guid>http://localhost:1313/tags/cornerstonecongregational.org/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>http://localhost:1313/tags/database/</link>
+      <pubDate>Mon, 09 Sep 2024 15:01:22 +1200</pubDate>
+      <guid>http://localhost:1313/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Job</title>
+      <link>http://localhost:1313/tags/job/</link>
+      <pubDate>Thu, 05 Sep 2024 09:14:29 +1200</pubDate>
+      <guid>http://localhost:1313/tags/job/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ResumeManager</title>
+      <link>http://localhost:1313/tags/resumemanager/</link>
+      <pubDate>Thu, 05 Sep 2024 09:14:29 +1200</pubDate>
+      <guid>http://localhost:1313/tags/resumemanager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>http://localhost:1313/tags/automation/</link>
+      <pubDate>Wed, 04 Sep 2024 15:43:08 +1200</pubDate>
+      <guid>http://localhost:1313/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docusaurus</title>
+      <link>http://localhost:1313/tags/docusaurus/</link>
+      <pubDate>Wed, 04 Sep 2024 15:43:08 +1200</pubDate>
+      <guid>http://localhost:1313/tags/docusaurus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Website</title>
+      <link>http://localhost:1313/tags/website/</link>
+      <pubDate>Wed, 04 Sep 2024 15:43:08 +1200</pubDate>
+      <guid>http://localhost:1313/tags/website/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IOT</title>
+      <link>http://localhost:1313/tags/iot/</link>
+      <pubDate>Mon, 02 Sep 2024 22:17:29 +1200</pubDate>
+      <guid>http://localhost:1313/tags/iot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TimberProcessing</title>
+      <link>http://localhost:1313/tags/timberprocessing/</link>
+      <pubDate>Mon, 02 Sep 2024 22:17:29 +1200</pubDate>
+      <guid>http://localhost:1313/tags/timberprocessing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>USNR</title>
+      <link>http://localhost:1313/tags/usnr/</link>
+      <pubDate>Mon, 02 Sep 2024 22:17:29 +1200</pubDate>
+      <guid>http://localhost:1313/tags/usnr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>http://localhost:1313/tags/data/</link>
+      <pubDate>Wed, 28 Aug 2024 20:45:47 +1200</pubDate>
+      <guid>http://localhost:1313/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Goal</title>
+      <link>http://localhost:1313/tags/goal/</link>
+      <pubDate>Tue, 20 Aug 2024 15:40:20 +1200</pubDate>
+      <guid>http://localhost:1313/tags/goal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SystemThinking</title>
+      <link>http://localhost:1313/tags/systemthinking/</link>
+      <pubDate>Tue, 20 Aug 2024 15:40:20 +1200</pubDate>
+      <guid>http://localhost:1313/tags/systemthinking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JobHunting</title>
+      <link>http://localhost:1313/tags/jobhunting/</link>
+      <pubDate>Mon, 12 Aug 2024 09:26:40 +1200</pubDate>
+      <guid>http://localhost:1313/tags/jobhunting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloudflare</title>
+      <link>http://localhost:1313/tags/cloudflare/</link>
+      <pubDate>Wed, 07 Aug 2024 15:29:03 +1200</pubDate>
+      <guid>http://localhost:1313/tags/cloudflare/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domain</title>
+      <link>http://localhost:1313/tags/domain/</link>
+      <pubDate>Wed, 07 Aug 2024 15:29:03 +1200</pubDate>
+      <guid>http://localhost:1313/tags/domain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GoDaddy</title>
+      <link>http://localhost:1313/tags/godaddy/</link>
+      <pubDate>Wed, 07 Aug 2024 15:29:03 +1200</pubDate>
+      <guid>http://localhost:1313/tags/godaddy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interview</title>
+      <link>http://localhost:1313/tags/interview/</link>
+      <pubDate>Wed, 24 Jul 2024 15:36:34 +1200</pubDate>
+      <guid>http://localhost:1313/tags/interview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JobInterview</title>
+      <link>http://localhost:1313/tags/jobinterview/</link>
+      <pubDate>Wed, 24 Jul 2024 15:36:34 +1200</pubDate>
+      <guid>http://localhost:1313/tags/jobinterview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vscode</title>
+      <link>http://localhost:1313/tags/vscode/</link>
+      <pubDate>Tue, 23 Jul 2024 11:49:42 +1200</pubDate>
+      <guid>http://localhost:1313/tags/vscode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/tags/react/</link>
+      <pubDate>Fri, 19 Jul 2024 15:57:51 +1200</pubDate>
+      <guid>http://localhost:1313/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vite</title>
+      <link>http://localhost:1313/tags/vite/</link>
+      <pubDate>Fri, 19 Jul 2024 15:57:51 +1200</pubDate>
+      <guid>http://localhost:1313/tags/vite/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Adsense</title>
+      <link>http://localhost:1313/tags/google-adsense/</link>
+      <pubDate>Thu, 04 Jul 2024 10:14:57 +1200</pubDate>
+      <guid>http://localhost:1313/tags/google-adsense/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SEO</title>
+      <link>http://localhost:1313/tags/seo/</link>
+      <pubDate>Thu, 04 Jul 2024 10:14:57 +1200</pubDate>
+      <guid>http://localhost:1313/tags/seo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Website Building</title>
+      <link>http://localhost:1313/tags/website-building/</link>
+      <pubDate>Thu, 04 Jul 2024 10:14:57 +1200</pubDate>
+      <guid>http://localhost:1313/tags/website-building/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Football</title>
+      <link>http://localhost:1313/tags/football/</link>
+      <pubDate>Wed, 03 Jul 2024 14:52:22 +1200</pubDate>
+      <guid>http://localhost:1313/tags/football/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ML</title>
+      <link>http://localhost:1313/tags/ml/</link>
+      <pubDate>Wed, 03 Jul 2024 14:52:22 +1200</pubDate>
+      <guid>http://localhost:1313/tags/ml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>YOLO</title>
+      <link>http://localhost:1313/tags/yolo/</link>
+      <pubDate>Wed, 03 Jul 2024 14:52:22 +1200</pubDate>
+      <guid>http://localhost:1313/tags/yolo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Analytics</title>
+      <link>http://localhost:1313/tags/google-analytics/</link>
+      <pubDate>Tue, 02 Jul 2024 20:57:29 +1200</pubDate>
+      <guid>http://localhost:1313/tags/google-analytics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Tue, 02 Jul 2024 20:57:29 +1200</pubDate>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

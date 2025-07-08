@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SaaS on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/saas/</link>
+    <description>Recent content in SaaS on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Apr 2025 16:10:00 +1300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/saas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SaaS Test 2 : Test Case</title>
+      <link>http://localhost:1313/posts/saas-test-2/</link>
+      <pubDate>Sun, 20 Apr 2025 16:10:00 +1300</pubDate>
+      <guid>http://localhost:1313/posts/saas-test-2/</guid>
+      <description>&lt;h2 id=&#34;1-principle&#34;&gt;1 Principle&lt;/h2&gt;
+&lt;h2 id=&#34;-what-each-testing-layer-should-do&#34;&gt;✅ What Each Testing Layer Should Do&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Testing Layer&lt;/th&gt;
+          &lt;th&gt;What to Test&lt;/th&gt;
+          &lt;th&gt;Example&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟩 Unit Test&lt;/td&gt;
+          &lt;td&gt;Test &lt;strong&gt;core logic&lt;/strong&gt; of individual functions or classes, without external dependencies&lt;/td&gt;
+          &lt;td&gt;Validate password strength: &lt;code&gt;PasswordValidator::isStrong()&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟨 Integration Test&lt;/td&gt;
+          &lt;td&gt;Test how modules/services &lt;strong&gt;interact&lt;/strong&gt;, often with real DB or services&lt;/td&gt;
+          &lt;td&gt;Check if user registration inserts into DB and sends email&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟥 End-to-End (E2E) Test&lt;/td&gt;
+          &lt;td&gt;Simulate &lt;strong&gt;real user behavior&lt;/strong&gt; across the full stack&lt;/td&gt;
+          &lt;td&gt;Fill out registration form in browser → submit → redirect to dashboard&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-what-each-testing-layer-should-not-do&#34;&gt;❌ What Each Testing Layer Should NOT Do&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Testing Layer&lt;/th&gt;
+          &lt;th&gt;Don&amp;rsquo;t Do This&lt;/th&gt;
+          &lt;th&gt;Reason&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟩 Unit Test&lt;/td&gt;
+          &lt;td&gt;Don&amp;rsquo;t access DB, network, or real APIs&lt;/td&gt;
+          &lt;td&gt;Unit tests should be fast, isolated, and logic-only&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟨 Integration Test&lt;/td&gt;
+          &lt;td&gt;Don’t test UI rendering or button positions&lt;/td&gt;
+          &lt;td&gt;Integration tests focus on backend/data flow, not UI components&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;🟥 End-to-End (E2E) Test&lt;/td&gt;
+          &lt;td&gt;Don’t test detailed field validations (e.g., regex)&lt;/td&gt;
+          &lt;td&gt;E2E tests should verify core flows, not internal validation rules&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-test-layer-summary&#34;&gt;🧠 Test Layer Summary&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Layer&lt;/th&gt;
+          &lt;th&gt;DO&lt;/th&gt;
+          &lt;th&gt;DON’T&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Unit&lt;/td&gt;
+          &lt;td&gt;Test logic in isolation&lt;/td&gt;
+          &lt;td&gt;No DB, no API calls&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Integration&lt;/td&gt;
+          &lt;td&gt;Test module cooperation&lt;/td&gt;
+          &lt;td&gt;No UI component tests&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;E2E&lt;/td&gt;
+          &lt;td&gt;Test full user flow&lt;/td&gt;
+          &lt;td&gt;No detailed field logic or validation&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;2-minimum-viable-test-plan&#34;&gt;2 Minimum Viable Test Plan&lt;/h2&gt;
+&lt;p&gt;based on the Test Pyramid model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SaaS Test 1 : Phased Testing Strategy for a SaaS System</title>
+      <link>http://localhost:1313/posts/saas-test-1/</link>
+      <pubDate>Sun, 20 Apr 2025 15:10:00 +1300</pubDate>
+      <guid>http://localhost:1313/posts/saas-test-1/</guid>
+      <description>This document outlines a practical, phased approach to testing login and registration features in a SaaS application. It balances manual testing and E2E automation based on development stage.</description>
+    </item>
+    <item>
+      <title>Json web token</title>
+      <link>http://localhost:1313/posts/json-web-token/</link>
+      <pubDate>Mon, 14 Apr 2025 20:00:00 +1300</pubDate>
+      <guid>http://localhost:1313/posts/json-web-token/</guid>
+      <description>JWT (JSON Web Token) is a popular way to handle cross-domain authentication. In this post, I’ll go over how it works and how to use it.</description>
+    </item>
+    <item>
+      <title>Designing and Delivering a Customizable Front-End UI System for End Users : 1</title>
+      <link>http://localhost:1313/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</link>
+      <pubDate>Mon, 07 Apr 2025 15:10:00 +1300</pubDate>
+      <guid>http://localhost:1313/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</guid>
+      <description>&lt;h1 id=&#34;1-delivery-method&#34;&gt;1 Delivery method&lt;/h1&gt;
+&lt;p&gt;We have to choice for users:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Provide a project template&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Provide an import method that makes it easy to install into their existing project&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Inspired by &lt;a href=&#34;https://adminmart.com&#34;&gt;AdminMart&lt;/a&gt;, we explored their approach to delivering UI systems via templates — including how they structure delivery, enable user customization, and support extensibility.&lt;br&gt;
+The current analysis is based on the documentation of AdminMart and the templates provided by Material UI&lt;/p&gt;
+&lt;h1 id=&#34;2-themestyling--customization&#34;&gt;2 Theme(Styling) &amp;amp; Customization&lt;/h1&gt;
+&lt;p&gt;When you init a new project, you can choice :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Qucik Start : Laravel</title>
+      <link>http://localhost:1313/posts/qucik-start-laravel/</link>
+      <pubDate>Wed, 19 Feb 2025 20:20:01 +1300</pubDate>
+      <guid>http://localhost:1313/posts/qucik-start-laravel/</guid>
+      <description>My notes when I learn Laravel create a API project use JWT. My first use in 2025-02-19, rewrite in 2025-04-01.</description>
+    </item>
+    <item>
+      <title> My Tech Stack Selection - 2025 - SaaS</title>
+      <link>http://localhost:1313/posts/my-tech-stack-selection-2025-saas/</link>
+      <pubDate>Wed, 01 Jan 2025 20:01:01 +1300</pubDate>
+      <guid>http://localhost:1313/posts/my-tech-stack-selection-2025-saas/</guid>
+      <description>My default tech stack selection for typical SaaS systems in 2025.</description>
+    </item>
+    <item>
+      <title>New Features in Resume Manager 2</title>
+      <link>http://localhost:1313/posts/new-features-in-resume-manager-2/</link>
+      <pubDate>Tue, 06 Aug 2024 15:46:24 +1200</pubDate>
+      <guid>http://localhost:1313/posts/new-features-in-resume-manager-2/</guid>
+      <description>&lt;p&gt;Hello, all my friends. Thank you for all your ideas and feedback, help this product better.&lt;br&gt;
+We&amp;rsquo;re back! The last update was &lt;strong&gt;18 days ago&lt;/strong&gt;. This week I use &lt;strong&gt;6 hours&lt;/strong&gt; to add new feature : &lt;strong&gt;Job Application Task Manager&lt;/strong&gt;. &lt;a href=&#34;https://resumemanager.pages.dev/&#34;&gt;Click here to experience it now&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here are some of the main interfaces :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;New Dashboard&lt;/strong&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/resume_manager_2_01.png&#34; alt=&#34;new dashboard&#34;  /&gt;
+&lt;br&gt;
+Because we added the job application manager, the dashboard has changed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Job Application List&lt;/strong&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/resume_manager_2_02.png&#34; alt=&#34;Job Application List&#34;  /&gt;
+&lt;br&gt;
+We can add new job applications and change the application status on this page.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

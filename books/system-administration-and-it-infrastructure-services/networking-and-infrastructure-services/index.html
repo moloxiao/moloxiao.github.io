@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Network and infrastructure services | Shan&#39;s blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="We will cover what IT infrastructure services are and what their role is in system administration. We&rsquo;ll also learn about server operating systems, virtualization, network services, DNS for web services, and how to troubleshoot network services.
+Physical infrastructure services
+
+Server Operating System
+Virtuallization(There are two ways you can run your services, either on dedicated hardware or on a virtualized instance on a server)
+Remote Access(the ability to connect to your infrastructure from anywhere in the world. A popular tool to access the CLI remotely is WinRM or Putty. RDP is also popular if you want to access the GUI remotely.)
+
+Network Services
+
+FTP, SFTP, TFTP
+PXE(Preboot eXecution Environment, pre boot execution)
+NTP(Network time protocol : it&rsquo;s used to keep the clock synchronized on machines connected to a network)
+Intranets, Proxy Servers
+DNS(DNS is what maps human understandable names to IP addresses). Methods of Mapping : Local Host File, Local DNS Server
+DHCP(Dynamic Host Configuration Protocol)
+
+Network Support Services Revisited(a couple of network services essential for enhancing employee productivity, privacy, and security within a company&rsquo;s IT infrastructure) :">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
+     crossorigin="anonymous"></script>
+     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
+    </script>
+     
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Network and infrastructure services
+    </h1>
+    <div class="post-meta"><span title='2024-08-21 11:30:43 +1200 NZST'>August 21, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>We will cover what IT infrastructure services are and what their role is in system administration. We&rsquo;ll also learn about server operating systems, virtualization, network services, DNS for web services, and how to troubleshoot network services.</p>
+<h1 id="physical-infrastructure-services">Physical infrastructure services<a hidden class="anchor" aria-hidden="true" href="#physical-infrastructure-services">#</a></h1>
+<ul>
+<li>Server Operating System</li>
+<li>Virtuallization(There are two ways you can run your services, either on dedicated hardware or on a virtualized instance on a server)</li>
+<li>Remote Access(the ability to connect to your infrastructure from anywhere in the world. A popular tool to access the CLI remotely is WinRM or Putty. RDP is also popular if you want to access the GUI remotely.)</li>
+</ul>
+<h1 id="network-services">Network Services<a hidden class="anchor" aria-hidden="true" href="#network-services">#</a></h1>
+<ul>
+<li>FTP, SFTP, TFTP</li>
+<li>PXE(Preboot eXecution Environment, pre boot execution)</li>
+<li>NTP(Network time protocol : it&rsquo;s used to keep the clock synchronized on machines connected to a network)</li>
+<li>Intranets, Proxy Servers</li>
+<li>DNS(DNS is what maps human understandable names to IP addresses). Methods of Mapping : Local Host File, Local DNS Server</li>
+<li>DHCP(Dynamic Host Configuration Protocol)</li>
+</ul>
+<p>Network Support Services Revisited(a couple of network services essential for enhancing employee productivity, privacy, and security within a company&rsquo;s IT infrastructure) :</p>
+<ul>
+<li>Intranets</li>
+<li>Proxy Servers</li>
+</ul>
+<h1 id="troubleshooting-network-services">troubleshooting Network Services<a hidden class="anchor" aria-hidden="true" href="#troubleshooting-network-services">#</a></h1>
+<p>Unable to Resolve a Hostname or Domain Name.</p>
+<p>Basic Troubleshooting :</p>
+<ol>
+<li>Always start by checking if your network connection is active, like pinging a reliable site like <a href="https://www.google.com">www.google.com</a>.</li>
+<li>If your connection is active but you still can&rsquo;t access a specific website, the issue might be with your DNS settings.</li>
+</ol>
+<p>Using NSLOOKUP and Checking the Host File :</p>
+<ol>
+<li>Use the nslookup command to see what IP address your DNS server is assigning to the website name.</li>
+<li>If nslookup shows the correct IP address but the website still doesn&rsquo;t load, your computer&rsquo;s host file might be redirecting the website to a wrong IP address. You can edit the host file to remove any incorrect entries.</li>
+</ol>
+<p>Importance of Isolation :</p>
+<ol>
+<li>DNS troubleshooting can be tricky, but remember to isolate each component. Systematically checking your network connection, DNS server response, and host file will help you pinpoint and fix the root cause of the problem.</li>
+</ol>
+<h1 id="managing-system-services">Managing System Services<a hidden class="anchor" aria-hidden="true" href="#managing-system-services">#</a></h1>
+<p>Services are programs that run in the background without needing user interaction, providing essential functions like DNS, DHCP, and NTP.<br>
+Managing Services :</p>
+<ol>
+<li>System administrators need to know how to start, stop, and check the logs of services to ensure they&rsquo;re running smoothly.</li>
+<li>Services are typically configured to start automatically upon system boot and restart if they crash, but these settings can be adjusted as needed.</li>
+</ol>
+<p>How to :</p>
+<ul>
+<li>Managing Services in Linux</li>
+<li>Managing Services in Windows</li>
+<li>Configuring Services in Linux</li>
+<li>Configuring Services in Windows</li>
+</ul>
+<h1 id="configuring-network-services">Configuring Network Services<a hidden class="anchor" aria-hidden="true" href="#configuring-network-services">#</a></h1>
+<p>dnsmasq, a tool that can handle DNS, DHCP, TFTP, and PXE services, and explores its basic DNS caching functionality.<br>
+Configuring DNS with Dnsmasq :</p>
+<ul>
+<li>In smaller setups, dnsmasq can be used as a centralized solution for handling various network services.</li>
+<li>Once installed, dnsmasq automatically starts with basic DNS caching enabled. This means it can store DNS query results, speeding up subsequent requests for the same domain.</li>
+<li>While primarily a caching DNS server, dnsmasq can also act as an authoritative server for specific hostnames.</li>
+<li>By providing dnsmasq with a file listing hostnames and their corresponding IP addresses, it can directly resolve those names without forwarding the query to other DNS servers.</li>
+</ul>
+<p>dnsmasq as a DHCP server :</p>
+<ul>
+<li>A DHCP server is typically configured on a device with a static IP address on the network interface used to serve DHCP requests.</li>
+<li>In the simulation, a single machine simulates both the DHCP server (using the eth_srv interface) and a DHCP client (using the eth_cli interface).</li>
+<li>The dnsmasq configuration file (dhcp.config) specifies the interface to listen on (eth_srv), the domain name, default gateway, and DNS server information for clients.</li>
+<li>A DHCP range defines the pool of IP addresses the server can assign, and the lease time determines how long a client can use an assigned IP.</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

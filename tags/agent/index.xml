@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Agent on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/agent/</link>
+    <description>Recent content in Agent on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 May 2025 14:02:09 +1300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/agent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Learning Roadmap: From Foundations to RAG and Beyond</title>
+      <link>http://localhost:1313/posts/2025-05-22-ai-learning-roadmap/</link>
+      <pubDate>Tue, 20 May 2025 14:02:09 +1300</pubDate>
+      <guid>http://localhost:1313/posts/2025-05-22-ai-learning-roadmap/</guid>
+      <description>In my recent side project, I’ve had many opportunities to leverage AI, and I’d like to summarize the technologies and foundational knowledge I used along the way. Here are my notes.</description>
+    </item>
+  </channel>
+</rss>

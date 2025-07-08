@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Relational Databases and Normalization | Shan&#39;s blog</title>
+<meta name="keywords" content="Database, SQL">
+<meta name="description" content="Normalization forms the foundation of relational databases. In this article, we walk through an example, applying 1NF, 2NF, and 3NF step by step, illustrating how normalization guides the design of a well-structured relational table.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/relational-databases-and-normalization/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/relational-databases-and-normalization/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
+     crossorigin="anonymous"></script>
+     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
+    </script>
+     
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Relational Databases and Normalization
+    </h1>
+    <div class="post-description">
+      Normalization forms the foundation of relational databases. In this article, we walk through an example, applying 1NF, 2NF, and 3NF step by step, illustrating how normalization guides the design of a well-structured relational table.
+    </div>
+    <div class="post-meta"><span title='2024-09-09 15:01:22 +1200 NZST'>September 9, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img loading="lazy" src="/images/2024-09/edgar-f-codd.png" alt="landing page"  />
+<br>
+Two-dimensional data is the most commonly used form of information representation by humans. In 1970, <strong>Edgar F. Codd</strong> first introduced how to efficiently use two-dimensional data to represent transactions, laying the foundation for modern databases.</p>
+<blockquote>
+<p>The core of this theory is: normalization.</p></blockquote>
+<p>Let’s demonstrate how database normalization helps us build a better two-dimensional data model through an example.</p>
+<h1 id="1-scenario">1 Scenario<a hidden class="anchor" aria-hidden="true" href="#1-scenario">#</a></h1>
+<p>We have a system that tracks students registering for courses at a technical institute. Each student has a unique ID, and each course has a unique course number, course name, and instructor. We need to design a normalized database structure.</p>
+<p><strong>Initial Unnormalized Data</strong><br>
+Suppose we have a table where each student can register for multiple courses, but the course information and instructor names are stored in a single field:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Courses</th>
+          <th>Instructors</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>John Smith</td>
+          <td>Mathematics, Physics</td>
+          <td>Dr. Brown, Dr. Green</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Emily Davis</td>
+          <td>Mathematics</td>
+          <td>Dr. Brown</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Michael Lee</td>
+          <td>Chemistry</td>
+          <td>Dr. White</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Sarah Wilson</td>
+          <td>Mathematics, Chemistry</td>
+          <td>Dr. Brown, Dr. White</td>
+      </tr>
+  </tbody>
+</table>
+<p>Problems with this structure :</p>
+<ul>
+<li>Redundancy: Both course names and instructor names are repeated.</li>
+<li>Data integrity: If an instructor changes their name, we would have to manually update multiple records.</li>
+<li>Querying issues: Retrieving specific data (like a list of students in a particular course) would be inefficient due to the combined fields.</li>
+</ul>
+<h2 id="11-first-normal-form-1nf">1.1 First Normal Form (1NF)<a hidden class="anchor" aria-hidden="true" href="#11-first-normal-form-1nf">#</a></h2>
+<p>To meet the 1NF requirements, we must ensure each field contains <strong>only atomic (indivisible) values</strong>. We would split the multi-valued fields into separate rows:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Instructor Name</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>John Smith</td>
+          <td>101</td>
+          <td>Mathematics</td>
+          <td>Dr. Brown</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>John Smith</td>
+          <td>102</td>
+          <td>Physics</td>
+          <td>Dr. Green</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Emily Davis</td>
+          <td>101</td>
+          <td>Mathematics</td>
+          <td>Dr. Brown</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Michael Lee</td>
+          <td>103</td>
+          <td>Chemistry</td>
+          <td>Dr. White</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Sarah Wilson</td>
+          <td>101</td>
+          <td>Mathematics</td>
+          <td>Dr. Brown</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Sarah Wilson</td>
+          <td>103</td>
+          <td>Chemistry</td>
+          <td>Dr. White</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="12-second-normal-form-2nf--third-normal-form-3nf">1.2 Second Normal Form (2NF) &amp; Third Normal Form (3NF)<a hidden class="anchor" aria-hidden="true" href="#12-second-normal-form-2nf--third-normal-form-3nf">#</a></h2>
+<p>Second Normal Form (2NF) requirement: A table is in 2NF if it is already in 1NF and every non-primary key attribute is fully dependent on the entire primary key (in the case of a composite primary key, it must depend on all parts of the key):</p>
+<ul>
+<li>In the original table, the primary key is the combination of Student ID and Course ID.</li>
+<li>Issue: The non-primary key attribute Student Name only depends on Student ID and not on the entire composite primary key. This is called a partial dependency, which violates 2NF because Student Name is not dependent on the whole key (Student ID + Course ID), just on a part of it (Student ID).</li>
+<li>Similarly, Course Name and Instructor Name depend only on Course ID, not on the entire composite key (Student ID + Course ID).</li>
+</ul>
+<blockquote>
+<p>Because of these partial dependencies, the table does not satisfy 2NF.</p></blockquote>
+<p>Third Normal Form (3NF) requirement: A table is in 3NF if it is in 2NF and there are no transitive dependencies. This means that non-primary key attributes should not depend on other non-primary key attributes :</p>
+<ul>
+<li>Issue: In the original table, the attribute Instructor Name depends on Course ID, which is another non-primary key attribute. This creates a transitive dependency, because Instructor Name is indirectly dependent on the composite primary key through Course ID. Essentially, Instructor Name depends on Course ID, and Course ID is part of the primary key.</li>
+</ul>
+<blockquote>
+<p>Due to this transitive dependency, the table violates 3NF.</p></blockquote>
+<p>To meet 2NF &amp; 3NF, we need to remove partial dependencies by separating student registrations from course details. We split the table into N.</p>
+<p><strong>table1 - Students</strong> :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Student ID</th>
+          <th>Student Name</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>John Smith</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Emily Davis</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Michael Lee</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Sarah Wilson</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>table2 Instructors Table</strong> :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Instructor ID</th>
+          <th>Instructor Name</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Dr. Brown</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Dr. Green</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Dr. White</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>table3 Course Table</strong> :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>101</td>
+          <td>Mathematics</td>
+      </tr>
+      <tr>
+          <td>102</td>
+          <td>Physics</td>
+      </tr>
+      <tr>
+          <td>103</td>
+          <td>Chemistry</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>table4 Course-Instructor Relationship Table</strong> :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Course ID</th>
+          <th>Instructor ID</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>101</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>102</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>103</td>
+          <td>3</td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="2-define">2 Define<a hidden class="anchor" aria-hidden="true" href="#2-define">#</a></h1>
+<p><strong>First Normal Form (1NF)</strong>: A table is in 1NF if all the values in each column are atomic (indivisible). This means that each field should contain only one value, and there should be no repeating groups or arrays of values in a single column.<br>
+<strong>Second Normal Form (2NF)</strong>: A table is in 2NF if it is in 1NF and all non-primary key attributes are fully dependent on the entire primary key (if a composite primary key is used). It eliminates partial dependencies, where a non-primary key attribute depends only on part of a composite key.<br>
+<strong>Third Normal Form (3NF)</strong>: A table is in 3NF if it is in 2NF and all non-primary key attributes are not only fully dependent on the primary key but also not transitively dependent on other non-primary key attributes. This eliminates transitive dependencies, where one non-key attribute depends on another non-key attribute.</p>
+<h1 id="3-next-step">3 Next step<a hidden class="anchor" aria-hidden="true" href="#3-next-step">#</a></h1>
+<p>Next, we can consider two aspects:</p>
+<ol>
+<li>In more complex scenarios, explore other normal forms or even denormalization.</li>
+<li>How to enable computers to more efficiently store and query normalized data (a central theme of database products in the decades following the 1970s).</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/database/">Database</a></li>
+      <li><a href="http://localhost:1313/tags/sql/">SQL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

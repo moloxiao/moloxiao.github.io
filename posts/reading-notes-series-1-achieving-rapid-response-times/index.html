@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Reading Notes Series 1 Achieving Rapid Response Times | Shan&#39;s blog</title>
+<meta name="keywords" content="ReadingNotes, Software">
+<meta name="description" content="Notes and key insights from the paper &#39;Achieving Rapid Response Times in Large Online Services&#39; by Jeff Dean.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/reading-notes-series-1-achieving-rapid-response-times/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/reading-notes-series-1-achieving-rapid-response-times/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
+     crossorigin="anonymous"></script>
+     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
+    </script>
+     
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Reading Notes Series 1 Achieving Rapid Response Times
+    </h1>
+    <div class="post-description">
+      Notes and key insights from the paper &#39;Achieving Rapid Response Times in Large Online Services&#39; by Jeff Dean.
+    </div>
+    <div class="post-meta"><span title='2024-11-12 15:30:57 +1300 NZDT'>November 12, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>This is my first blog post in the Reading Notes Series. Ten years ago, <a href="https://research.google/people/jeff/">Jeff Dean</a> presented these insights at the 2014 O&rsquo;Reilly Velocity Conference in Santa Clara, CA. Now, a decade later, are these tips still relevant? Let&rsquo;s take a closer look.</p>
+<p>For more details, you can check out the <a href="https://www.youtube.com/watch?v=1-3Ahy7Fxsc&amp;t=376s">Video</a>  or <a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44875.pdf">Slide-PDF</a>.</p>
+<p>By the way, I initially planned to spend just 2 hours reading these papers and watching the video, but I think I&rsquo;ll actually need a whole week (about 2 hours a day) to complete the summary.</p>
+<p>I wrote this blog for two purposes:</p>
+<ol>
+<li>to share some of my insights;</li>
+<li>to organize and integrate the technical details mentioned by Jeff Dean into a structured framework, creating a clear thought process.</li>
+</ol>
+<h1 id="tpoic-1--squash-all-variability">Tpoic 1 : Squash All Variability<a hidden class="anchor" aria-hidden="true" href="#tpoic-1--squash-all-variability">#</a></h1>
+<p>Possible at small scale :</p>
+<ul>
+<li>dedicated resources</li>
+<li>complete control over whole system</li>
+<li>careful understanding of all background activities</li>
+<li>less likely to have hardware fail in bizarre ways</li>
+</ul>
+<p>Software or hardware changes affect delicate balance, so that will make system changes are difficult(Not tenable at large scale: need to share resources).</p>
+<p>Next step is : <strong>Shared Environment</strong>, Huge benefit: greatly increased utilization, but hard to predict effects increase variability(Exacerbated by large fanout systems) :</p>
+<ul>
+<li>network congestion</li>
+<li>background activities</li>
+<li>bursts of foreground activity</li>
+<li>not just your jobs, but everyone else’s jobs, too</li>
+</ul>
+<p>So it&rsquo;s not work.</p>
+<h2 id="topic-2--basic-latency-reduction-techniques">Topic 2 : Basic Latency Reduction Techniques<a hidden class="anchor" aria-hidden="true" href="#topic-2--basic-latency-reduction-techniques">#</a></h2>
+<p>Sort of really rein in the long tail of latency without increasing the performance cost of the system too much.<br>
+First way is <strong>Differentiated service classes</strong> :</p>
+<ul>
+<li>prioritized request queues in servers</li>
+<li>prioritized network traffic</li>
+</ul>
+<p>Second way is <strong>Reduce head-of-line blocking</strong> :</p>
+<ul>
+<li>break large requests into sequence of small requests</li>
+</ul>
+<p>Third way is <strong>Manage expensive background activities</strong> :</p>
+<ul>
+<li>e.g. log compaction in distributed storage systems</li>
+<li>rate limit activity</li>
+<li>defer expensive activity until load is lower</li>
+</ul>
+<h2 id="topic-3--tolerating-faults-vs-tolerating-variability">Topic 3 : Tolerating Faults vs. Tolerating Variability<a hidden class="anchor" aria-hidden="true" href="#topic-3--tolerating-faults-vs-tolerating-variability">#</a></h2>
+<p>Tolerating faults:</p>
+<ul>
+<li>rely on extra resources (RAIDed disks, ECC memory, dist. system components, etc.)</li>
+<li><strong>make a reliable whole out of unreliable parts</strong></li>
+</ul>
+<p>Tolerating variability:</p>
+<ul>
+<li>use these same extra resources</li>
+<li><strong>make a predictable whole out of unpredictable parts</strong></li>
+</ul>
+<p>Times scales are very different:</p>
+<ul>
+<li>variability: 1000s of disruptions/sec, scale of milliseconds</li>
+<li>faults: 10s of failures per day, scale of tens of seconds</li>
+</ul>
+<h1 id="contentstopic-1">Contents[Topic 1]<a hidden class="anchor" aria-hidden="true" href="#contentstopic-1">#</a></h1>
+<ul>
+<li>Large Fanout Services</li>
+<li></li>
+</ul>
+<h2 id="1-large-fanout-services">1 Large Fanout Services<a hidden class="anchor" aria-hidden="true" href="#1-large-fanout-services">#</a></h2>
+<p><strong>Definition</strong>: Large Fanout Services are systems that handle requests by querying multiple backend services or subsystems in parallel. They are common in large-scale systems like search engines, ad services, and recommendation engines, where each request depends on data from many sources.</p>
+<p><strong>Challenges</strong>: The primary challenge in Large Fanout Services is managing &ldquo;tail latency,&rdquo; where the slowest responses from backends can delay the overall response time. Since these services depend on multiple responses, even a few slow replies can impact the user experience.</p>
+<p><strong>Optimization Goal</strong>:</p>
+<ul>
+<li>consistently rapid response times</li>
+</ul>
+<p><strong>Method</strong>:</p>
+<ol>
+<li>Request Redundancy: Sending duplicate requests to multiple servers and using the first response, helping to avoid delays from slow servers.</li>
+<li>Timeout Management: Setting precise time limits for requests to ensure they don’t wait indefinitely and instead proceed with partial data if necessary.</li>
+<li>Distributed Caching: Caching frequently accessed data to reduce dependency on slower backends, speeding up response times for repeated requests.</li>
+</ol>
+<h1 id="reference">Reference<a hidden class="anchor" aria-hidden="true" href="#reference">#</a></h1>
+<ul>
+<li><a href="https://github.com/dirtysalt/dirtysalt.github.io/blob/master/src/achieving-rapid-response-times-in-large-online-services.org">如何在大规模在线系统中保证延迟？</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/readingnotes/">ReadingNotes</a></li>
+      <li><a href="http://localhost:1313/tags/software/">Software</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

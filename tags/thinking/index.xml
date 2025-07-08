@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Thinking on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/thinking/</link>
+    <description>Recent content in Thinking on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Jul 2025 10:00:00 +1200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Become an Expert in Any Field</title>
+      <link>http://localhost:1313/posts/2025-07-08-how-to-become-an-expert-in-any-field/</link>
+      <pubDate>Tue, 08 Jul 2025 10:00:00 +1200</pubDate>
+      <guid>http://localhost:1313/posts/2025-07-08-how-to-become-an-expert-in-any-field/</guid>
+      <description>My reflections on how to become an expert in any field, inspired by Andrej Karpathy’s tweets.</description>
+    </item>
+  </channel>
+</rss>

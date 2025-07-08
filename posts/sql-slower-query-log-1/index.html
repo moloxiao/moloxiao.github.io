@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>SQL slower query log : 1 | Shan&#39;s blog</title>
+<meta name="keywords" content="SQL, SlowerQuery">
+<meta name="description" content="Query1 [companyExWarehouseOrderItem] - NOT solve
+SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName,       c.spec AS componentSpec, c.colour AS componentColour, c.componentTypeId, c.businessTypeId, c.modelNo,        d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo,       f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, g.orderNo AS parentOrderNo,       h.customerNo AS planCustomerNo, h.orderLineNumber AS planOrderLineNumber, h.planNo, h.extendDesc AS planDesc, h.amount, h.unitPrice, h.currencyId,       j.grossAmount, j.unmetAmount, k.demandId, l.userName AS qcCheckerNameZh, m.nameZh AS currencyNameZh       FROM companyExWarehouseOrderItem AS a, companyExWarehouseOrderState AS b, companyBasicComponent AS c, companyComponentType AS d,       companyBasicComponentBomUnitType AS f, companyExWarehouseOrder AS g, companyProductionSchedules AS h, companyProductionSchedulesBom AS j,      companyProductionDemandSchedule AS k, user AS l, currency AS m       WHERE a.parentId = 27682 AND a.sourceTypeId = 1 AND a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND c.unitTypeId = f.id AND a.parentId = g.id AND a.scheduleId = h.id AND h.id = j.scheduleId       AND a.componentId = j.componentId AND a.scheduleId = k.scheduleId AND a.qcCheckerId = l.id AND h.currencyId = m.id;
+before : 4.0291
+code use in : solution.getSales().getTask().getExWarehouse().getItem().getListByParentId(mysqlCoon.getSlaveConn(), detailInfo.id, cb);">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/sql-slower-query-log-1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/sql-slower-query-log-1/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
+     crossorigin="anonymous"></script>
+     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
+    </script>
+     
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      SQL slower query log : 1
+    </h1>
+    <div class="post-meta"><span title='2025-04-01 20:02:09 +1300 NZDT'>April 1, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="query1-companyexwarehouseorderitem---not-solve">Query1 [companyExWarehouseOrderItem] - NOT solve<a hidden class="anchor" aria-hidden="true" href="#query1-companyexwarehouseorderitem---not-solve">#</a></h2>
+<pre tabindex="0"><code>SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName,       c.spec AS componentSpec, c.colour AS componentColour, c.componentTypeId, c.businessTypeId, c.modelNo,        d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo,       f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, g.orderNo AS parentOrderNo,       h.customerNo AS planCustomerNo, h.orderLineNumber AS planOrderLineNumber, h.planNo, h.extendDesc AS planDesc, h.amount, h.unitPrice, h.currencyId,       j.grossAmount, j.unmetAmount, k.demandId, l.userName AS qcCheckerNameZh, m.nameZh AS currencyNameZh       FROM companyExWarehouseOrderItem AS a, companyExWarehouseOrderState AS b, companyBasicComponent AS c, companyComponentType AS d,       companyBasicComponentBomUnitType AS f, companyExWarehouseOrder AS g, companyProductionSchedules AS h, companyProductionSchedulesBom AS j,      companyProductionDemandSchedule AS k, user AS l, currency AS m       WHERE a.parentId = 27682 AND a.sourceTypeId = 1 AND a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND c.unitTypeId = f.id AND a.parentId = g.id AND a.scheduleId = h.id AND h.id = j.scheduleId       AND a.componentId = j.componentId AND a.scheduleId = k.scheduleId AND a.qcCheckerId = l.id AND h.currencyId = m.id;
+</code></pre><p>before : 4.0291
+code use in : solution.getSales().getTask().getExWarehouse().getItem().getListByParentId(mysqlCoon.getSlaveConn(), detailInfo.id, cb);</p>
+<pre tabindex="0"><code>CREATE INDEX idx_exOrder_parent_source ON companyExWarehouseOrderItem (parentId, sourceTypeId);
+</code></pre><p>then : 3.65</p>
+<h2 id="query-2-companyproductionschedulesbom">Query 2 [companyProductionSchedulesBom]<a hidden class="anchor" aria-hidden="true" href="#query-2-companyproductionschedulesbom">#</a></h2>
+<pre tabindex="0"><code>SELECT a.*, b.orderNo AS planNo, b.requireDate, b.requireDate AS planStartDate, f.aliasName, f.partNo, f.spec
+FROM companyProductionSchedulesBom AS a, companyProductionDemandPurchaseRequirement AS b, companyBasicComponent AS f
+WHERE a.companyId = 2 AND a.componentId = 917367 AND a.typeId = 0 AND a.sourceTypeId = 1 AND a.stateId = 0 AND a.unmetAmount &gt; 0 AND a.requirementId = b.id AND b.componentId = f.id;
+</code></pre><p>增加索引，并且顺序很重要:</p>
+<pre tabindex="0"><code>ALTER TABLE companyProductionSchedulesBom 
+ADD INDEX idx_optimize_query (
+    companyId, 
+    componentId, 
+    typeId, 
+    sourceTypeId, 
+    stateId
+);
+</code></pre><p>优化后:
+<strong>1.5 -&gt; 0.0010</strong></p>
+<h2 id="query-3-warehousingrecode">Query 3 [warehousingRecode]<a hidden class="anchor" aria-hidden="true" href="#query-3-warehousingrecode">#</a></h2>
+<pre tabindex="0"><code># Query_time: 11  Lock_time: 0  Rows_sent: 0  Rows_examined: 573780
+SET timestamp=1745708909
+SELECT a.*, b.partNo, b.aliasName AS componentAliasName, b.spec AS componentSpec, b.componentTypeId, c.name AS componentTypeName, c.nameZh AS componentTypeNameZh, c.customerNo AS componentTypeNo, d.name AS productTypeName, d.nameZh AS productTypeNameZh, e.name AS stateName , e.nameZh AS stateNameZh,  f.name AS typeName, f.nameZh AS typeNameZh,       g.name AS basicTypeName, g.nameZh AS basicTypeNameZh, h.name AS unitTypeName, h.nameZh AS unitTypeNameZh, k.typeId AS storageBinTypeId, l.eName AS prepareUserName, l.userName AS prepareUserNameZh       FROM warehousingRecode AS a, companyBasicComponent AS b, companyComponentType AS c, warehousingRecodeProductType AS d , warehousingRecodeState AS e, materialRequirementType AS f, materialRequirementBasicType AS g, companyBasicComponentBomUnitType AS h,companyWarehouse AS j, warehouseStorageBinLevelTag AS k, user AS l        WHERE a.relationNo = &#39;DX-SP-2504190007&#39; AND a.typeId = 2 AND a.componentId = b.id AND b.componentTypeId = c.id  AND a.productTypeId = d.id AND a.stateId = e.id AND a.typeId = f.id AND a.basicTypeId = g.id AND b.unitTypeId = h.id AND a.storageBinId != 0 AND a.storageBinId = j.id AND j.levelTagId = k.id AND a.prepareUserId = l.id;
+</code></pre><pre tabindex="0"><code>CREATE INDEX idx_warehousingRecode_main ON warehousingRecode (relationNo, typeId, componentId, productTypeId, stateId, basicTypeId, storageBinId, prepareUserId);
+</code></pre><p>优化后:
+<strong>1.5 -&gt; 0.0010</strong></p>
+<h2 id="query-4-companyproductionschedulestask-workshopbytimewagesapply----not-solve">Query 4 [companyProductionSchedulesTask-workshopByTimeWagesApply]  - NOT solve<a hidden class="anchor" aria-hidden="true" href="#query-4-companyproductionschedulestask-workshopbytimewagesapply----not-solve">#</a></h2>
+<pre tabindex="0"><code># Query_time: 4  Lock_time: 0  Rows_sent: 1  Rows_examined: 367178
+SET timestamp=1746316614
+SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.eName AS userName, c.userName AS userNameZh, d.name AS procedureName, d.nameZh AS procedureNameZh,     e.workshopId, e.name AS workCenterName, e.nameZh AS workCenterNameZh, f.eName AS workCenterManagerName, f.userName AS workCenterManagerNameZh,     h.planNo AS schedulePlanNo, h.requireDate AS scheduleRequireDate, h.netAmount, h.bomId, h.componentId, k.partNo, k.componentTypeId, k.aliasName AS componentAliasName, k.spec AS componentSpec,     l.customerNo AS componentTypeNo, l.nameZh AS componentTypeNameZh, l.name AS componentTypeName, m.procedureWagesTypeId, m.id AS componentProcedureId, m.estimateTimePrice, m.totalCost, m.cost, n.nameZh AS teamNameZh     FROM `companyProductionSchedulesTask` AS a, `companyProductionSchedulesTaskState` AS b, `user` AS c, meProcedure AS d, pmcWorkshopProductionLine AS e, user AS f,     companyProductionSchedules AS h, companyBasicComponent AS k, companyComponentType AS l, companyComponentTechnicProcedure AS m, companyWorkshopTeam AS n     WHERE a.companyId = 15  AND a.stateId = 0 AND a.id NOT IN (SELECT taskId FROM workshopByTimeWagesApply WHERE companyId = 15 AND id != 29745 ) AND a.stateId = b.id AND a.userId = c.id AND a.procedureId = d.id AND a.workCenterId = e.id AND a.workCenterManagerId = f.id AND e.workshopId = 16     AND a.schedulesId = h.id AND h.componentId = k.id AND k.componentTypeId = l.id AND a.procedureId = m.procedureId AND m.procedureWagesTypeId = 2 AND h.componentId = m.componentId AND a.teamId = n.id AND a.completeDate &gt;= &#39;2025-04-04&#39; AND a.completeDate &lt;= &#39;2025-05-05&#39;;
+</code></pre><p>before : 4.2</p>
+<pre tabindex="0"><code>CREATE INDEX idx_apply_task_company_id ON workshopByTimeWagesApply(taskId, companyId, id);
+</code></pre><p>then : 4.0</p>
+<pre tabindex="0"><code>CREATE INDEX idx_task_filter ON companyProductionSchedulesTask(companyId, stateId, completeDate);
+</code></pre><p>then : 3.6</p>
+<h2 id="query-5-warehousingmaterialrequisitionitem">Query 5 [warehousingMaterialRequisitionItem]<a hidden class="anchor" aria-hidden="true" href="#query-5-warehousingmaterialrequisitionitem">#</a></h2>
+<pre tabindex="0"><code># Query_time: 3  Lock_time: 0  Rows_sent: 0  Rows_examined: 5284489
+SET timestamp=1746317175
+SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName, c.spec AS componentSpec, c.componentTypeId,   d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo, e.eName AS prepareUserName, e.userName AS prepareUserNameZh, f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, f.integerTag AS unitTypeIntegerTag, g.orderNo AS parentOrderNo   FROM warehousingMaterialRequisitionItem AS a, warehousingMaterialRequisitionState AS b, companyBasicComponent AS c, companyComponentType AS d, user AS e, companyBasicComponentBomUnitType AS f, warehousingMaterialRequisition AS g   WHERE a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND a.prepareUserId = e.id AND c.unitTypeId = f.id AND a.parentId = g.id AND g.relationId = 199743;
+</code></pre><p>5.0273(3.2)</p>
+<pre tabindex="0"><code>CREATE INDEX idx_relationId ON warehousingMaterialRequisition(relationId);
+</code></pre><p>then : 0.0009</p>
+<pre tabindex="0"><code>CREATE INDEX idx_parentId ON warehousingMaterialRequisitionItem(parentId);
+</code></pre><p>then : 0.0006</p>
+<h2 id="query-6---todo">Query 6 - TODO<a hidden class="anchor" aria-hidden="true" href="#query-6---todo">#</a></h2>
+<pre tabindex="0"><code># Time: 2025-05-05T08:30:08.446229 CST
+# User@Host: eta[eta] @  [10.25.90.9] id: 18307659
+# Query_time: 11  Lock_time: 0  Rows_sent: 3711  Rows_examined: 578127
+SET timestamp=1746405008
+SELECT * FROM warehousingRecode WHERE companyId = 16 AND stateId = 3 AND updatePlanOrderTag = 0 AND typeId = 2;
+</code></pre><h2 id="query-7----todo">Query 7  - TODO<a hidden class="anchor" aria-hidden="true" href="#query-7----todo">#</a></h2>
+<pre tabindex="0"><code># Time: 2025-05-05T08:30:47.087622 CST
+# User@Host: eta[eta] @  [10.25.90.9] id: 18307659
+# Query_time: 8  Lock_time: 0  Rows_sent: 1  Rows_examined: 267827
+SET timestamp=1746405047
+SELECT componentId, SUM(numbers) AS netAmount, SUM(deliveryNumbers) AS completeNumbers, SUM(numbers - deliveryNumbers) AS waitInNumbers         FROM `companyProcurementMaterielOrder`          WHERE companyId = 16 AND stateId IN (1, 3, 5, 8, 9) AND componentId IN (916339) GROUP BY componentId;
+</code></pre><h2 id="query-8---todo">Query 8 - TODO<a hidden class="anchor" aria-hidden="true" href="#query-8---todo">#</a></h2>
+<pre tabindex="0"><code># Time: 2025-05-05T08:30:08.446229 CST
+# User@Host: eta[eta] @  [10.25.90.9] id: 18307659
+# Query_time: 11  Lock_time: 0  Rows_sent: 3711  Rows_examined: 578127
+SET timestamp=1746405008
+SELECT * FROM warehousingRecode WHERE companyId = 16 AND stateId = 3 AND updatePlanOrderTag = 0 AND typeId = 2;
+</code></pre><h2 id="query-9---todo">Query 9 - TODO<a hidden class="anchor" aria-hidden="true" href="#query-9---todo">#</a></h2>
+<pre tabindex="0"><code># Query_time: 3  Lock_time: 0  Rows_sent: 0  Rows_examined: 1842970
+SET timestamp=1746405246
+UPDATE warehousingRecode SET stateId = 4 WHERE companyId = 2 AND operateNo IN ( SELECT orderNo FROM warehousingDeliveryVoucher WHERE companyId = 2 AND id IN (60635) ) AND stateId != 4 AND stateId != 3;
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/sql/">SQL</a></li>
+      <li><a href="http://localhost:1313/tags/slowerquery/">SlowerQuery</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

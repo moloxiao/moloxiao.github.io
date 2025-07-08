@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Job on Shan&#39;s blog</title>
+    <link>http://localhost:1313/tags/job/</link>
+    <description>Recent content in Job on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Sep 2024 09:14:29 +1200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/job/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customize Your Resume According to the Job Description</title>
+      <link>http://localhost:1313/posts/customize-your-resume-according-to-the-job-description/</link>
+      <pubDate>Thu, 05 Sep 2024 09:14:29 +1200</pubDate>
+      <guid>http://localhost:1313/posts/customize-your-resume-according-to-the-job-description/</guid>
+      <description>&lt;p&gt;In the current &lt;a href=&#34;https://resumemanager.pages.dev/&#34;&gt;Resume Manager&lt;/a&gt; application, the module I use the most on a daily basis is the job application module, with its core feature being the tracking of resume submissions. Moving forward, I want to enhance the ability to match resumes with job requirements. This will involve the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Analysis of the recruitment process and the needs of each stage&lt;/li&gt;
+&lt;li&gt;Resume Match evaluation&lt;/li&gt;
+&lt;li&gt;Process adjustment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;1-analysis-of-the-recruitment-process-and-the-needs-of-each-stage&#34;&gt;1 Analysis of the recruitment process and the needs of each stage&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Stage&lt;/th&gt;
+          &lt;th&gt;Goal&lt;/th&gt;
+          &lt;th&gt;Evaluation Criteria&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Resume Screening&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Initial screening to find candidates that meet basic job requirements&lt;/td&gt;
+          &lt;td&gt;Core skills&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Years of experience&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Education requirements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Career objectives and cultural fit&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Initial/Phone Interview&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Further assess communication skills, motivation, and cultural fit&lt;/td&gt;
+          &lt;td&gt;Communication skills&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Career motivation&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Problem-solving ability&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Cultural fit&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Technical Assessment&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Evaluate candidates&amp;rsquo; technical proficiency and problem-solving skills&lt;/td&gt;
+          &lt;td&gt;Technical skills&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Problem-solving ability&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Project experience and technical expertise&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Behavioral/Deep Interview&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Assess leadership, teamwork, and deeper cultural fit&lt;/td&gt;
+          &lt;td&gt;Leadership&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Teamwork&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Cultural fit&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Handling challenges&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Final Interview/Decision&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Ensure long-term potential within the company and alignment of compensation expectations&lt;/td&gt;
+          &lt;td&gt;Overall competence&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Role expectations and company growth alignment&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Salary negotiation and benefits expectations&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;2-resume-match-evaluation&#34;&gt;2 Resume Match evaluation&lt;/h1&gt;
+&lt;p&gt;the three most important aspects of a resume are :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Prepare for Data Jobs</title>
+      <link>http://localhost:1313/posts/how-to-prepare-for-data-jobs/</link>
+      <pubDate>Wed, 28 Aug 2024 20:45:47 +1200</pubDate>
+      <guid>http://localhost:1313/posts/how-to-prepare-for-data-jobs/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/2024-08/data-engineer-resume.webp&#34; alt=&#34;Add Your Domain to Cloudflare&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;Preparing for data jobs means writing a good resume and passing the job interview.&lt;/p&gt;
+&lt;p&gt;I want to take immediate action, so I&amp;rsquo;ve set the following principles:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Time allocation principle: Focus on securing interview opportunities before receiving any interviews; once an interview is secured, focus on interview preparation.&lt;/li&gt;
+&lt;li&gt;Take action first, then reflect and improve as you go.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Therefore, we start with the resume, which includes two important factors:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shan&#39;s Responses to Common Interview Questions</title>
+      <link>http://localhost:1313/posts/shan-responses-to-common-interview-questions/</link>
+      <pubDate>Wed, 24 Jul 2024 15:36:34 +1200</pubDate>
+      <guid>http://localhost:1313/posts/shan-responses-to-common-interview-questions/</guid>
+      <description>Shan&amp;#39;s suggest Responses to Common Interview Questions.</description>
+    </item>
+  </channel>
+</rss>

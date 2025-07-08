@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>SaaS Test 2 : Test Case | Shan&#39;s blog</title>
+<meta name="keywords" content="Test, SaaS">
+<meta name="description" content="1 Principle
+✅ What Each Testing Layer Should Do
+
+  
+      
+          Testing Layer
+          What to Test
+          Example
+      
+  
+  
+      
+          🟩 Unit Test
+          Test core logic of individual functions or classes, without external dependencies
+          Validate password strength: PasswordValidator::isStrong()
+      
+      
+          🟨 Integration Test
+          Test how modules/services interact, often with real DB or services
+          Check if user registration inserts into DB and sends email
+      
+      
+          🟥 End-to-End (E2E) Test
+          Simulate real user behavior across the full stack
+          Fill out registration form in browser → submit → redirect to dashboard
+      
+  
+
+❌ What Each Testing Layer Should NOT Do
+
+  
+      
+          Testing Layer
+          Don&rsquo;t Do This
+          Reason
+      
+  
+  
+      
+          🟩 Unit Test
+          Don&rsquo;t access DB, network, or real APIs
+          Unit tests should be fast, isolated, and logic-only
+      
+      
+          🟨 Integration Test
+          Don’t test UI rendering or button positions
+          Integration tests focus on backend/data flow, not UI components
+      
+      
+          🟥 End-to-End (E2E) Test
+          Don’t test detailed field validations (e.g., regex)
+          E2E tests should verify core flows, not internal validation rules
+      
+  
+
+🧠 Test Layer Summary
+
+  
+      
+          Layer
+          DO
+          DON’T
+      
+  
+  
+      
+          Unit
+          Test logic in isolation
+          No DB, no API calls
+      
+      
+          Integration
+          Test module cooperation
+          No UI component tests
+      
+      
+          E2E
+          Test full user flow
+          No detailed field logic or validation
+      
+  
+
+2 Minimum Viable Test Plan
+based on the Test Pyramid model.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/saas-test-2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/saas-test-2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
+     crossorigin="anonymous"></script>
+     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
+    </script>
+     
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      SaaS Test 2 : Test Case
+    </h1>
+    <div class="post-meta"><span title='2025-04-20 16:10:00 +1300 +1300'>April 20, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="1-principle">1 Principle<a hidden class="anchor" aria-hidden="true" href="#1-principle">#</a></h2>
+<h2 id="-what-each-testing-layer-should-do">✅ What Each Testing Layer Should Do<a hidden class="anchor" aria-hidden="true" href="#-what-each-testing-layer-should-do">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Testing Layer</th>
+          <th>What to Test</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🟩 Unit Test</td>
+          <td>Test <strong>core logic</strong> of individual functions or classes, without external dependencies</td>
+          <td>Validate password strength: <code>PasswordValidator::isStrong()</code></td>
+      </tr>
+      <tr>
+          <td>🟨 Integration Test</td>
+          <td>Test how modules/services <strong>interact</strong>, often with real DB or services</td>
+          <td>Check if user registration inserts into DB and sends email</td>
+      </tr>
+      <tr>
+          <td>🟥 End-to-End (E2E) Test</td>
+          <td>Simulate <strong>real user behavior</strong> across the full stack</td>
+          <td>Fill out registration form in browser → submit → redirect to dashboard</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-what-each-testing-layer-should-not-do">❌ What Each Testing Layer Should NOT Do<a hidden class="anchor" aria-hidden="true" href="#-what-each-testing-layer-should-not-do">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Testing Layer</th>
+          <th>Don&rsquo;t Do This</th>
+          <th>Reason</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🟩 Unit Test</td>
+          <td>Don&rsquo;t access DB, network, or real APIs</td>
+          <td>Unit tests should be fast, isolated, and logic-only</td>
+      </tr>
+      <tr>
+          <td>🟨 Integration Test</td>
+          <td>Don’t test UI rendering or button positions</td>
+          <td>Integration tests focus on backend/data flow, not UI components</td>
+      </tr>
+      <tr>
+          <td>🟥 End-to-End (E2E) Test</td>
+          <td>Don’t test detailed field validations (e.g., regex)</td>
+          <td>E2E tests should verify core flows, not internal validation rules</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-test-layer-summary">🧠 Test Layer Summary<a hidden class="anchor" aria-hidden="true" href="#-test-layer-summary">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>DO</th>
+          <th>DON’T</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Unit</td>
+          <td>Test logic in isolation</td>
+          <td>No DB, no API calls</td>
+      </tr>
+      <tr>
+          <td>Integration</td>
+          <td>Test module cooperation</td>
+          <td>No UI component tests</td>
+      </tr>
+      <tr>
+          <td>E2E</td>
+          <td>Test full user flow</td>
+          <td>No detailed field logic or validation</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="2-minimum-viable-test-plan">2 Minimum Viable Test Plan<a hidden class="anchor" aria-hidden="true" href="#2-minimum-viable-test-plan">#</a></h2>
+<p>based on the Test Pyramid model.</p>
+<h2 id="login">Login<a hidden class="anchor" aria-hidden="true" href="#login">#</a></h2>
+<p><strong>example</strong> <code>AuthService::login()</code> Unit Test Cases :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Test ID</th>
+          <th>Scenario Description</th>
+          <th>Input Conditions</th>
+          <th>Mocked Behavior</th>
+          <th>Expected Behavior</th>
+          <th>Key Assertions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Login succeeds with valid credentials</td>
+          <td>Valid <code>email</code> and <code>password</code>; email is verified; status is Active; company type is allowed</td>
+          <td><code>Auth::attempt</code> returns token; <code>Auth::user</code> returns user</td>
+          <td>Returns <code>success: true</code> with token and user info</td>
+          <td><code>expect($response-&gt;success)-&gt;toBeTrue()</code><!-- raw HTML omitted --><code>expect($response-&gt;data['user']-&gt;email)-&gt;toBe(TEST_ACCOUNT_EMAIL)</code></td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Login fails due to incorrect password</td>
+          <td>Valid email but wrong password</td>
+          <td><code>Auth::attempt</code> returns false</td>
+          <td>Returns <code>success: false</code> with login failure message</td>
+          <td><code>expect($response-&gt;success)-&gt;toBeFalse()</code><!-- raw HTML omitted --><code>expect($response-&gt;message)-&gt;toBe(AuthStatus::FAILED-&gt;message())</code></td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Login denied due to disallowed company</td>
+          <td>User&rsquo;s company type is not in allowed list</td>
+          <td><code>Auth::user</code> returns user with disallowed company; <code>logout</code> called</td>
+          <td>Returns <code>success: false</code> with &ldquo;Access forbidden&rdquo; message</td>
+          <td><code>expect($response-&gt;success)-&gt;toBeFalse()</code><!-- raw HTML omitted --><code>expect($response-&gt;message)-&gt;toContain('Access forbidden')</code></td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Email not verified, triggers callback</td>
+          <td><code>email_verified_at</code> is null</td>
+          <td>Callback is invoked; <code>logout</code> is called</td>
+          <td>Returns <code>success: false</code>; includes <code>email_verification_required = true</code></td>
+          <td><code>expect($response-&gt;success)-&gt;toBeFalse()</code><!-- raw HTML omitted --><code>expect($called)-&gt;toBeTrue()</code><!-- raw HTML omitted --><code>expect($response-&gt;data['email_verification_required'])-&gt;toBeTrue()</code></td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>Login blocked due to <code>Pending</code> status</td>
+          <td>User status is <code>Pending</code></td>
+          <td><code>logout</code> is called</td>
+          <td>Returns <code>success: false</code> with pending status message</td>
+          <td><code>expect($response-&gt;success)-&gt;toBeFalse()</code><!-- raw HTML omitted --><code>expect($response-&gt;message)-&gt;toBe(AuthStatus::PENDING-&gt;message())</code></td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>Login blocked due to <code>Suspended</code> status</td>
+          <td>User status is <code>Suspended</code></td>
+          <td><code>logout</code> is called</td>
+          <td>Returns <code>success: false</code> with suspended status message</td>
+          <td><code>expect($response-&gt;success)-&gt;toBeFalse()</code><!-- raw HTML omitted --><code>expect($response-&gt;message)-&gt;toBe(AuthStatus::SUSPENDED-&gt;message())</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>example result :</p>
+<pre tabindex="0"><code>   PASS  Tests\Unit\Services\Auth\AdminLoginTest
+  ✓ AuthService::login() → it logs in successfully with correct credentials                                                                                                                           0.13s  
+  ✓ AuthService::login() → it fails with incorrect password                                                                                                                                           0.01s  
+  ✓ AuthService::login() → it blocks users with disallowed company type                                                                                                                               0.01s  
+  ✓ AuthService::login() → it requires email verification if email is not verified                                                                                                                    0.03s  
+  ✓ AuthService::login() → it rejects users with Pending status                                                                                                                                       0.01s  
+  ✓ AuthService::login() → it rejects users with Suspended status   
+</code></pre><h2 id="login--registration-feature-test-cases">Login &amp; Registration Feature Test Cases<a hidden class="anchor" aria-hidden="true" href="#login--registration-feature-test-cases">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Feature Name</th>
+          <th>Description</th>
+          <th>Test Level</th>
+          <th>Sample Test Data</th>
+          <th>Expected Result</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Sign Up</td>
+          <td>Register a new user with email and password</td>
+          <td>End-to-End</td>
+          <td>Email: <a href="mailto:test@abc.com">test@abc.com</a><!-- raw HTML omitted -->Password: Test@1234<!-- raw HTML omitted -->Confirm: Test@1234</td>
+          <td>Registration successful; system sends email verification</td>
+      </tr>
+      <tr>
+          <td>Email Format Check</td>
+          <td>Validate email input format</td>
+          <td>Unit</td>
+          <td>Email: test@abc / test@.com</td>
+          <td>Error: &ldquo;Invalid email format&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Password Strength</td>
+          <td>Enforce strong password policy</td>
+          <td>Unit</td>
+          <td>Password: 12345 / abcde</td>
+          <td>Error: &ldquo;Password too weak&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Password Match</td>
+          <td>Ensure password and confirmation match</td>
+          <td>Unit</td>
+          <td>Password: Test@1234<!-- raw HTML omitted -->Confirm: Test@4321</td>
+          <td>Error: &ldquo;Passwords do not match&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Email Verification</td>
+          <td>Handle email token verification</td>
+          <td>Integration</td>
+          <td>Link: <code>/verify?token=abc123</code></td>
+          <td>Success: &ldquo;Email verified&rdquo;, user is activated</td>
+      </tr>
+      <tr>
+          <td>Token Expiry</td>
+          <td>Handle expired or invalid email verification link</td>
+          <td>Integration</td>
+          <td>Link: <code>/verify?token=expired</code></td>
+          <td>Error: &ldquo;Verification link is invalid or expired&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Login</td>
+          <td>Login with email and password</td>
+          <td>End-to-End</td>
+          <td>Email: <a href="mailto:test@abc.com">test@abc.com</a><!-- raw HTML omitted -->Password: Test@1234</td>
+          <td>Login successful, redirect to dashboard</td>
+      </tr>
+      <tr>
+          <td>Login Rate Limit</td>
+          <td>Limit login attempts to prevent brute-force attacks</td>
+          <td>Integration</td>
+          <td>5 failed login attempts</td>
+          <td>Error: &ldquo;Too many login attempts&rdquo; or account temporarily locked</td>
+      </tr>
+      <tr>
+          <td>Forgot Password</td>
+          <td>Request a password reset link via email</td>
+          <td>Integration</td>
+          <td>Email: <a href="mailto:test@abc.com">test@abc.com</a></td>
+          <td>Message: &ldquo;Password reset link sent to your email&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Reset Password</td>
+          <td>Set a new password using the reset link</td>
+          <td>End-to-End</td>
+          <td>Link: <code>/reset?token=abc123</code><!-- raw HTML omitted -->New password: Test@5678</td>
+          <td>Message: &ldquo;Password successfully reset&rdquo;, user can login again</td>
+      </tr>
+      <tr>
+          <td>Logout</td>
+          <td>Log the user out and destroy session/token</td>
+          <td>Integration</td>
+          <td>Click &ldquo;Logout&rdquo;</td>
+          <td>JWT/session/cookie is cleared, user is redirected to login page</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="user-management-feature-test-cases">User Management Feature Test Cases<a hidden class="anchor" aria-hidden="true" href="#user-management-feature-test-cases">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Feature Name</th>
+          <th>Description</th>
+          <th>Test Level</th>
+          <th>Sample Test Data</th>
+          <th>Expected Result</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Personal Info Update</td>
+          <td>Update user details: last name, mobile number, landline number (required), extension, address</td>
+          <td>End-to-End</td>
+          <td>Last Name: Smith<!-- raw HTML omitted -->Mobile: 0210000000<!-- raw HTML omitted -->Landline: 0320000000<!-- raw HTML omitted -->Ext: 123<!-- raw HTML omitted -->Address: 123 Main St</td>
+          <td>Success: &ldquo;Profile updated&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Landline Required Check</td>
+          <td>Ensure landline number is mandatory when updating profile info</td>
+          <td>Unit</td>
+          <td>Landline: (empty)</td>
+          <td>Error: &ldquo;Landline number is required&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Password Change</td>
+          <td>Change password by providing current password and confirming new one twice</td>
+          <td>End-to-End</td>
+          <td>Current: OldPass@123<!-- raw HTML omitted -->New: NewPass@456<!-- raw HTML omitted -->Confirm: NewPass@456</td>
+          <td>Success: &ldquo;Password updated&rdquo;, user may need to log in again</td>
+      </tr>
+      <tr>
+          <td>Password Mismatch Check</td>
+          <td>Ensure new password and confirmation match</td>
+          <td>Unit</td>
+          <td>New Password: NewPass@456<!-- raw HTML omitted -->Confirm: NewPass@654</td>
+          <td>Error: &ldquo;Passwords do not match&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Current Password Check</td>
+          <td>Require correct current password to authorize password change</td>
+          <td>Integration</td>
+          <td>Current Password: (incorrect)</td>
+          <td>Error: &ldquo;Current password is incorrect&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Email Verification Check</td>
+          <td>Ensure email is verified before allowing access to core features</td>
+          <td>End-to-End</td>
+          <td>User has not verified email, tries to create a project/order</td>
+          <td>Error: &ldquo;Please verify your email first&rdquo;, action is blocked</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Glossary</strong>  :  The <strong>Testing Pyramid</strong> is a software testing strategy that emphasizes having <strong>more low-level tests (fast and cheap)</strong> and <strong>fewer high-level tests (slower and costlier)</strong>. This ensures test coverage is broad, efficient, and maintainable.</p>
+<p>Three Layers of the Testing Pyramid :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Definition</th>
+          <th>Characteristics</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>1. Unit Test</strong></td>
+          <td>Tests individual functions, methods, or components in isolation.</td>
+          <td>- Fast and lightweight<!-- raw HTML omitted -->- No external dependencies (e.g., database, API)<!-- raw HTML omitted -->- Ideal for logic validation</td>
+      </tr>
+      <tr>
+          <td><strong>2. Integration Test</strong></td>
+          <td>Tests how different components or systems work together (e.g., database + backend API).</td>
+          <td>- Slower than unit tests<!-- raw HTML omitted -->- Checks service or module interaction<!-- raw HTML omitted -->- Often test APIs, auth, DB logic</td>
+      </tr>
+      <tr>
+          <td><strong>3. End-to-End Test (E2E)</strong></td>
+          <td>Simulates real user scenarios across the whole system (frontend + backend + DB).</td>
+          <td>- Slowest and most resource-intensive<!-- raw HTML omitted -->- High confidence<!-- raw HTML omitted -->- Useful for testing critical user workflows</td>
+      </tr>
+  </tbody>
+</table>
+<p>Key Idea :</p>
+<ul>
+<li>The <strong>base</strong> of the pyramid is <strong>unit tests</strong>—you should have <strong>the most</strong> of these.</li>
+<li>The <strong>middle</strong> layer has <strong>integration tests</strong>—fewer, but still essential.</li>
+<li>The <strong>top</strong> is <strong>E2E tests</strong>—only a <strong>small number</strong> to cover critical user journeys.</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/test/">Test</a></li>
+      <li><a href="http://localhost:1313/tags/saas/">SaaS</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
