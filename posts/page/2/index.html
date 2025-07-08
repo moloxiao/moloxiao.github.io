@@ -252,23 +252,6 @@ PTE Academic Test Structure Summary Part Section / Task Type Estimated Time Numb
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Docker FAQ
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Scene 1 Scenario Analysis
-You are using a minimal Vultr server instance (1 CPU, 1GB RAM, 25GB SSD) for personal development and testing.
-The server runs multiple environments such as Python, PHP, and Java. The workload is light but involves frequent testing, diverse language stacks, and limited system resources.
-Recommended Strategy
-Deploy each project using Docker, with a dedicated docker-compose.yml file per project if needed. Share service containers like MySQL across projects to avoid redundancy and conserve resources. Configure swap space to handle memory limitations—this is especially important with only 1GB of RAM. Advanced Suggestions
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-05 10:09:27 +1300 NZDT'>March 5, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Docker FAQ" href="https://moloxiao.github.io/posts/docker-faq/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">Laravel FAQ
     </h2>
   </header>
@@ -279,6 +262,21 @@ Caching Mechanism : Direct env() usage: When you use env() directly in your appl
   </div>
   <footer class="entry-footer"><span title='2025-03-04 11:04:01 +1300 NZDT'>March 4, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Laravel FAQ" href="https://moloxiao.github.io/posts/laravel-faq/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Nextjs FAQ
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When to Use Direct API Calls vs. Next.js Server Proxy Use Next.js API Routes when:
+You need to hide API keys or other secrets You want to aggregate multiple API calls You need to transform data before sending it to the client Your API requires complex authentication that’s better handled server-side Direct API calls might be acceptable when:
+The API is public and requires no sensitive credentials You’re working with a simple prototype The backend already handles CORS and is specifically designed for browser access You need real-time updates (although you could still use WebSockets through Next.js) Why and when use React Context React Context is designed to solve the “Props Drilling” problem, where deeply nested components need access to shared data, but passing props through multiple levels becomes cumbersome. It allows global state sharing, making it useful for themes, authentication, and localization.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-04 11:04:01 +1300 NZDT'>March 4, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Nextjs FAQ" href="https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -15,12 +15,5 @@
       <guid>https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</guid>
       <description>This is a character-indexed object issue encountered in a Laravel &#43; Docker &#43; Nginx deployment environment, where the API, instead of returning a valid JSON object, occasionally responds with an object whose keys are string indices and whose values are the individual characters of the intended JSON string.</description>
     </item>
-    <item>
-      <title>Docker FAQ</title>
-      <link>https://moloxiao.github.io/posts/docker-faq/</link>
-      <pubDate>Wed, 05 Mar 2025 10:09:27 +1300</pubDate>
-      <guid>https://moloxiao.github.io/posts/docker-faq/</guid>
-      <description>.</description>
-    </item>
   </channel>
 </rss>

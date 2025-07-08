@@ -1850,13 +1850,6 @@ code use in : solution.getSales().getTask().getExWarehouse().getItem().getListBy
       <description>Have you ever wondered why Git commit messages often start with feat: when using Copilot or other AI-assisted tools? This blog explores Conventional Commits, a structured approach to writing commit messages that enhances readability, automates changelog generation, and supports semantic versioning. Learn why adopting this convention can improve your workflow and how to implement it in your projects using commitizen, commitlint, and husky. 🚀</description>
     </item>
     <item>
-      <title>Docker FAQ</title>
-      <link>https://moloxiao.github.io/posts/docker-faq/</link>
-      <pubDate>Wed, 05 Mar 2025 10:09:27 +1300</pubDate>
-      <guid>https://moloxiao.github.io/posts/docker-faq/</guid>
-      <description>.</description>
-    </item>
-    <item>
       <title>Laravel FAQ</title>
       <link>https://moloxiao.github.io/posts/laravel-faq/</link>
       <pubDate>Tue, 04 Mar 2025 11:04:01 +1300</pubDate>
