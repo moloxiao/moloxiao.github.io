@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Shan&#39;s blog</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://moloxiao.github.io/posts/</link>
     <description>Recent content in Posts on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Jul 2025 10:00:00 +1200</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Become an Expert in Any Field</title>
-      <link>http://localhost:1313/posts/2025-07-08-how-to-become-an-expert-in-any-field/</link>
+      <link>https://moloxiao.github.io/posts/2025-07-08-how-to-become-an-expert-in-any-field/</link>
       <pubDate>Tue, 08 Jul 2025 10:00:00 +1200</pubDate>
-      <guid>http://localhost:1313/posts/2025-07-08-how-to-become-an-expert-in-any-field/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-07-08-how-to-become-an-expert-in-any-field/</guid>
       <description>My reflections on how to become an expert in any field, inspired by Andrej Karpathy’s tweets.</description>
     </item>
     <item>
       <title>What Can Kids Do in the Future?</title>
-      <link>http://localhost:1313/posts/2025-06-05-what-can-kids-do-in-the-future/</link>
+      <link>https://moloxiao.github.io/posts/2025-06-05-what-can-kids-do-in-the-future/</link>
       <pubDate>Thu, 05 Jun 2025 20:16:04 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-06-05-what-can-kids-do-in-the-future/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-06-05-what-can-kids-do-in-the-future/</guid>
       <description>Lately, I&amp;#39;ve been working on adding goal-setting features to Thought Manager, my side project. While discussing how to set goals with my child,  I started thinking — not just as a developer, but as a parent — about what it means to be a survivor in the world that&amp;#39;s coming.</description>
     </item>
     <item>
       <title>How to Prepare for ICAS Primary Mathematics Using Khan Academy</title>
-      <link>http://localhost:1313/posts/2025-06-03-how-to-prepare-for-icas-primary-mathematics-using-khan-academy/</link>
+      <link>https://moloxiao.github.io/posts/2025-06-03-how-to-prepare-for-icas-primary-mathematics-using-khan-academy/</link>
       <pubDate>Tue, 03 Jun 2025 15:28:19 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-06-03-how-to-prepare-for-icas-primary-mathematics-using-khan-academy/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-06-03-how-to-prepare-for-icas-primary-mathematics-using-khan-academy/</guid>
       <description>&lt;h2 id=&#34;1-khan-academy-view&#34;&gt;1 Khan Academy View&lt;/h2&gt;
 &lt;h3 id=&#34;11-year-4&#34;&gt;1.1 Year 4&lt;/h3&gt;
 &lt;table&gt;
@@ -41,72 +41,72 @@
       &lt;tr&gt;
           &lt;td&gt;1&lt;/td&gt;
           &lt;td&gt;Place value&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;2&lt;/td&gt;
           &lt;td&gt;Addition, subtraction, and estimation&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;3&lt;/td&gt;
           &lt;td&gt;Multiply by 1-digit numbers&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;4&lt;/td&gt;
           &lt;td&gt;Multiply by 2-digit numbers&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;5&lt;/td&gt;
           &lt;td&gt;Division&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;6&lt;/td&gt;
           &lt;td&gt;Factors, multiples and patterns&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#2-algebra--patterns--icas-year-6-mathematics&#34;&gt;Algebra &amp;amp; Patterns&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#2-algebra--patterns--icas-year-6-mathematics&#34;&gt;Algebra &amp;amp; Patterns&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;7&lt;/td&gt;
           &lt;td&gt;Equivalent fractions and comparing fractions&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;8&lt;/td&gt;
           &lt;td&gt;Add and subtract fractions&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;9&lt;/td&gt;
           &lt;td&gt;Multiply fractions&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;10&lt;/td&gt;
           &lt;td&gt;Understand decimals&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;11&lt;/td&gt;
           &lt;td&gt;Plane figures&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;12&lt;/td&gt;
           &lt;td&gt;Measuring angles&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;13&lt;/td&gt;
           &lt;td&gt;Area and perimeter&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#3-measures--units--icas-year-6-mathematics&#34;&gt;Measures &amp;amp; Units&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#3-measures--units--icas-year-6-mathematics&#34;&gt;Measures &amp;amp; Units&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;14&lt;/td&gt;
           &lt;td&gt;Units of measurement&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#3-measures--units--icas-year-6-mathematics&#34;&gt;Measures &amp;amp; Units&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#3-measures--units--icas-year-6-mathematics&#34;&gt;Measures &amp;amp; Units&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -123,82 +123,82 @@
       &lt;tr&gt;
           &lt;td&gt;1&lt;/td&gt;
           &lt;td&gt;Decimal place value&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;2&lt;/td&gt;
           &lt;td&gt;Add decimals&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;3&lt;/td&gt;
           &lt;td&gt;Subtract decimals&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;4&lt;/td&gt;
           &lt;td&gt;Add and subtract fractions&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;5&lt;/td&gt;
           &lt;td&gt;Multi-digit multiplication and division&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;6&lt;/td&gt;
           &lt;td&gt;Multiply fractions&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;7&lt;/td&gt;
           &lt;td&gt;Divide fractions&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;8&lt;/td&gt;
           &lt;td&gt;Multiply decimals&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;9&lt;/td&gt;
           &lt;td&gt;Divide decimals&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;10&lt;/td&gt;
           &lt;td&gt;Powers of ten&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;11&lt;/td&gt;
           &lt;td&gt;Volume&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#3-measures--units--icas-year-6-mathematics&#34;&gt;Measures &amp;amp; Units&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#3-measures--units--icas-year-6-mathematics&#34;&gt;Measures &amp;amp; Units&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;12&lt;/td&gt;
           &lt;td&gt;Coordinate plane&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;13&lt;/td&gt;
           &lt;td&gt;Algebraic thinking&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#2-algebra--patterns--icas-year-6-mathematics&#34;&gt;Algebra &amp;amp; Patterns&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#2-algebra--patterns--icas-year-6-mathematics&#34;&gt;Algebra &amp;amp; Patterns&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;14&lt;/td&gt;
           &lt;td&gt;Converting units of measure&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#3-measures--units--icas-year-6-mathematics&#34;&gt;Measures &amp;amp; Units&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#3-measures--units--icas-year-6-mathematics&#34;&gt;Measures &amp;amp; Units&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;15&lt;/td&gt;
           &lt;td&gt;Line plots&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#5-chance--data--icas-year-6-mathematics&#34;&gt;Chance &amp;amp; Data&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#5-chance--data--icas-year-6-mathematics&#34;&gt;Chance &amp;amp; Data&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;16&lt;/td&gt;
           &lt;td&gt;Properties of shapes&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -215,57 +215,57 @@
       &lt;tr&gt;
           &lt;td&gt;1&lt;/td&gt;
           &lt;td&gt;Ratios&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;2&lt;/td&gt;
           &lt;td&gt;Arithmetic with rational numbers&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;3&lt;/td&gt;
           &lt;td&gt;Rates and percentages&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;4&lt;/td&gt;
           &lt;td&gt;Exponents and order of operations&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;5&lt;/td&gt;
           &lt;td&gt;Negative numbers&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#1-number--arithmetic--icas-year-6-mathematics&#34;&gt;Number &amp;amp; Arithmetic&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;6&lt;/td&gt;
           &lt;td&gt;Variables &amp;amp; expressions&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#2-algebra--patterns--icas-year-6-mathematics&#34;&gt;Algebra &amp;amp; Patterns&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#2-algebra--patterns--icas-year-6-mathematics&#34;&gt;Algebra &amp;amp; Patterns&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;7&lt;/td&gt;
           &lt;td&gt;Equations &amp;amp; inequalities&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#2-algebra--patterns--icas-year-6-mathematics&#34;&gt;Algebra &amp;amp; Patterns&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#2-algebra--patterns--icas-year-6-mathematics&#34;&gt;Algebra &amp;amp; Patterns&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;8&lt;/td&gt;
           &lt;td&gt;Plane figures&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;9&lt;/td&gt;
           &lt;td&gt;Coordinate plane&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;10&lt;/td&gt;
           &lt;td&gt;3D figures&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#4-space--geometry--icas-year-6-mathematics&#34;&gt;Space &amp;amp; Geometry&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;11&lt;/td&gt;
           &lt;td&gt;Data and statistics&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&#34;http://localhost:1313/posts/2025-06-03-icas-math/#5-chance--data--icas-year-6-mathematics&#34;&gt;Chance &amp;amp; Data&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://moloxiao.github.io/posts/2025-06-03-icas-math/#5-chance--data--icas-year-6-mathematics&#34;&gt;Chance &amp;amp; Data&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -731,51 +731,51 @@
     </item>
     <item>
       <title>ICAS math</title>
-      <link>http://localhost:1313/posts/2025-06-03-icas-math/</link>
+      <link>https://moloxiao.github.io/posts/2025-06-03-icas-math/</link>
       <pubDate>Tue, 03 Jun 2025 15:28:19 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-06-03-icas-math/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-06-03-icas-math/</guid>
       <description>My child is preparing for the Year 6 ICAS test. These are my notes to help him. We worked through a practice test and summarized these key concepts during the explanation.</description>
     </item>
     <item>
       <title>AI-Powered Workflows: Value Creation, Key Technologies &amp; Challenges</title>
-      <link>http://localhost:1313/posts/2025-05-27-ai-powered-workflows/</link>
+      <link>https://moloxiao.github.io/posts/2025-05-27-ai-powered-workflows/</link>
       <pubDate>Tue, 27 May 2025 15:28:19 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-05-27-ai-powered-workflows/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-05-27-ai-powered-workflows/</guid>
       <description>This outline summarizes how AI-powered workflow platforms enhance existing software by unifying interfaces, automating tasks, leveraging knowledge-driven insights, and scaling through plugin ecosystems.</description>
     </item>
     <item>
       <title>AI Learning Roadmap: From Foundations to RAG and Beyond</title>
-      <link>http://localhost:1313/posts/2025-05-22-ai-learning-roadmap/</link>
+      <link>https://moloxiao.github.io/posts/2025-05-22-ai-learning-roadmap/</link>
       <pubDate>Tue, 20 May 2025 14:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-05-22-ai-learning-roadmap/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-05-22-ai-learning-roadmap/</guid>
       <description>In my recent side project, I’ve had many opportunities to leverage AI, and I’d like to summarize the technologies and foundational knowledge I used along the way. Here are my notes.</description>
     </item>
     <item>
       <title>How to Learn in the Age of AI: Focus on Problem Solving and Sustainable Action</title>
-      <link>http://localhost:1313/posts/2025-05-20-how-to-learn-in-the-age-of-ai-focusing-on-problem-solving-and-sustainable-action/</link>
+      <link>https://moloxiao.github.io/posts/2025-05-20-how-to-learn-in-the-age-of-ai-focusing-on-problem-solving-and-sustainable-action/</link>
       <pubDate>Tue, 20 May 2025 14:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-05-20-how-to-learn-in-the-age-of-ai-focusing-on-problem-solving-and-sustainable-action/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-05-20-how-to-learn-in-the-age-of-ai-focusing-on-problem-solving-and-sustainable-action/</guid>
       <description>Ready to learn something new? Start now, make it work, make it right, and then make it fast. The future is built by those who take action.</description>
     </item>
     <item>
       <title>The Character-Indexed Object Problem in Laravel Docker APIs</title>
-      <link>http://localhost:1313/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</link>
+      <link>https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</link>
       <pubDate>Sun, 18 May 2025 20:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</guid>
       <description>This is a character-indexed object issue encountered in a Laravel &#43; Docker &#43; Nginx deployment environment, where the API, instead of returning a valid JSON object, occasionally responds with an object whose keys are string indices and whose values are the individual characters of the intended JSON string.</description>
     </item>
     <item>
       <title>Simple Delpoyment Workflow</title>
-      <link>http://localhost:1313/posts/simple-deployment-workflow/</link>
+      <link>https://moloxiao.github.io/posts/simple-deployment-workflow/</link>
       <pubDate>Wed, 30 Apr 2025 20:00:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/simple-deployment-workflow/</guid>
+      <guid>https://moloxiao.github.io/posts/simple-deployment-workflow/</guid>
       <description>Simple delpoyment workflow with git.</description>
     </item>
     <item>
       <title>Designing Better Web Request Interactions</title>
-      <link>http://localhost:1313/posts/designing-better-web-request-interactions/</link>
+      <link>https://moloxiao.github.io/posts/designing-better-web-request-interactions/</link>
       <pubDate>Mon, 28 Apr 2025 20:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/designing-better-web-request-interactions/</guid>
+      <guid>https://moloxiao.github.io/posts/designing-better-web-request-interactions/</guid>
       <description>&lt;h1 id=&#34;designing-better-web-request-interactions-with-mui&#34;&gt;Designing Better Web Request Interactions with MUI&lt;/h1&gt;
 &lt;p&gt;When designing web applications, handling user interactions during network requests is crucial for delivering a smooth, responsive, and professional experience. In this blog post, we&amp;rsquo;ll explore the purpose behind request interaction design, the six recommended interaction patterns (with Material-UI components), and how to apply them to typical scenarios.&lt;/p&gt;
 &lt;h2 id=&#34;1-purpose-core-goals-of-web-request-interaction-design&#34;&gt;1. Purpose: Core Goals of Web Request Interaction Design&lt;/h2&gt;
@@ -941,9 +941,9 @@
     </item>
     <item>
       <title>SaaS Test 2 : Test Case</title>
-      <link>http://localhost:1313/posts/saas-test-2/</link>
+      <link>https://moloxiao.github.io/posts/saas-test-2/</link>
       <pubDate>Sun, 20 Apr 2025 16:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/saas-test-2/</guid>
+      <guid>https://moloxiao.github.io/posts/saas-test-2/</guid>
       <description>&lt;h2 id=&#34;1-principle&#34;&gt;1 Principle&lt;/h2&gt;
 &lt;h2 id=&#34;-what-each-testing-layer-should-do&#34;&gt;✅ What Each Testing Layer Should Do&lt;/h2&gt;
 &lt;table&gt;
@@ -1031,23 +1031,23 @@
     </item>
     <item>
       <title>SaaS Test 1 : Phased Testing Strategy for a SaaS System</title>
-      <link>http://localhost:1313/posts/saas-test-1/</link>
+      <link>https://moloxiao.github.io/posts/saas-test-1/</link>
       <pubDate>Sun, 20 Apr 2025 15:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/saas-test-1/</guid>
+      <guid>https://moloxiao.github.io/posts/saas-test-1/</guid>
       <description>This document outlines a practical, phased approach to testing login and registration features in a SaaS application. It balances manual testing and E2E automation based on development stage.</description>
     </item>
     <item>
       <title>Json web token</title>
-      <link>http://localhost:1313/posts/json-web-token/</link>
+      <link>https://moloxiao.github.io/posts/json-web-token/</link>
       <pubDate>Mon, 14 Apr 2025 20:00:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/json-web-token/</guid>
+      <guid>https://moloxiao.github.io/posts/json-web-token/</guid>
       <description>JWT (JSON Web Token) is a popular way to handle cross-domain authentication. In this post, I’ll go over how it works and how to use it.</description>
     </item>
     <item>
       <title>Framework for Web-Based Component Ordering System</title>
-      <link>http://localhost:1313/posts/framework-for-web-based-component-ordering-system/</link>
+      <link>https://moloxiao.github.io/posts/framework-for-web-based-component-ordering-system/</link>
       <pubDate>Tue, 08 Apr 2025 15:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/framework-for-web-based-component-ordering-system/</guid>
+      <guid>https://moloxiao.github.io/posts/framework-for-web-based-component-ordering-system/</guid>
       <description>&lt;p&gt;I asked ChatGPT to help me design a web application that allows users to input structured window and door information, and I asked it to provide a thinking framework for the system.&lt;/p&gt;
 &lt;h1 id=&#34;-framework-for-web-based-component-ordering-system-for-apl-windowdoor-fabricators&#34;&gt;🧠 Framework for Web-Based Component Ordering System (For APL Window/Door Fabricators)&lt;/h1&gt;
 &lt;hr&gt;
@@ -1245,9 +1245,9 @@
     </item>
     <item>
       <title>Designing and Delivering a Customizable Front-End UI System for End Users : 1</title>
-      <link>http://localhost:1313/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</link>
+      <link>https://moloxiao.github.io/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</link>
       <pubDate>Mon, 07 Apr 2025 15:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</guid>
+      <guid>https://moloxiao.github.io/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</guid>
       <description>&lt;h1 id=&#34;1-delivery-method&#34;&gt;1 Delivery method&lt;/h1&gt;
 &lt;p&gt;We have to choice for users:&lt;/p&gt;
 &lt;ul&gt;
@@ -1261,9 +1261,9 @@ The current analysis is based on the documentation of AdminMart and the template
     </item>
     <item>
       <title>SQL slower query log : 1</title>
-      <link>http://localhost:1313/posts/sql-slower-query-log-1/</link>
+      <link>https://moloxiao.github.io/posts/sql-slower-query-log-1/</link>
       <pubDate>Tue, 01 Apr 2025 20:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/sql-slower-query-log-1/</guid>
+      <guid>https://moloxiao.github.io/posts/sql-slower-query-log-1/</guid>
       <description>&lt;h2 id=&#34;query1-companyexwarehouseorderitem---not-solve&#34;&gt;Query1 [companyExWarehouseOrderItem] - NOT solve&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName,       c.spec AS componentSpec, c.colour AS componentColour, c.componentTypeId, c.businessTypeId, c.modelNo,        d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo,       f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, g.orderNo AS parentOrderNo,       h.customerNo AS planCustomerNo, h.orderLineNumber AS planOrderLineNumber, h.planNo, h.extendDesc AS planDesc, h.amount, h.unitPrice, h.currencyId,       j.grossAmount, j.unmetAmount, k.demandId, l.userName AS qcCheckerNameZh, m.nameZh AS currencyNameZh       FROM companyExWarehouseOrderItem AS a, companyExWarehouseOrderState AS b, companyBasicComponent AS c, companyComponentType AS d,       companyBasicComponentBomUnitType AS f, companyExWarehouseOrder AS g, companyProductionSchedules AS h, companyProductionSchedulesBom AS j,      companyProductionDemandSchedule AS k, user AS l, currency AS m       WHERE a.parentId = 27682 AND a.sourceTypeId = 1 AND a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND c.unitTypeId = f.id AND a.parentId = g.id AND a.scheduleId = h.id AND h.id = j.scheduleId       AND a.componentId = j.componentId AND a.scheduleId = k.scheduleId AND a.qcCheckerId = l.id AND h.currencyId = m.id;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;before : 4.0291
@@ -1271,9 +1271,9 @@ code use in : solution.getSales().getTask().getExWarehouse().getItem().getListBy
     </item>
     <item>
       <title>My Plan and Log for Pte Test</title>
-      <link>http://localhost:1313/posts/2025-03-19-my-plan-and-log-for-pte-test/</link>
+      <link>https://moloxiao.github.io/posts/2025-03-19-my-plan-and-log-for-pte-test/</link>
       <pubDate>Wed, 19 Mar 2025 20:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-03-19-my-plan-and-log-for-pte-test/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-03-19-my-plan-and-log-for-pte-test/</guid>
       <description>&lt;p&gt;I will join the PTE test in 2, May, so I need a plan for prepare.&lt;/p&gt;
 &lt;h2 id=&#34;pte-academic-test-structure-summary&#34;&gt;PTE Academic Test Structure Summary&lt;/h2&gt;
 &lt;table&gt;
@@ -1628,163 +1628,163 @@ code use in : solution.getSales().getTask().getExWarehouse().getItem().getListBy
     </item>
     <item>
       <title>Why Does Git Commits Start with `feat:`?</title>
-      <link>http://localhost:1313/posts/2025-03-19-why-does-git-commits-start-with-feat/</link>
+      <link>https://moloxiao.github.io/posts/2025-03-19-why-does-git-commits-start-with-feat/</link>
       <pubDate>Wed, 19 Mar 2025 20:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-03-19-why-does-git-commits-start-with-feat/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-03-19-why-does-git-commits-start-with-feat/</guid>
       <description>Have you ever wondered why Git commit messages often start with feat: when using Copilot or other AI-assisted tools? This blog explores Conventional Commits, a structured approach to writing commit messages that enhances readability, automates changelog generation, and supports semantic versioning. Learn why adopting this convention can improve your workflow and how to implement it in your projects using commitizen, commitlint, and husky. 🚀</description>
     </item>
     <item>
       <title>Docker FAQ</title>
-      <link>http://localhost:1313/posts/docker-faq/</link>
+      <link>https://moloxiao.github.io/posts/docker-faq/</link>
       <pubDate>Wed, 05 Mar 2025 10:09:27 +1300</pubDate>
-      <guid>http://localhost:1313/posts/docker-faq/</guid>
+      <guid>https://moloxiao.github.io/posts/docker-faq/</guid>
       <description>.</description>
     </item>
     <item>
       <title>Laravel FAQ</title>
-      <link>http://localhost:1313/posts/laravel-faq/</link>
+      <link>https://moloxiao.github.io/posts/laravel-faq/</link>
       <pubDate>Tue, 04 Mar 2025 11:04:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/laravel-faq/</guid>
+      <guid>https://moloxiao.github.io/posts/laravel-faq/</guid>
       <description>.</description>
     </item>
     <item>
       <title>Nextjs FAQ</title>
-      <link>http://localhost:1313/posts/2025-03-04-nextjs-faq/</link>
+      <link>https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/</link>
       <pubDate>Tue, 04 Mar 2025 11:04:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-03-04-nextjs-faq/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/</guid>
       <description>.</description>
     </item>
     <item>
       <title>Qucik Start : Laravel</title>
-      <link>http://localhost:1313/posts/qucik-start-laravel/</link>
+      <link>https://moloxiao.github.io/posts/qucik-start-laravel/</link>
       <pubDate>Wed, 19 Feb 2025 20:20:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/qucik-start-laravel/</guid>
+      <guid>https://moloxiao.github.io/posts/qucik-start-laravel/</guid>
       <description>My notes when I learn Laravel create a API project use JWT. My first use in 2025-02-19, rewrite in 2025-04-01.</description>
     </item>
     <item>
       <title>Daily Brainstorming : How to Evaluate Whether a New Project Is Good</title>
-      <link>http://localhost:1313/posts/daily-brainstorming-how-to-evaluate-whether-a-new-project-is-good/</link>
+      <link>https://moloxiao.github.io/posts/daily-brainstorming-how-to-evaluate-whether-a-new-project-is-good/</link>
       <pubDate>Tue, 07 Jan 2025 14:53:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/daily-brainstorming-how-to-evaluate-whether-a-new-project-is-good/</guid>
+      <guid>https://moloxiao.github.io/posts/daily-brainstorming-how-to-evaluate-whether-a-new-project-is-good/</guid>
       <description>In this blog, I share insights as a software engineer on the challenge of assessing new projects.</description>
     </item>
     <item>
       <title> My Tech Stack Selection - 2025 - SaaS</title>
-      <link>http://localhost:1313/posts/my-tech-stack-selection-2025-saas/</link>
+      <link>https://moloxiao.github.io/posts/my-tech-stack-selection-2025-saas/</link>
       <pubDate>Wed, 01 Jan 2025 20:01:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/my-tech-stack-selection-2025-saas/</guid>
+      <guid>https://moloxiao.github.io/posts/my-tech-stack-selection-2025-saas/</guid>
       <description>My default tech stack selection for typical SaaS systems in 2025.</description>
     </item>
     <item>
       <title>New Year Holiday Reading Book 3 How to Raise a Tech Genius</title>
-      <link>http://localhost:1313/posts/new-year-holiday-reading-book-3-how-to-raise-a-tech-genius/</link>
+      <link>https://moloxiao.github.io/posts/new-year-holiday-reading-book-3-how-to-raise-a-tech-genius/</link>
       <pubDate>Tue, 31 Dec 2024 16:15:31 +1300</pubDate>
-      <guid>http://localhost:1313/posts/new-year-holiday-reading-book-3-how-to-raise-a-tech-genius/</guid>
+      <guid>https://moloxiao.github.io/posts/new-year-holiday-reading-book-3-how-to-raise-a-tech-genius/</guid>
       <description>How to Raise a Tech Genius : Develop your child&amp;#39;s computing skills without spending any money</description>
     </item>
     <item>
       <title>New Year Holiday Reading Book 2 Design and Build Great Web Apis</title>
-      <link>http://localhost:1313/posts/new-year-holiday-reading-book-2-design-and-build-great-web-apis/</link>
+      <link>https://moloxiao.github.io/posts/new-year-holiday-reading-book-2-design-and-build-great-web-apis/</link>
       <pubDate>Thu, 26 Dec 2024 11:01:04 +1300</pubDate>
-      <guid>http://localhost:1313/posts/new-year-holiday-reading-book-2-design-and-build-great-web-apis/</guid>
+      <guid>https://moloxiao.github.io/posts/new-year-holiday-reading-book-2-design-and-build-great-web-apis/</guid>
       <description>.</description>
     </item>
     <item>
       <title>New Year Holiday Reading Book 1 : Business Intelligence Analytics Data Science and Ai</title>
-      <link>http://localhost:1313/posts/new-year-holiday-reading-book-1-business-intelligence-analytics-data-science-and-ai/</link>
+      <link>https://moloxiao.github.io/posts/new-year-holiday-reading-book-1-business-intelligence-analytics-data-science-and-ai/</link>
       <pubDate>Wed, 25 Dec 2024 20:36:02 +1300</pubDate>
-      <guid>http://localhost:1313/posts/new-year-holiday-reading-book-1-business-intelligence-analytics-data-science-and-ai/</guid>
+      <guid>https://moloxiao.github.io/posts/new-year-holiday-reading-book-1-business-intelligence-analytics-data-science-and-ai/</guid>
       <description>This is a comprehensive book (Business Intelligence Analytics and Data Science : A Managerial Perspective), perfect for browsing through.</description>
     </item>
     <item>
       <title>You Do Not Need Learn Everything in the Code</title>
-      <link>http://localhost:1313/posts/you-do-not-need-learn-everything-in-the-code/</link>
+      <link>https://moloxiao.github.io/posts/you-do-not-need-learn-everything-in-the-code/</link>
       <pubDate>Thu, 19 Dec 2024 10:40:54 +1300</pubDate>
-      <guid>http://localhost:1313/posts/you-do-not-need-learn-everything-in-the-code/</guid>
+      <guid>https://moloxiao.github.io/posts/you-do-not-need-learn-everything-in-the-code/</guid>
       <description>You Do Not Need Learn Everything in the Code. Which is impossible. Pick a tech stack and learn as much as you can about that group of technologies. </description>
     </item>
     <item>
       <title>How to Fix Replicate Run Error Readablestream in Nextjs</title>
-      <link>http://localhost:1313/posts/how-to-fix-replicate-run-error-readablestream-in-nextjs/</link>
+      <link>https://moloxiao.github.io/posts/how-to-fix-replicate-run-error-readablestream-in-nextjs/</link>
       <pubDate>Thu, 05 Dec 2024 18:53:31 +1300</pubDate>
-      <guid>http://localhost:1313/posts/how-to-fix-replicate-run-error-readablestream-in-nextjs/</guid>
+      <guid>https://moloxiao.github.io/posts/how-to-fix-replicate-run-error-readablestream-in-nextjs/</guid>
       <description>Fix the error when using the Replicate Node.js client in a Next.js application to retrieve the URL response.</description>
     </item>
     <item>
       <title>Can We Make a Simple Software</title>
-      <link>http://localhost:1313/posts/2024-12-03-can-we-make-a-simple-software/</link>
+      <link>https://moloxiao.github.io/posts/2024-12-03-can-we-make-a-simple-software/</link>
       <pubDate>Tue, 03 Dec 2024 15:25:30 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2024-12-03-can-we-make-a-simple-software/</guid>
+      <guid>https://moloxiao.github.io/posts/2024-12-03-can-we-make-a-simple-software/</guid>
       <description>Can We Make a Simple Software or Why Can&amp;#39;t We Make Simple Software? Let&amp;#39;s talk about it from Complexity.</description>
     </item>
     <item>
       <title>Hello Accounting</title>
-      <link>http://localhost:1313/posts/hello-accounting/</link>
+      <link>https://moloxiao.github.io/posts/hello-accounting/</link>
       <pubDate>Mon, 25 Nov 2024 16:40:33 +1300</pubDate>
-      <guid>http://localhost:1313/posts/hello-accounting/</guid>
+      <guid>https://moloxiao.github.io/posts/hello-accounting/</guid>
       <description>My Notes on Accounting, Driven by Personal Interest.</description>
     </item>
     <item>
       <title>The Best Places for Camping in Invercargill</title>
-      <link>http://localhost:1313/posts/the-best-places-for-camping-in-invercargill/</link>
+      <link>https://moloxiao.github.io/posts/the-best-places-for-camping-in-invercargill/</link>
       <pubDate>Wed, 13 Nov 2024 22:11:45 +1300</pubDate>
-      <guid>http://localhost:1313/posts/the-best-places-for-camping-in-invercargill/</guid>
+      <guid>https://moloxiao.github.io/posts/the-best-places-for-camping-in-invercargill/</guid>
       <description>The Best Places for Camping in Invercargill</description>
     </item>
     <item>
       <title>Reading Notes Series 1 Achieving Rapid Response Times</title>
-      <link>http://localhost:1313/posts/reading-notes-series-1-achieving-rapid-response-times/</link>
+      <link>https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/</link>
       <pubDate>Tue, 12 Nov 2024 15:30:57 +1300</pubDate>
-      <guid>http://localhost:1313/posts/reading-notes-series-1-achieving-rapid-response-times/</guid>
+      <guid>https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/</guid>
       <description>Notes and key insights from the paper &amp;#39;Achieving Rapid Response Times in Large Online Services&amp;#39; by Jeff Dean.</description>
     </item>
     <item>
       <title>How to Build Confidence in Your Kids</title>
-      <link>http://localhost:1313/posts/2024-10-14-how-to-build-confidence-in-your-kids/</link>
+      <link>https://moloxiao.github.io/posts/2024-10-14-how-to-build-confidence-in-your-kids/</link>
       <pubDate>Mon, 14 Oct 2024 22:05:28 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2024-10-14-how-to-build-confidence-in-your-kids/</guid>
+      <guid>https://moloxiao.github.io/posts/2024-10-14-how-to-build-confidence-in-your-kids/</guid>
       <description>One day, our children will leave us to live independently, and the role of parents will also change. When they move forward on their own, I hope they are filled with confidence.</description>
     </item>
     <item>
       <title>Shan Side Project Monthly Update 01 October 2024</title>
-      <link>http://localhost:1313/posts/shan-side-project-monthly-update-01-october-2024/</link>
+      <link>https://moloxiao.github.io/posts/shan-side-project-monthly-update-01-october-2024/</link>
       <pubDate>Sun, 13 Oct 2024 17:12:19 +1300</pubDate>
-      <guid>http://localhost:1313/posts/shan-side-project-monthly-update-01-october-2024/</guid>
+      <guid>https://moloxiao.github.io/posts/shan-side-project-monthly-update-01-october-2024/</guid>
       <description>Shan Side Project Monthly Update 01 October 2024.</description>
     </item>
     <item>
       <title>Understanding It Consultant Levels</title>
-      <link>http://localhost:1313/posts/understanding-it-consultant-levels/</link>
+      <link>https://moloxiao.github.io/posts/understanding-it-consultant-levels/</link>
       <pubDate>Thu, 10 Oct 2024 10:04:36 +1300</pubDate>
-      <guid>http://localhost:1313/posts/understanding-it-consultant-levels/</guid>
+      <guid>https://moloxiao.github.io/posts/understanding-it-consultant-levels/</guid>
       <description>Understanding IT Consultant Levels: A Breakdown with AWS, Microsoft, and Google Certifications</description>
     </item>
     <item>
       <title>How to Write Code Using AI Assistance</title>
-      <link>http://localhost:1313/posts/how-to-write-code-using-ai-assistance/</link>
+      <link>https://moloxiao.github.io/posts/how-to-write-code-using-ai-assistance/</link>
       <pubDate>Wed, 11 Sep 2024 10:53:23 +1200</pubDate>
-      <guid>http://localhost:1313/posts/how-to-write-code-using-ai-assistance/</guid>
+      <guid>https://moloxiao.github.io/posts/how-to-write-code-using-ai-assistance/</guid>
       <description>how to write code Using AI-assistance By Andrew Ng. This is Shan&amp;#39;s notes. </description>
     </item>
     <item>
       <title>Essential Tools and Tips for Daily Church Website Management</title>
-      <link>http://localhost:1313/posts/essential-tools-and-tips-for-daily-church-website-management/</link>
+      <link>https://moloxiao.github.io/posts/essential-tools-and-tips-for-daily-church-website-management/</link>
       <pubDate>Tue, 10 Sep 2024 15:11:01 +1200</pubDate>
-      <guid>http://localhost:1313/posts/essential-tools-and-tips-for-daily-church-website-management/</guid>
+      <guid>https://moloxiao.github.io/posts/essential-tools-and-tips-for-daily-church-website-management/</guid>
       <description>Toolset for Daily Management of CornerstoneCongregational.org</description>
     </item>
     <item>
       <title>Relational Databases and Normalization</title>
-      <link>http://localhost:1313/posts/relational-databases-and-normalization/</link>
+      <link>https://moloxiao.github.io/posts/relational-databases-and-normalization/</link>
       <pubDate>Mon, 09 Sep 2024 15:01:22 +1200</pubDate>
-      <guid>http://localhost:1313/posts/relational-databases-and-normalization/</guid>
+      <guid>https://moloxiao.github.io/posts/relational-databases-and-normalization/</guid>
       <description>Normalization forms the foundation of relational databases. In this article, we walk through an example, applying 1NF, 2NF, and 3NF step by step, illustrating how normalization guides the design of a well-structured relational table.</description>
     </item>
     <item>
       <title>Customize Your Resume According to the Job Description</title>
-      <link>http://localhost:1313/posts/customize-your-resume-according-to-the-job-description/</link>
+      <link>https://moloxiao.github.io/posts/customize-your-resume-according-to-the-job-description/</link>
       <pubDate>Thu, 05 Sep 2024 09:14:29 +1200</pubDate>
-      <guid>http://localhost:1313/posts/customize-your-resume-according-to-the-job-description/</guid>
+      <guid>https://moloxiao.github.io/posts/customize-your-resume-according-to-the-job-description/</guid>
       <description>&lt;p&gt;In the current &lt;a href=&#34;https://resumemanager.pages.dev/&#34;&gt;Resume Manager&lt;/a&gt; application, the module I use the most on a daily basis is the job application module, with its core feature being the tracking of resume submissions. Moving forward, I want to enhance the ability to match resumes with job requirements. This will involve the following steps:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Analysis of the recruitment process and the needs of each stage&lt;/li&gt;
@@ -1898,21 +1898,19 @@ code use in : solution.getSales().getTask().getExWarehouse().getItem().getListBy
     </item>
     <item>
       <title>Create an Industrial Automation Solutions Website</title>
-      <link>http://localhost:1313/posts/create-an-industrial-automation-solutions-website/</link>
+      <link>https://moloxiao.github.io/posts/create-an-industrial-automation-solutions-website/</link>
       <pubDate>Wed, 04 Sep 2024 15:43:08 +1200</pubDate>
-      <guid>http://localhost:1313/posts/create-an-industrial-automation-solutions-website/</guid>
+      <guid>https://moloxiao.github.io/posts/create-an-industrial-automation-solutions-website/</guid>
       <description>&lt;p&gt;I want to consolidate my experience and knowledge in the field of automation, and I’ve decided to do this by creating a website. I also hope it can serve as a starting point for offering consulting services.&lt;br&gt;
 Since this website is content-focused, I chose to build it using &lt;strong&gt;Docusaurus&lt;/strong&gt; and deployed it on Cloudflare. I spent an hour setting up the template and configuring automated deployment. You can now access it by &lt;a href=&#34;https://automation.micostupid.com&#34;&gt;clicking here&lt;/a&gt;. &lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/2024-09/screen-01.png&#34; alt=&#34;screenshort&#34;  /&gt;
-&lt;/p&gt;</description>
+&lt;img alt=&#34;screenshort&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/2024-09/screen-01.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Method for Quickly Mastering the USNR Scanning System</title>
-      <link>http://localhost:1313/posts/a-method-for-quickly-mastering-the-usnr-scanning-system/</link>
+      <link>https://moloxiao.github.io/posts/a-method-for-quickly-mastering-the-usnr-scanning-system/</link>
       <pubDate>Mon, 02 Sep 2024 22:17:29 +1200</pubDate>
-      <guid>http://localhost:1313/posts/a-method-for-quickly-mastering-the-usnr-scanning-system/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/2024-09/dall.e-01.png&#34; alt=&#34;landing page&#34;  /&gt;
-&lt;br&gt;
+      <guid>https://moloxiao.github.io/posts/a-method-for-quickly-mastering-the-usnr-scanning-system/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;landing page&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/2024-09/dall.e-01.png&#34;&gt;&lt;br&gt;
 I have never used the USNR Scanning system before. This article &lt;strong&gt;outlines&lt;/strong&gt; my plan for quickly mastering the system and developing the capability for ongoing maintenance and improvement.&lt;/p&gt;
 &lt;h1 id=&#34;1-goals--metrics&#34;&gt;1 Goals &amp;amp; Metrics&lt;/h1&gt;
 &lt;p&gt;The goal can be divided into two stages :&lt;/p&gt;
@@ -1924,11 +1922,10 @@ I have never used the USNR Scanning system before. This article &lt;strong&gt;ou
     </item>
     <item>
       <title>How to Prepare for Data Jobs</title>
-      <link>http://localhost:1313/posts/how-to-prepare-for-data-jobs/</link>
+      <link>https://moloxiao.github.io/posts/how-to-prepare-for-data-jobs/</link>
       <pubDate>Wed, 28 Aug 2024 20:45:47 +1200</pubDate>
-      <guid>http://localhost:1313/posts/how-to-prepare-for-data-jobs/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/2024-08/data-engineer-resume.webp&#34; alt=&#34;Add Your Domain to Cloudflare&#34;  /&gt;
-&lt;/p&gt;
+      <guid>https://moloxiao.github.io/posts/how-to-prepare-for-data-jobs/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Add Your Domain to Cloudflare&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/2024-08/data-engineer-resume.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Preparing for data jobs means writing a good resume and passing the job interview.&lt;/p&gt;
 &lt;p&gt;I want to take immediate action, so I&amp;rsquo;ve set the following principles:&lt;/p&gt;
 &lt;ol&gt;
@@ -1939,9 +1936,9 @@ I have never used the USNR Scanning system before. This article &lt;strong&gt;ou
     </item>
     <item>
       <title>Creating a Continuous Improvement System</title>
-      <link>http://localhost:1313/posts/creating-a-continuous-improvement-system/</link>
+      <link>https://moloxiao.github.io/posts/creating-a-continuous-improvement-system/</link>
       <pubDate>Tue, 20 Aug 2024 15:40:20 +1200</pubDate>
-      <guid>http://localhost:1313/posts/creating-a-continuous-improvement-system/</guid>
+      <guid>https://moloxiao.github.io/posts/creating-a-continuous-improvement-system/</guid>
       <description>&lt;p&gt;When we want to accomplish something or achieve a goal, sometimes we succeed, and sometimes we face challenges. Can we find a method that makes it easier to succeed? My answer is PDCA(plan–do–check–adjust). &lt;br&gt;
 Just do it, let it fail if necessary, and then find a new way to fix it.&lt;/p&gt;
 &lt;h1 id=&#34;what-is-a-system&#34;&gt;What is a system&lt;/h1&gt;
@@ -1954,11 +1951,10 @@ Just do it, let it fail if necessary, and then find a new way to fix it.&lt;/p&g
     </item>
     <item>
       <title>Application Integration : it&#39;s all about the adapter</title>
-      <link>http://localhost:1313/posts/application-integration/</link>
+      <link>https://moloxiao.github.io/posts/application-integration/</link>
       <pubDate>Tue, 13 Aug 2024 10:53:43 +1200</pubDate>
-      <guid>http://localhost:1313/posts/application-integration/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/2024-08-13-01.webp&#34; alt=&#34;Header&#34;  /&gt;
-
+      <guid>https://moloxiao.github.io/posts/application-integration/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Header&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/2024-08-13-01.webp&#34;&gt;
 Integration development is not a standardized term, so there isn&amp;rsquo;t a dedicated page for it on Wikipedia.&lt;br&gt;
 In this article, it defines &lt;strong&gt;application integration&lt;/strong&gt; as the process of enabling individual applications to communicate with each other.&lt;/p&gt;
 &lt;p&gt;For me, &lt;strong&gt;integration means adapter&lt;/strong&gt;. Let me explain it.&lt;/p&gt;
@@ -1972,12 +1968,11 @@ In this article, it defines &lt;strong&gt;application integration&lt;/strong&gt;
     </item>
     <item>
       <title>Six Actionable Steps for Finding a Job</title>
-      <link>http://localhost:1313/posts/six-actionable-steps-for-finding-a-job/</link>
+      <link>https://moloxiao.github.io/posts/six-actionable-steps-for-finding-a-job/</link>
       <pubDate>Mon, 12 Aug 2024 09:26:40 +1200</pubDate>
-      <guid>http://localhost:1313/posts/six-actionable-steps-for-finding-a-job/</guid>
+      <guid>https://moloxiao.github.io/posts/six-actionable-steps-for-finding-a-job/</guid>
       <description>&lt;p&gt;Let me introduce six actionable steps for finding a job.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/2024-08-12-01.webp&#34; alt=&#34;Head Picture&#34;  /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Head Picture&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/2024-08-12-01.webp&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;1--get-your-head-right&#34;&gt;1.  get your head right&lt;/h2&gt;
 &lt;p&gt;You have to believe that you&amp;rsquo;re going to get a job. Your job is to control what you can control and to shrink the time between now and when you land a job.&lt;/p&gt;
 &lt;h2 id=&#34;2-just-do-it&#34;&gt;2. just do it&lt;/h2&gt;
@@ -1985,9 +1980,9 @@ In this article, it defines &lt;strong&gt;application integration&lt;/strong&gt;
     </item>
     <item>
       <title>How to Set Up Google Analytics a Step by Step Guide to Getting Your Measurement Id</title>
-      <link>http://localhost:1313/posts/how-to-set-up-google-analytics-a-step-by-step-guide-to-getting-your-measurement-id/</link>
+      <link>https://moloxiao.github.io/posts/how-to-set-up-google-analytics-a-step-by-step-guide-to-getting-your-measurement-id/</link>
       <pubDate>Wed, 07 Aug 2024 15:29:03 +1200</pubDate>
-      <guid>http://localhost:1313/posts/how-to-set-up-google-analytics-a-step-by-step-guide-to-getting-your-measurement-id/</guid>
+      <guid>https://moloxiao.github.io/posts/how-to-set-up-google-analytics-a-step-by-step-guide-to-getting-your-measurement-id/</guid>
       <description>&lt;p&gt;We use Google Analytics to track the number of visitors to our website, including information about when they visit and how they interact with our site. This helps us understand our audience better and improve our online presence.&lt;br&gt;
 when you have a website and want your software engineer to support it with Google Analytics, You need to do two things:&lt;/p&gt;
 &lt;ol&gt;
@@ -1998,9 +1993,9 @@ when you have a website and want your software engineer to support it with Googl
     </item>
     <item>
       <title>How to Move Your GoDaddy Domain to Cloudflare a Step by Step Guide</title>
-      <link>http://localhost:1313/posts/how-to-move-your-godaddy-domain-to-cloudflare-a-step-by-step-guide/</link>
+      <link>https://moloxiao.github.io/posts/how-to-move-your-godaddy-domain-to-cloudflare-a-step-by-step-guide/</link>
       <pubDate>Tue, 06 Aug 2024 20:00:29 +1200</pubDate>
-      <guid>http://localhost:1313/posts/how-to-move-your-godaddy-domain-to-cloudflare-a-step-by-step-guide/</guid>
+      <guid>https://moloxiao.github.io/posts/how-to-move-your-godaddy-domain-to-cloudflare-a-step-by-step-guide/</guid>
       <description>&lt;p&gt;Managing your domain through Cloudflare offers numerous benefits, including enhanced security, improved website performance, and easy DNS management. &lt;strong&gt;These are not the most important factors. The main reason is that you might need my help with day-to-day management, and personally, I prefer Cloudflare.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;If you have a domain registered with GoDaddy and want to move it to Cloudflare, follow this detailed step-by-step guide.&lt;/p&gt;
 &lt;h2 id=&#34;step-1-create-a-cloudflare-account-and-add-your-site&#34;&gt;Step 1: Create a Cloudflare Account and Add Your Site&lt;/h2&gt;
@@ -2019,15 +2014,13 @@ when you have a website and want your software engineer to support it with Googl
 &lt;li&gt;After logging in, click on “Add a Site” on the Cloudflare dashboard.&lt;/li&gt;
 &lt;li&gt;Enter your GoDaddy domain (e.g., “yourdomain.com”).&lt;/li&gt;
 &lt;li&gt;Click “Continue”.&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-01.png&#34; alt=&#34;Add Your Domain to Cloudflare  &#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;Add Your Domain to Cloudflare  &#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-01.png&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;step-2-choose-a-cloudflare-plan&#34;&gt;Step 2: Choose a Cloudflare Plan&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Cloudflare offers various plans, including a free plan and several paid plans. Choose the one that best fits your needs.&lt;/li&gt;
 &lt;li&gt;Click “Continue”.&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-02.png&#34; alt=&#34;Add Your Domain to Cloudflare&#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;Add Your Domain to Cloudflare&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-02.png&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;step-3-review-and-confirm-dns-records&#34;&gt;Step 3: Review and Confirm DNS Records&lt;/h2&gt;
 &lt;ol&gt;
@@ -2042,8 +2035,7 @@ when you have a website and want your software engineer to support it with Googl
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;Once you have confirmed that all DNS records are correct, click “Continue”.
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-03.png&#34; alt=&#34;Confirm DNS Records &#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;Confirm DNS Records &#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-03.png&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;step-4-update-your-domains-nameservers&#34;&gt;Step 4: Update Your Domain’s Nameservers&lt;/h2&gt;
 &lt;ol&gt;
@@ -2052,8 +2044,7 @@ when you have a website and want your software engineer to support it with Googl
 &lt;ul&gt;
 &lt;li&gt;Cloudflare will provide you with two nameservers, such as addyson.ns.cloudflare.com and norman.ns.cloudflare.com.&lt;/li&gt;
 &lt;li&gt;copy nameservers.
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-04.png&#34; alt=&#34;Update Your Domain’s Nameservers&#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;Update Your Domain’s Nameservers&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-04.png&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;Log in to Your GoDaddy Account&lt;/li&gt;
@@ -2062,74 +2053,65 @@ when you have a website and want your software engineer to support it with Googl
 &lt;li&gt;Visit the &lt;a href=&#34;&#34;&gt;GoDaddy website&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Log in to your GoDaddy account.&lt;/li&gt;
 &lt;li&gt;Click &amp;lsquo;My Products&amp;rsquo;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-05.png&#34; alt=&#34;Go to Godaddy Dashboard&#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;Go to Godaddy Dashboard&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-05.png&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;Access Domain Management&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;On the GoDaddy dashboard, find and click on “Domains”.&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-06.png&#34; alt=&#34;find and click on “Domains”&#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;find and click on “Domains”&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-06.png&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Locate the domain you want to manage and click on “Domain Name”.&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-07.png&#34; alt=&#34;click on “Domain Name”&#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;click on “Domain Name”&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-07.png&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;Change Nameservers&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;In the DNS Management page, find the “Nameservers” section and click “Change”.
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-08.png&#34; alt=&#34;find the “Nameservers”&#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;find the “Nameservers”&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-08.png&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Select the “Custom” option.&lt;/li&gt;
 &lt;li&gt;Enter the nameservers provided by Cloudflare.&lt;/li&gt;
 &lt;li&gt;Save your changes.
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-09.png&#34; alt=&#34;find the “Nameservers”&#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;find the “Nameservers”&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-09.png&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Confirm
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-10.png&#34; alt=&#34;find the “Nameservers”&#34;  /&gt;
-&lt;/li&gt;
+&lt;img alt=&#34;find the “Nameservers”&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-10.png&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;step-5-wait-for-dns-propagation&#34;&gt;Step 5: Wait for DNS Propagation&lt;/h2&gt;
 &lt;p&gt;The changes to the nameservers may take 24-48 hours to propagate across the internet.  &lt;strong&gt;I only waited for 10 minutes.&lt;/strong&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/godaddy-to-cloudflare-11.png&#34; alt=&#34;find the “Nameservers”&#34;  /&gt;
-&lt;/p&gt;</description>
+&lt;img alt=&#34;find the “Nameservers”&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/godaddy-to-cloudflare-11.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>New Features in Resume Manager 2</title>
-      <link>http://localhost:1313/posts/new-features-in-resume-manager-2/</link>
+      <link>https://moloxiao.github.io/posts/new-features-in-resume-manager-2/</link>
       <pubDate>Tue, 06 Aug 2024 15:46:24 +1200</pubDate>
-      <guid>http://localhost:1313/posts/new-features-in-resume-manager-2/</guid>
+      <guid>https://moloxiao.github.io/posts/new-features-in-resume-manager-2/</guid>
       <description>&lt;p&gt;Hello, all my friends. Thank you for all your ideas and feedback, help this product better.&lt;br&gt;
 We&amp;rsquo;re back! The last update was &lt;strong&gt;18 days ago&lt;/strong&gt;. This week I use &lt;strong&gt;6 hours&lt;/strong&gt; to add new feature : &lt;strong&gt;Job Application Task Manager&lt;/strong&gt;. &lt;a href=&#34;https://resumemanager.pages.dev/&#34;&gt;Click here to experience it now&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here are some of the main interfaces :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;New Dashboard&lt;/strong&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/resume_manager_2_01.png&#34; alt=&#34;new dashboard&#34;  /&gt;
-&lt;br&gt;
+&lt;img alt=&#34;new dashboard&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/resume_manager_2_01.png&#34;&gt;&lt;br&gt;
 Because we added the job application manager, the dashboard has changed.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Job Application List&lt;/strong&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/resume_manager_2_02.png&#34; alt=&#34;Job Application List&#34;  /&gt;
-&lt;br&gt;
+&lt;img alt=&#34;Job Application List&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/resume_manager_2_02.png&#34;&gt;&lt;br&gt;
 We can add new job applications and change the application status on this page.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Shan&#39;s Responses to Common Interview Questions</title>
-      <link>http://localhost:1313/posts/shan-responses-to-common-interview-questions/</link>
+      <link>https://moloxiao.github.io/posts/shan-responses-to-common-interview-questions/</link>
       <pubDate>Wed, 24 Jul 2024 15:36:34 +1200</pubDate>
-      <guid>http://localhost:1313/posts/shan-responses-to-common-interview-questions/</guid>
+      <guid>https://moloxiao.github.io/posts/shan-responses-to-common-interview-questions/</guid>
       <description>Shan&amp;#39;s suggest Responses to Common Interview Questions.</description>
     </item>
     <item>
       <title>Creating Custom Code Snippets in Vscode</title>
-      <link>http://localhost:1313/posts/creating-custom-code-snippets-in-vscode/</link>
+      <link>https://moloxiao.github.io/posts/creating-custom-code-snippets-in-vscode/</link>
       <pubDate>Tue, 23 Jul 2024 11:49:42 +1200</pubDate>
-      <guid>http://localhost:1313/posts/creating-custom-code-snippets-in-vscode/</guid>
+      <guid>https://moloxiao.github.io/posts/creating-custom-code-snippets-in-vscode/</guid>
       <description>&lt;p&gt;VSCode provides a powerful snippet feature that helps developers boost their coding efficiency and consistency. This blog will guide you through creating custom code snippets in VSCode, specifically for TypeScript and React projects.&lt;/p&gt;
 &lt;h2 id=&#34;what-are-code-snippets&#34;&gt;What are Code Snippets?&lt;/h2&gt;
 &lt;p&gt;Code snippets are predefined chunks of code that you can quickly insert into your code files using simple shortcuts. They are extremely useful for repetitive tasks or commonly used code templates.&lt;/p&gt;
@@ -2141,23 +2123,23 @@ We can add new job applications and change the application status on this page.&
     </item>
     <item>
       <title>Minified React Error #130</title>
-      <link>http://localhost:1313/posts/minified-react-error-%23130/</link>
+      <link>https://moloxiao.github.io/posts/minified-react-error-%23130/</link>
       <pubDate>Fri, 19 Jul 2024 15:57:51 +1200</pubDate>
-      <guid>http://localhost:1313/posts/minified-react-error-%23130/</guid>
+      <guid>https://moloxiao.github.io/posts/minified-react-error-%23130/</guid>
       <description>how to fix Minified React error #130</description>
     </item>
     <item>
       <title>Getting a blog accepted by Google AdSense</title>
-      <link>http://localhost:1313/posts/getting-a-blog-accepted-by-google-adsense/</link>
+      <link>https://moloxiao.github.io/posts/getting-a-blog-accepted-by-google-adsense/</link>
       <pubDate>Thu, 04 Jul 2024 10:14:57 +1200</pubDate>
-      <guid>http://localhost:1313/posts/getting-a-blog-accepted-by-google-adsense/</guid>
+      <guid>https://moloxiao.github.io/posts/getting-a-blog-accepted-by-google-adsense/</guid>
       <description>Getting a blog accepted by Google AdSense.</description>
     </item>
     <item>
       <title>Use Yolo to Analyze Youth Football Matches</title>
-      <link>http://localhost:1313/posts/use-yolo-to-analyze-youth-football-matches/</link>
+      <link>https://moloxiao.github.io/posts/use-yolo-to-analyze-youth-football-matches/</link>
       <pubDate>Wed, 03 Jul 2024 14:52:22 +1200</pubDate>
-      <guid>http://localhost:1313/posts/use-yolo-to-analyze-youth-football-matches/</guid>
+      <guid>https://moloxiao.github.io/posts/use-yolo-to-analyze-youth-football-matches/</guid>
       <description>&lt;p&gt;I discuss youth soccer games with my 10-year-old son. I think it&amp;rsquo;s important to first help him understand when making certain decisions is beneficial. So, I&amp;rsquo;m looking for a way to help young athletes develop their decision-making skills.&lt;br&gt;
 One important tool for this is watching game videos.&lt;/p&gt;
 &lt;p&gt;While watching and learning from game videos together, I started thinking about some questions:&lt;/p&gt;
@@ -2166,14 +2148,13 @@ One important tool for this is watching game videos.&lt;/p&gt;
 &lt;li&gt;What is the relationship between ball possession and winning?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;So I used Python, along with YOLO and OpenCV, to create a prototype, like this :&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/football_game_kids_01.png&#34; alt=&#34;oduio&#34;  /&gt;
-&lt;/p&gt;</description>
+&lt;img alt=&#34;oduio&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/football_game_kids_01.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Create a blog using Hugo</title>
-      <link>http://localhost:1313/posts/2024-07-02-create-a-blog-using-hugo/</link>
+      <link>https://moloxiao.github.io/posts/2024-07-02-create-a-blog-using-hugo/</link>
       <pubDate>Tue, 02 Jul 2024 20:57:29 +1200</pubDate>
-      <guid>http://localhost:1313/posts/2024-07-02-create-a-blog-using-hugo/</guid>
+      <guid>https://moloxiao.github.io/posts/2024-07-02-create-a-blog-using-hugo/</guid>
       <description>How I created my blog using Hugo and the tools I used.</description>
     </item>
   </channel>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Relational Databases and Normalization | Shan&#39;s blog</title>
 <meta name="keywords" content="Database, SQL">
 <meta name="description" content="Normalization forms the foundation of relational databases. In this article, we walk through an example, applying 1NF, 2NF, and 3NF step by step, illustrating how normalization guides the design of a well-structured relational table.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/relational-databases-and-normalization/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://moloxiao.github.io/posts/relational-databases-and-normalization/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://moloxiao.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://moloxiao.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://moloxiao.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://moloxiao.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://moloxiao.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/relational-databases-and-normalization/">
+<link rel="alternate" hreflang="en" href="https://moloxiao.github.io/posts/relational-databases-and-normalization/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,14 +55,71 @@
         }
 
     </style>
-</noscript>
-    
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
-     crossorigin="anonymous"></script>
-     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
-    </script>
-     
+</noscript><meta property="og:url" content="https://moloxiao.github.io/posts/relational-databases-and-normalization/">
+  <meta property="og:site_name" content="Shan&#39;s blog">
+  <meta property="og:title" content="Relational Databases and Normalization">
+  <meta property="og:description" content="Normalization forms the foundation of relational databases. In this article, we walk through an example, applying 1NF, 2NF, and 3NF step by step, illustrating how normalization guides the design of a well-structured relational table.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-09T15:01:22+12:00">
+    <meta property="article:modified_time" content="2024-09-09T15:01:22+12:00">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="SQL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Relational Databases and Normalization">
+<meta name="twitter:description" content="Normalization forms the foundation of relational databases. In this article, we walk through an example, applying 1NF, 2NF, and 3NF step by step, illustrating how normalization guides the design of a well-structured relational table.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://moloxiao.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Relational Databases and Normalization",
+      "item": "https://moloxiao.github.io/posts/relational-databases-and-normalization/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Relational Databases and Normalization",
+  "name": "Relational Databases and Normalization",
+  "description": "Normalization forms the foundation of relational databases. In this article, we walk through an example, applying 1NF, 2NF, and 3NF step by step, illustrating how normalization guides the design of a well-structured relational table.",
+  "keywords": [
+    "Database", "SQL"
+  ],
+  "articleBody": "\nTwo-dimensional data is the most commonly used form of information representation by humans. In 1970, Edgar F. Codd first introduced how to efficiently use two-dimensional data to represent transactions, laying the foundation for modern databases.\nThe core of this theory is: normalization.\nLet’s demonstrate how database normalization helps us build a better two-dimensional data model through an example.\n1 Scenario We have a system that tracks students registering for courses at a technical institute. Each student has a unique ID, and each course has a unique course number, course name, and instructor. We need to design a normalized database structure.\nInitial Unnormalized Data\nSuppose we have a table where each student can register for multiple courses, but the course information and instructor names are stored in a single field:\nStudent ID Student Name Courses Instructors 1 John Smith Mathematics, Physics Dr. Brown, Dr. Green 2 Emily Davis Mathematics Dr. Brown 3 Michael Lee Chemistry Dr. White 4 Sarah Wilson Mathematics, Chemistry Dr. Brown, Dr. White Problems with this structure :\nRedundancy: Both course names and instructor names are repeated. Data integrity: If an instructor changes their name, we would have to manually update multiple records. Querying issues: Retrieving specific data (like a list of students in a particular course) would be inefficient due to the combined fields. 1.1 First Normal Form (1NF) To meet the 1NF requirements, we must ensure each field contains only atomic (indivisible) values. We would split the multi-valued fields into separate rows:\nStudent ID Student Name Course ID Course Name Instructor Name 1 John Smith 101 Mathematics Dr. Brown 1 John Smith 102 Physics Dr. Green 2 Emily Davis 101 Mathematics Dr. Brown 3 Michael Lee 103 Chemistry Dr. White 4 Sarah Wilson 101 Mathematics Dr. Brown 4 Sarah Wilson 103 Chemistry Dr. White 1.2 Second Normal Form (2NF) \u0026 Third Normal Form (3NF) Second Normal Form (2NF) requirement: A table is in 2NF if it is already in 1NF and every non-primary key attribute is fully dependent on the entire primary key (in the case of a composite primary key, it must depend on all parts of the key):\nIn the original table, the primary key is the combination of Student ID and Course ID. Issue: The non-primary key attribute Student Name only depends on Student ID and not on the entire composite primary key. This is called a partial dependency, which violates 2NF because Student Name is not dependent on the whole key (Student ID + Course ID), just on a part of it (Student ID). Similarly, Course Name and Instructor Name depend only on Course ID, not on the entire composite key (Student ID + Course ID). Because of these partial dependencies, the table does not satisfy 2NF.\nThird Normal Form (3NF) requirement: A table is in 3NF if it is in 2NF and there are no transitive dependencies. This means that non-primary key attributes should not depend on other non-primary key attributes :\nIssue: In the original table, the attribute Instructor Name depends on Course ID, which is another non-primary key attribute. This creates a transitive dependency, because Instructor Name is indirectly dependent on the composite primary key through Course ID. Essentially, Instructor Name depends on Course ID, and Course ID is part of the primary key. Due to this transitive dependency, the table violates 3NF.\nTo meet 2NF \u0026 3NF, we need to remove partial dependencies by separating student registrations from course details. We split the table into N.\ntable1 - Students :\nStudent ID Student Name 1 John Smith 2 Emily Davis 3 Michael Lee 4 Sarah Wilson table2 Instructors Table :\nInstructor ID Instructor Name 1 Dr. Brown 2 Dr. Green 3 Dr. White table3 Course Table :\nCourse ID Course Name 101 Mathematics 102 Physics 103 Chemistry table4 Course-Instructor Relationship Table :\nCourse ID Instructor ID 101 1 102 2 103 3 2 Define First Normal Form (1NF): A table is in 1NF if all the values in each column are atomic (indivisible). This means that each field should contain only one value, and there should be no repeating groups or arrays of values in a single column.\nSecond Normal Form (2NF): A table is in 2NF if it is in 1NF and all non-primary key attributes are fully dependent on the entire primary key (if a composite primary key is used). It eliminates partial dependencies, where a non-primary key attribute depends only on part of a composite key.\nThird Normal Form (3NF): A table is in 3NF if it is in 2NF and all non-primary key attributes are not only fully dependent on the primary key but also not transitively dependent on other non-primary key attributes. This eliminates transitive dependencies, where one non-key attribute depends on another non-key attribute.\n3 Next step Next, we can consider two aspects:\nIn more complex scenarios, explore other normal forms or even denormalization. How to enable computers to more efficiently store and query normalized data (a central theme of database products in the decades following the 1970s). ",
+  "wordCount" : "836",
+  "inLanguage": "en",
+  "datePublished": "2024-09-09T15:01:22+12:00",
+  "dateModified": "2024-09-09T15:01:22+12:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moloxiao.github.io/posts/relational-databases-and-normalization/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shan's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moloxiao.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -80,9 +137,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <a href="https://moloxiao.github.io/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -106,7 +163,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                <a href="https://moloxiao.github.io/privacy-policy/" title="Privacy Policy">
                     <span>Privacy Policy</span>
                 </a>
             </li>
@@ -128,8 +185,7 @@
 
 </div>
   </header> 
-  <div class="post-content"><p><img loading="lazy" src="/images/2024-09/edgar-f-codd.png" alt="landing page"  />
-<br>
+  <div class="post-content"><p><img alt="landing page" loading="lazy" src="/images/2024-09/edgar-f-codd.png"><br>
 Two-dimensional data is the most commonly used form of information representation by humans. In 1970, <strong>Edgar F. Codd</strong> first introduced how to efficiently use two-dimensional data to represent transactions, laying the foundation for modern databases.</p>
 <blockquote>
 <p>The core of this theory is: normalization.</p></blockquote>
@@ -365,15 +421,15 @@ Suppose we have a table where each student can register for multiple courses, bu
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/database/">Database</a></li>
-      <li><a href="http://localhost:1313/tags/sql/">SQL</a></li>
+      <li><a href="https://moloxiao.github.io/tags/database/">Database</a></li>
+      <li><a href="https://moloxiao.github.io/tags/sql/">SQL</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+        <span>&copy; 2025 <a href="https://moloxiao.github.io/">Shan&#39;s blog</a></span> · 
 
     <span>
         Powered by

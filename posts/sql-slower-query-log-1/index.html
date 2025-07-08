@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>SQL slower query log : 1 | Shan&#39;s blog</title>
 <meta name="keywords" content="SQL, SlowerQuery">
 <meta name="description" content="Query1 [companyExWarehouseOrderItem] - NOT solve
@@ -12,16 +12,16 @@ SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName 
 before : 4.0291
 code use in : solution.getSales().getTask().getExWarehouse().getItem().getListByParentId(mysqlCoon.getSlaveConn(), detailInfo.id, cb);">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/sql-slower-query-log-1/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://moloxiao.github.io/posts/sql-slower-query-log-1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://moloxiao.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://moloxiao.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://moloxiao.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://moloxiao.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://moloxiao.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/sql-slower-query-log-1/">
+<link rel="alternate" hreflang="en" href="https://moloxiao.github.io/posts/sql-slower-query-log-1/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,14 +58,74 @@ code use in : solution.getSales().getTask().getExWarehouse().getItem().getListBy
         }
 
     </style>
-</noscript>
-    
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
-     crossorigin="anonymous"></script>
-     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
-    </script>
-     
+</noscript><meta property="og:url" content="https://moloxiao.github.io/posts/sql-slower-query-log-1/">
+  <meta property="og:site_name" content="Shan&#39;s blog">
+  <meta property="og:title" content="SQL slower query log : 1">
+  <meta property="og:description" content="Query1 [companyExWarehouseOrderItem] - NOT solve SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName, c.spec AS componentSpec, c.colour AS componentColour, c.componentTypeId, c.businessTypeId, c.modelNo, d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo, f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, g.orderNo AS parentOrderNo, h.customerNo AS planCustomerNo, h.orderLineNumber AS planOrderLineNumber, h.planNo, h.extendDesc AS planDesc, h.amount, h.unitPrice, h.currencyId, j.grossAmount, j.unmetAmount, k.demandId, l.userName AS qcCheckerNameZh, m.nameZh AS currencyNameZh FROM companyExWarehouseOrderItem AS a, companyExWarehouseOrderState AS b, companyBasicComponent AS c, companyComponentType AS d, companyBasicComponentBomUnitType AS f, companyExWarehouseOrder AS g, companyProductionSchedules AS h, companyProductionSchedulesBom AS j, companyProductionDemandSchedule AS k, user AS l, currency AS m WHERE a.parentId = 27682 AND a.sourceTypeId = 1 AND a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND c.unitTypeId = f.id AND a.parentId = g.id AND a.scheduleId = h.id AND h.id = j.scheduleId AND a.componentId = j.componentId AND a.scheduleId = k.scheduleId AND a.qcCheckerId = l.id AND h.currencyId = m.id; before : 4.0291 code use in : solution.getSales().getTask().getExWarehouse().getItem().getListByParentId(mysqlCoon.getSlaveConn(), detailInfo.id, cb);">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-01T20:02:09+13:00">
+    <meta property="article:modified_time" content="2025-04-01T20:02:09+13:00">
+    <meta property="article:tag" content="SQL">
+    <meta property="article:tag" content="SlowerQuery">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL slower query log : 1">
+<meta name="twitter:description" content="Query1 [companyExWarehouseOrderItem] - NOT solve
+SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName,       c.spec AS componentSpec, c.colour AS componentColour, c.componentTypeId, c.businessTypeId, c.modelNo,        d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo,       f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, g.orderNo AS parentOrderNo,       h.customerNo AS planCustomerNo, h.orderLineNumber AS planOrderLineNumber, h.planNo, h.extendDesc AS planDesc, h.amount, h.unitPrice, h.currencyId,       j.grossAmount, j.unmetAmount, k.demandId, l.userName AS qcCheckerNameZh, m.nameZh AS currencyNameZh       FROM companyExWarehouseOrderItem AS a, companyExWarehouseOrderState AS b, companyBasicComponent AS c, companyComponentType AS d,       companyBasicComponentBomUnitType AS f, companyExWarehouseOrder AS g, companyProductionSchedules AS h, companyProductionSchedulesBom AS j,      companyProductionDemandSchedule AS k, user AS l, currency AS m       WHERE a.parentId = 27682 AND a.sourceTypeId = 1 AND a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND c.unitTypeId = f.id AND a.parentId = g.id AND a.scheduleId = h.id AND h.id = j.scheduleId       AND a.componentId = j.componentId AND a.scheduleId = k.scheduleId AND a.qcCheckerId = l.id AND h.currencyId = m.id;
+before : 4.0291
+code use in : solution.getSales().getTask().getExWarehouse().getItem().getListByParentId(mysqlCoon.getSlaveConn(), detailInfo.id, cb);">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://moloxiao.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "SQL slower query log : 1",
+      "item": "https://moloxiao.github.io/posts/sql-slower-query-log-1/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "SQL slower query log : 1",
+  "name": "SQL slower query log : 1",
+  "description": "Query1 [companyExWarehouseOrderItem] - NOT solve SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName, c.spec AS componentSpec, c.colour AS componentColour, c.componentTypeId, c.businessTypeId, c.modelNo, d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo, f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, g.orderNo AS parentOrderNo, h.customerNo AS planCustomerNo, h.orderLineNumber AS planOrderLineNumber, h.planNo, h.extendDesc AS planDesc, h.amount, h.unitPrice, h.currencyId, j.grossAmount, j.unmetAmount, k.demandId, l.userName AS qcCheckerNameZh, m.nameZh AS currencyNameZh FROM companyExWarehouseOrderItem AS a, companyExWarehouseOrderState AS b, companyBasicComponent AS c, companyComponentType AS d, companyBasicComponentBomUnitType AS f, companyExWarehouseOrder AS g, companyProductionSchedules AS h, companyProductionSchedulesBom AS j, companyProductionDemandSchedule AS k, user AS l, currency AS m WHERE a.parentId = 27682 AND a.sourceTypeId = 1 AND a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND c.unitTypeId = f.id AND a.parentId = g.id AND a.scheduleId = h.id AND h.id = j.scheduleId AND a.componentId = j.componentId AND a.scheduleId = k.scheduleId AND a.qcCheckerId = l.id AND h.currencyId = m.id; before : 4.0291 code use in : solution.getSales().getTask().getExWarehouse().getItem().getListByParentId(mysqlCoon.getSlaveConn(), detailInfo.id, cb);\n",
+  "keywords": [
+    "SQL", "SlowerQuery"
+  ],
+  "articleBody": "Query1 [companyExWarehouseOrderItem] - NOT solve SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName, c.spec AS componentSpec, c.colour AS componentColour, c.componentTypeId, c.businessTypeId, c.modelNo, d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo, f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, g.orderNo AS parentOrderNo, h.customerNo AS planCustomerNo, h.orderLineNumber AS planOrderLineNumber, h.planNo, h.extendDesc AS planDesc, h.amount, h.unitPrice, h.currencyId, j.grossAmount, j.unmetAmount, k.demandId, l.userName AS qcCheckerNameZh, m.nameZh AS currencyNameZh FROM companyExWarehouseOrderItem AS a, companyExWarehouseOrderState AS b, companyBasicComponent AS c, companyComponentType AS d, companyBasicComponentBomUnitType AS f, companyExWarehouseOrder AS g, companyProductionSchedules AS h, companyProductionSchedulesBom AS j, companyProductionDemandSchedule AS k, user AS l, currency AS m WHERE a.parentId = 27682 AND a.sourceTypeId = 1 AND a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND c.unitTypeId = f.id AND a.parentId = g.id AND a.scheduleId = h.id AND h.id = j.scheduleId AND a.componentId = j.componentId AND a.scheduleId = k.scheduleId AND a.qcCheckerId = l.id AND h.currencyId = m.id; before : 4.0291 code use in : solution.getSales().getTask().getExWarehouse().getItem().getListByParentId(mysqlCoon.getSlaveConn(), detailInfo.id, cb);\nCREATE INDEX idx_exOrder_parent_source ON companyExWarehouseOrderItem (parentId, sourceTypeId); then : 3.65\nQuery 2 [companyProductionSchedulesBom] SELECT a.*, b.orderNo AS planNo, b.requireDate, b.requireDate AS planStartDate, f.aliasName, f.partNo, f.spec FROM companyProductionSchedulesBom AS a, companyProductionDemandPurchaseRequirement AS b, companyBasicComponent AS f WHERE a.companyId = 2 AND a.componentId = 917367 AND a.typeId = 0 AND a.sourceTypeId = 1 AND a.stateId = 0 AND a.unmetAmount \u003e 0 AND a.requirementId = b.id AND b.componentId = f.id; 增加索引，并且顺序很重要:\nALTER TABLE companyProductionSchedulesBom ADD INDEX idx_optimize_query ( companyId, componentId, typeId, sourceTypeId, stateId ); 优化后: 1.5 -\u003e 0.0010\nQuery 3 [warehousingRecode] # Query_time: 11 Lock_time: 0 Rows_sent: 0 Rows_examined: 573780 SET timestamp=1745708909 SELECT a.*, b.partNo, b.aliasName AS componentAliasName, b.spec AS componentSpec, b.componentTypeId, c.name AS componentTypeName, c.nameZh AS componentTypeNameZh, c.customerNo AS componentTypeNo, d.name AS productTypeName, d.nameZh AS productTypeNameZh, e.name AS stateName , e.nameZh AS stateNameZh, f.name AS typeName, f.nameZh AS typeNameZh, g.name AS basicTypeName, g.nameZh AS basicTypeNameZh, h.name AS unitTypeName, h.nameZh AS unitTypeNameZh, k.typeId AS storageBinTypeId, l.eName AS prepareUserName, l.userName AS prepareUserNameZh FROM warehousingRecode AS a, companyBasicComponent AS b, companyComponentType AS c, warehousingRecodeProductType AS d , warehousingRecodeState AS e, materialRequirementType AS f, materialRequirementBasicType AS g, companyBasicComponentBomUnitType AS h,companyWarehouse AS j, warehouseStorageBinLevelTag AS k, user AS l WHERE a.relationNo = 'DX-SP-2504190007' AND a.typeId = 2 AND a.componentId = b.id AND b.componentTypeId = c.id AND a.productTypeId = d.id AND a.stateId = e.id AND a.typeId = f.id AND a.basicTypeId = g.id AND b.unitTypeId = h.id AND a.storageBinId != 0 AND a.storageBinId = j.id AND j.levelTagId = k.id AND a.prepareUserId = l.id; CREATE INDEX idx_warehousingRecode_main ON warehousingRecode (relationNo, typeId, componentId, productTypeId, stateId, basicTypeId, storageBinId, prepareUserId); 优化后: 1.5 -\u003e 0.0010\nQuery 4 [companyProductionSchedulesTask-workshopByTimeWagesApply] - NOT solve # Query_time: 4 Lock_time: 0 Rows_sent: 1 Rows_examined: 367178 SET timestamp=1746316614 SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.eName AS userName, c.userName AS userNameZh, d.name AS procedureName, d.nameZh AS procedureNameZh, e.workshopId, e.name AS workCenterName, e.nameZh AS workCenterNameZh, f.eName AS workCenterManagerName, f.userName AS workCenterManagerNameZh, h.planNo AS schedulePlanNo, h.requireDate AS scheduleRequireDate, h.netAmount, h.bomId, h.componentId, k.partNo, k.componentTypeId, k.aliasName AS componentAliasName, k.spec AS componentSpec, l.customerNo AS componentTypeNo, l.nameZh AS componentTypeNameZh, l.name AS componentTypeName, m.procedureWagesTypeId, m.id AS componentProcedureId, m.estimateTimePrice, m.totalCost, m.cost, n.nameZh AS teamNameZh FROM `companyProductionSchedulesTask` AS a, `companyProductionSchedulesTaskState` AS b, `user` AS c, meProcedure AS d, pmcWorkshopProductionLine AS e, user AS f, companyProductionSchedules AS h, companyBasicComponent AS k, companyComponentType AS l, companyComponentTechnicProcedure AS m, companyWorkshopTeam AS n WHERE a.companyId = 15 AND a.stateId = 0 AND a.id NOT IN (SELECT taskId FROM workshopByTimeWagesApply WHERE companyId = 15 AND id != 29745 ) AND a.stateId = b.id AND a.userId = c.id AND a.procedureId = d.id AND a.workCenterId = e.id AND a.workCenterManagerId = f.id AND e.workshopId = 16 AND a.schedulesId = h.id AND h.componentId = k.id AND k.componentTypeId = l.id AND a.procedureId = m.procedureId AND m.procedureWagesTypeId = 2 AND h.componentId = m.componentId AND a.teamId = n.id AND a.completeDate \u003e= '2025-04-04' AND a.completeDate \u003c= '2025-05-05'; before : 4.2\nCREATE INDEX idx_apply_task_company_id ON workshopByTimeWagesApply(taskId, companyId, id); then : 4.0\nCREATE INDEX idx_task_filter ON companyProductionSchedulesTask(companyId, stateId, completeDate); then : 3.6\nQuery 5 [warehousingMaterialRequisitionItem] # Query_time: 3 Lock_time: 0 Rows_sent: 0 Rows_examined: 5284489 SET timestamp=1746317175 SELECT a.*, b.name AS stateName, b.nameZh AS stateNameZh, c.partNo, c.aliasName AS componentAliasName, c.spec AS componentSpec, c.componentTypeId, d.name AS componentTypeName, d.nameZh AS componentTypeNameZh, d.customerNo AS componentTypeNo, e.eName AS prepareUserName, e.userName AS prepareUserNameZh, f.name AS unitTypeName, f.nameZh AS unitTypeNameZh, f.integerTag AS unitTypeIntegerTag, g.orderNo AS parentOrderNo FROM warehousingMaterialRequisitionItem AS a, warehousingMaterialRequisitionState AS b, companyBasicComponent AS c, companyComponentType AS d, user AS e, companyBasicComponentBomUnitType AS f, warehousingMaterialRequisition AS g WHERE a.stateId = b.id AND a.componentId = c.id AND c.componentTypeId = d.id AND a.prepareUserId = e.id AND c.unitTypeId = f.id AND a.parentId = g.id AND g.relationId = 199743; 5.0273(3.2)\nCREATE INDEX idx_relationId ON warehousingMaterialRequisition(relationId); then : 0.0009\nCREATE INDEX idx_parentId ON warehousingMaterialRequisitionItem(parentId); then : 0.0006\nQuery 6 - TODO # Time: 2025-05-05T08:30:08.446229 CST # User@Host: eta[eta] @ [10.25.90.9] id: 18307659 # Query_time: 11 Lock_time: 0 Rows_sent: 3711 Rows_examined: 578127 SET timestamp=1746405008 SELECT * FROM warehousingRecode WHERE companyId = 16 AND stateId = 3 AND updatePlanOrderTag = 0 AND typeId = 2; Query 7 - TODO # Time: 2025-05-05T08:30:47.087622 CST # User@Host: eta[eta] @ [10.25.90.9] id: 18307659 # Query_time: 8 Lock_time: 0 Rows_sent: 1 Rows_examined: 267827 SET timestamp=1746405047 SELECT componentId, SUM(numbers) AS netAmount, SUM(deliveryNumbers) AS completeNumbers, SUM(numbers - deliveryNumbers) AS waitInNumbers FROM `companyProcurementMaterielOrder` WHERE companyId = 16 AND stateId IN (1, 3, 5, 8, 9) AND componentId IN (916339) GROUP BY componentId; Query 8 - TODO # Time: 2025-05-05T08:30:08.446229 CST # User@Host: eta[eta] @ [10.25.90.9] id: 18307659 # Query_time: 11 Lock_time: 0 Rows_sent: 3711 Rows_examined: 578127 SET timestamp=1746405008 SELECT * FROM warehousingRecode WHERE companyId = 16 AND stateId = 3 AND updatePlanOrderTag = 0 AND typeId = 2; Query 9 - TODO # Query_time: 3 Lock_time: 0 Rows_sent: 0 Rows_examined: 1842970 SET timestamp=1746405246 UPDATE warehousingRecode SET stateId = 4 WHERE companyId = 2 AND operateNo IN ( SELECT orderNo FROM warehousingDeliveryVoucher WHERE companyId = 2 AND id IN (60635) ) AND stateId != 4 AND stateId != 3; ",
+  "wordCount" : "977",
+  "inLanguage": "en",
+  "datePublished": "2025-04-01T20:02:09+13:00",
+  "dateModified": "2025-04-01T20:02:09+13:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moloxiao.github.io/posts/sql-slower-query-log-1/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shan's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moloxiao.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -83,9 +143,9 @@ code use in : solution.getSales().getTask().getExWarehouse().getItem().getListBy
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <a href="https://moloxiao.github.io/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -109,7 +169,7 @@ code use in : solution.getSales().getTask().getExWarehouse().getItem().getListBy
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                <a href="https://moloxiao.github.io/privacy-policy/" title="Privacy Policy">
                     <span>Privacy Policy</span>
                 </a>
             </li>
@@ -202,15 +262,15 @@ UPDATE warehousingRecode SET stateId = 4 WHERE companyId = 2 AND operateNo IN ( 
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/sql/">SQL</a></li>
-      <li><a href="http://localhost:1313/tags/slowerquery/">SlowerQuery</a></li>
+      <li><a href="https://moloxiao.github.io/tags/sql/">SQL</a></li>
+      <li><a href="https://moloxiao.github.io/tags/slowerquery/">SlowerQuery</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+        <span>&copy; 2025 <a href="https://moloxiao.github.io/">Shan&#39;s blog</a></span> · 
 
     <span>
         Powered by

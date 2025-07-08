@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Reading Notes Series 1 Achieving Rapid Response Times | Shan&#39;s blog</title>
 <meta name="keywords" content="ReadingNotes, Software">
 <meta name="description" content="Notes and key insights from the paper &#39;Achieving Rapid Response Times in Large Online Services&#39; by Jeff Dean.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/reading-notes-series-1-achieving-rapid-response-times/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://moloxiao.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://moloxiao.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://moloxiao.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://moloxiao.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://moloxiao.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/reading-notes-series-1-achieving-rapid-response-times/">
+<link rel="alternate" hreflang="en" href="https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,14 +55,71 @@
         }
 
     </style>
-</noscript>
-    
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
-     crossorigin="anonymous"></script>
-     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
-    </script>
-     
+</noscript><meta property="og:url" content="https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/">
+  <meta property="og:site_name" content="Shan&#39;s blog">
+  <meta property="og:title" content="Reading Notes Series 1 Achieving Rapid Response Times">
+  <meta property="og:description" content="Notes and key insights from the paper &#39;Achieving Rapid Response Times in Large Online Services&#39; by Jeff Dean.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-12T15:30:57+13:00">
+    <meta property="article:modified_time" content="2024-11-12T15:30:57+13:00">
+    <meta property="article:tag" content="ReadingNotes">
+    <meta property="article:tag" content="Software">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Reading Notes Series 1 Achieving Rapid Response Times">
+<meta name="twitter:description" content="Notes and key insights from the paper &#39;Achieving Rapid Response Times in Large Online Services&#39; by Jeff Dean.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://moloxiao.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Reading Notes Series 1 Achieving Rapid Response Times",
+      "item": "https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Reading Notes Series 1 Achieving Rapid Response Times",
+  "name": "Reading Notes Series 1 Achieving Rapid Response Times",
+  "description": "Notes and key insights from the paper 'Achieving Rapid Response Times in Large Online Services' by Jeff Dean.",
+  "keywords": [
+    "ReadingNotes", "Software"
+  ],
+  "articleBody": "This is my first blog post in the Reading Notes Series. Ten years ago, Jeff Dean presented these insights at the 2014 O’Reilly Velocity Conference in Santa Clara, CA. Now, a decade later, are these tips still relevant? Let’s take a closer look.\nFor more details, you can check out the Video or Slide-PDF.\nBy the way, I initially planned to spend just 2 hours reading these papers and watching the video, but I think I’ll actually need a whole week (about 2 hours a day) to complete the summary.\nI wrote this blog for two purposes:\nto share some of my insights; to organize and integrate the technical details mentioned by Jeff Dean into a structured framework, creating a clear thought process. Tpoic 1 : Squash All Variability Possible at small scale :\ndedicated resources complete control over whole system careful understanding of all background activities less likely to have hardware fail in bizarre ways Software or hardware changes affect delicate balance, so that will make system changes are difficult(Not tenable at large scale: need to share resources).\nNext step is : Shared Environment, Huge benefit: greatly increased utilization, but hard to predict effects increase variability(Exacerbated by large fanout systems) :\nnetwork congestion background activities bursts of foreground activity not just your jobs, but everyone else’s jobs, too So it’s not work.\nTopic 2 : Basic Latency Reduction Techniques Sort of really rein in the long tail of latency without increasing the performance cost of the system too much.\nFirst way is Differentiated service classes :\nprioritized request queues in servers prioritized network traffic Second way is Reduce head-of-line blocking :\nbreak large requests into sequence of small requests Third way is Manage expensive background activities :\ne.g. log compaction in distributed storage systems rate limit activity defer expensive activity until load is lower Topic 3 : Tolerating Faults vs. Tolerating Variability Tolerating faults:\nrely on extra resources (RAIDed disks, ECC memory, dist. system components, etc.) make a reliable whole out of unreliable parts Tolerating variability:\nuse these same extra resources make a predictable whole out of unpredictable parts Times scales are very different:\nvariability: 1000s of disruptions/sec, scale of milliseconds faults: 10s of failures per day, scale of tens of seconds Contents[Topic 1] Large Fanout Services 1 Large Fanout Services Definition: Large Fanout Services are systems that handle requests by querying multiple backend services or subsystems in parallel. They are common in large-scale systems like search engines, ad services, and recommendation engines, where each request depends on data from many sources.\nChallenges: The primary challenge in Large Fanout Services is managing “tail latency,” where the slowest responses from backends can delay the overall response time. Since these services depend on multiple responses, even a few slow replies can impact the user experience.\nOptimization Goal:\nconsistently rapid response times Method:\nRequest Redundancy: Sending duplicate requests to multiple servers and using the first response, helping to avoid delays from slow servers. Timeout Management: Setting precise time limits for requests to ensure they don’t wait indefinitely and instead proceed with partial data if necessary. Distributed Caching: Caching frequently accessed data to reduce dependency on slower backends, speeding up response times for repeated requests. Reference 如何在大规模在线系统中保证延迟？ ",
+  "wordCount" : "534",
+  "inLanguage": "en",
+  "datePublished": "2024-11-12T15:30:57+13:00",
+  "dateModified": "2024-11-12T15:30:57+13:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shan's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moloxiao.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -80,9 +137,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <a href="https://moloxiao.github.io/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -106,7 +163,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                <a href="https://moloxiao.github.io/privacy-policy/" title="Privacy Policy">
                     <span>Privacy Policy</span>
                 </a>
             </li>
@@ -214,15 +271,15 @@ First way is <strong>Differentiated service classes</strong> :</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/readingnotes/">ReadingNotes</a></li>
-      <li><a href="http://localhost:1313/tags/software/">Software</a></li>
+      <li><a href="https://moloxiao.github.io/tags/readingnotes/">ReadingNotes</a></li>
+      <li><a href="https://moloxiao.github.io/tags/software/">Software</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+        <span>&copy; 2025 <a href="https://moloxiao.github.io/">Shan&#39;s blog</a></span> · 
 
     <span>
         Powered by

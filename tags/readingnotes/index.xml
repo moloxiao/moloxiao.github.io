@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ReadingNotes on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/readingnotes/</link>
+    <link>https://moloxiao.github.io/tags/readingnotes/</link>
     <description>Recent content in ReadingNotes on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Nov 2024 15:30:57 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/readingnotes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/readingnotes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reading Notes Series 1 Achieving Rapid Response Times</title>
-      <link>http://localhost:1313/posts/reading-notes-series-1-achieving-rapid-response-times/</link>
+      <link>https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/</link>
       <pubDate>Tue, 12 Nov 2024 15:30:57 +1300</pubDate>
-      <guid>http://localhost:1313/posts/reading-notes-series-1-achieving-rapid-response-times/</guid>
+      <guid>https://moloxiao.github.io/posts/reading-notes-series-1-achieving-rapid-response-times/</guid>
       <description>Notes and key insights from the paper &amp;#39;Achieving Rapid Response Times in Large Online Services&amp;#39; by Jeff Dean.</description>
     </item>
   </channel>

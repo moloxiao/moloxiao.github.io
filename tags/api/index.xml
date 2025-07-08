@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>API on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/api/</link>
+    <link>https://moloxiao.github.io/tags/api/</link>
     <description>Recent content in API on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Feb 2025 20:20:01 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Qucik Start : Laravel</title>
-      <link>http://localhost:1313/posts/qucik-start-laravel/</link>
+      <link>https://moloxiao.github.io/posts/qucik-start-laravel/</link>
       <pubDate>Wed, 19 Feb 2025 20:20:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/qucik-start-laravel/</guid>
+      <guid>https://moloxiao.github.io/posts/qucik-start-laravel/</guid>
       <description>My notes when I learn Laravel create a API project use JWT. My first use in 2025-02-19, rewrite in 2025-04-01.</description>
     </item>
   </channel>

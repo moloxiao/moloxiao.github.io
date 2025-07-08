@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>The Character-Indexed Object Problem in Laravel Docker APIs | Shan&#39;s blog</title>
 <meta name="keywords" content="Laravel, Nginx, Docker, DevOps">
 <meta name="description" content="This is a character-indexed object issue encountered in a Laravel &#43; Docker &#43; Nginx deployment environment, where the API, instead of returning a valid JSON object, occasionally responds with an object whose keys are string indices and whose values are the individual characters of the intended JSON string.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://moloxiao.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://moloxiao.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://moloxiao.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://moloxiao.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://moloxiao.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/">
+<link rel="alternate" hreflang="en" href="https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,14 +55,73 @@
         }
 
     </style>
-</noscript>
-    
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
-     crossorigin="anonymous"></script>
-     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
-    </script>
-     
+</noscript><meta property="og:url" content="https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/">
+  <meta property="og:site_name" content="Shan&#39;s blog">
+  <meta property="og:title" content="The Character-Indexed Object Problem in Laravel Docker APIs">
+  <meta property="og:description" content="This is a character-indexed object issue encountered in a Laravel &#43; Docker &#43; Nginx deployment environment, where the API, instead of returning a valid JSON object, occasionally responds with an object whose keys are string indices and whose values are the individual characters of the intended JSON string.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-18T20:02:09+13:00">
+    <meta property="article:modified_time" content="2025-05-18T20:02:09+13:00">
+    <meta property="article:tag" content="Laravel">
+    <meta property="article:tag" content="Nginx">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="DevOps">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Character-Indexed Object Problem in Laravel Docker APIs">
+<meta name="twitter:description" content="This is a character-indexed object issue encountered in a Laravel &#43; Docker &#43; Nginx deployment environment, where the API, instead of returning a valid JSON object, occasionally responds with an object whose keys are string indices and whose values are the individual characters of the intended JSON string.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://moloxiao.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Character-Indexed Object Problem in Laravel Docker APIs",
+      "item": "https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Character-Indexed Object Problem in Laravel Docker APIs",
+  "name": "The Character-Indexed Object Problem in Laravel Docker APIs",
+  "description": "This is a character-indexed object issue encountered in a Laravel + Docker + Nginx deployment environment, where the API, instead of returning a valid JSON object, occasionally responds with an object whose keys are string indices and whose values are the individual characters of the intended JSON string.",
+  "keywords": [
+    "Laravel", "Nginx", "Docker", "DevOps"
+  ],
+  "articleBody": "1. Problem Description In a typical Laravel + Docker API deployment, you may notice an odd, intermittent bug: when accessing the same API endpoint multiple times in a row, the returned JSON response is sometimes corrupted. Instead of a normal structure like this:\n{ \"success\": true, \"data\": [ { \"id\": 1, \"name\": \"Test\" } ], \"statusCode\": 200 } You might occasionally get something like this:\n{ \"0\": \"{\", \"1\": \"s\", \"2\": \"u\", // ... } This bizarre issue usually happens after the container has been running for some time, even if you have already updated your PHP configuration to disable error output in production. Initially, everything seems fine, but after a day or two, the corruption becomes frequent.\nPseudo-code example of an affected controller:\npublic function getData() { $data = $this-\u003eservice-\u003efetchData(); // Sometimes $data triggers a warning/notice return response()-\u003ejson(['success' =\u003e true, 'data' =\u003e $data]); } 2. Technical Background The official PHP Docker image often defaults display_errors to STDOUT (i.e., errors/warnings are printed directly to the HTTP response). Any warning/notice generated by your code (e.g., undefined variables, array keys, type errors) can pollute your API response, especially when error output is not disabled. Many frontends, expecting valid JSON, will try to parse the raw response, and if it fails, some frameworks degrade to converting the raw string into a character-indexed object (resulting in the weird output above). Initially, everything may appear fine, as most requests don’t trigger warnings, but in production—with more data, concurrency, or edge cases—these warnings appear. 3. Analysis: Why Does It Happen Only After a While? If you observe that the issue is rare right after deployment, but becomes frequent after a day or more, the root cause is often not just PHP’s error display configuration, but also:\nResource exhaustion: PHP-FPM worker pool is full, memory leaks, or log/session/disk space is exhausted. Concurrent race conditions: Some requests trigger warnings/notices only under specific race, cache, or session states. Container volume synchronization issues: Occasional delays or failures in syncing volumes between host and container can trigger transient file access errors. Log or cache bloat: As logs or session files accumulate, they may eventually fill up storage or hit inode limits, causing PHP or Laravel to fail in non-obvious ways. This means: Your API may return normal JSON at first, but after enough time or load, warnings/errors start polluting the output, especially when system resources are under stress.\nTo diagnose, check:\nPHP-FPM error logs Laravel’s storage/logs/laravel.log Disk space and inode usage (df -h, df -i) docker stats for resource exhaustion Nginx access and error logs 4. Solution: Bulletproofing Your Laravel Docker API Step 1: Create a Custom PHP Configuration Create a custom.ini file in your project root with the following content:\ndisplay_errors = Off display_startup_errors = Off log_errors = On error_reporting = E_ALL \u0026 ~E_DEPRECATED \u0026 ~E_STRICT \u0026 ~E_NOTICE \u0026 ~E_WARNING Step 2: Add the Custom Config to Your Dockerfile Add this line (after copying your project files):\nCOPY custom.ini /usr/local/etc/php/conf.d/99-custom.ini This will override the default display_errors value when you build your Docker image.\nStep 3: Rebuild and Restart the Containers docker-compose build docker-compose up -d Step 4: Verify the Configuration Use this command to check the live PHP settings:\ndocker exec -it laravel-api php -i | grep display_errors Expected output:\ndisplay_errors =\u003e Off =\u003e Off Step 5: Monitor and Proactively Maintain Your Deployment Regularly check log and cache sizes to avoid disk/inode exhaustion. Monitor PHP-FPM and container resource usage (docker stats). Investigate all warning/notice entries in your logs and fix them in code if possible. Ensure your frontends gracefully handle non-200 and non-JSON responses for maximum resilience. 5. Final Thoughts Even with the right PHP config, long-running Docker containers can develop issues over time due to log, session, or resource exhaustion, or race conditions in code. Bulletproof your setup by:\nDisabling all error display in production. Monitoring logs and resources. Proactively addressing all sources of warnings/notices in your codebase. With this setup, your API should consistently return clean JSON—no more mysterious character-indexed objects!\n",
+  "wordCount" : "663",
+  "inLanguage": "en",
+  "datePublished": "2025-05-18T20:02:09+13:00",
+  "dateModified": "2025-05-18T20:02:09+13:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shan's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moloxiao.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -80,9 +139,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <a href="https://moloxiao.github.io/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -106,7 +165,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                <a href="https://moloxiao.github.io/privacy-policy/" title="Privacy Policy">
                     <span>Privacy Policy</span>
                 </a>
             </li>
@@ -218,17 +277,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/laravel/">Laravel</a></li>
-      <li><a href="http://localhost:1313/tags/nginx/">Nginx</a></li>
-      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
-      <li><a href="http://localhost:1313/tags/devops/">DevOps</a></li>
+      <li><a href="https://moloxiao.github.io/tags/laravel/">Laravel</a></li>
+      <li><a href="https://moloxiao.github.io/tags/nginx/">Nginx</a></li>
+      <li><a href="https://moloxiao.github.io/tags/docker/">Docker</a></li>
+      <li><a href="https://moloxiao.github.io/tags/devops/">DevOps</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+        <span>&copy; 2025 <a href="https://moloxiao.github.io/">Shan&#39;s blog</a></span> · 
 
     <span>
         Powered by

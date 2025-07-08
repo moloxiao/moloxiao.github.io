@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Git on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/git/</link>
+    <link>https://moloxiao.github.io/tags/git/</link>
     <description>Recent content in Git on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Apr 2025 20:00:01 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple Delpoyment Workflow</title>
-      <link>http://localhost:1313/posts/simple-deployment-workflow/</link>
+      <link>https://moloxiao.github.io/posts/simple-deployment-workflow/</link>
       <pubDate>Wed, 30 Apr 2025 20:00:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/simple-deployment-workflow/</guid>
+      <guid>https://moloxiao.github.io/posts/simple-deployment-workflow/</guid>
       <description>Simple delpoyment workflow with git.</description>
     </item>
     <item>
       <title>Why Does Git Commits Start with `feat:`?</title>
-      <link>http://localhost:1313/posts/2025-03-19-why-does-git-commits-start-with-feat/</link>
+      <link>https://moloxiao.github.io/posts/2025-03-19-why-does-git-commits-start-with-feat/</link>
       <pubDate>Wed, 19 Mar 2025 20:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-03-19-why-does-git-commits-start-with-feat/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-03-19-why-does-git-commits-start-with-feat/</guid>
       <description>Have you ever wondered why Git commit messages often start with feat: when using Copilot or other AI-assisted tools? This blog explores Conventional Commits, a structured approach to writing commit messages that enhances readability, automates changelog generation, and supports semantic versioning. Learn why adopting this convention can improve your workflow and how to implement it in your projects using commitizen, commitlint, and husky. 🚀</description>
     </item>
   </channel>

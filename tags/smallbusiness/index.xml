@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SmallBusiness on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/smallbusiness/</link>
+    <link>https://moloxiao.github.io/tags/smallbusiness/</link>
     <description>Recent content in SmallBusiness on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Nov 2024 16:40:33 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/smallbusiness/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/smallbusiness/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello Accounting</title>
-      <link>http://localhost:1313/posts/hello-accounting/</link>
+      <link>https://moloxiao.github.io/posts/hello-accounting/</link>
       <pubDate>Mon, 25 Nov 2024 16:40:33 +1300</pubDate>
-      <guid>http://localhost:1313/posts/hello-accounting/</guid>
+      <guid>https://moloxiao.github.io/posts/hello-accounting/</guid>
       <description>My Notes on Accounting, Driven by Personal Interest.</description>
     </item>
   </channel>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Simple Delpoyment Workflow | Shan&#39;s blog</title>
 <meta name="keywords" content="DevOps, Git">
 <meta name="description" content="Simple delpoyment workflow with git.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/simple-deployment-workflow/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://moloxiao.github.io/posts/simple-deployment-workflow/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://moloxiao.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://moloxiao.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://moloxiao.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://moloxiao.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://moloxiao.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/simple-deployment-workflow/">
+<link rel="alternate" hreflang="en" href="https://moloxiao.github.io/posts/simple-deployment-workflow/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,14 +55,71 @@
         }
 
     </style>
-</noscript>
-    
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
-     crossorigin="anonymous"></script>
-     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
-    </script>
-     
+</noscript><meta property="og:url" content="https://moloxiao.github.io/posts/simple-deployment-workflow/">
+  <meta property="og:site_name" content="Shan&#39;s blog">
+  <meta property="og:title" content="Simple Delpoyment Workflow">
+  <meta property="og:description" content="Simple delpoyment workflow with git.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-30T20:00:01+13:00">
+    <meta property="article:modified_time" content="2025-04-30T20:00:01+13:00">
+    <meta property="article:tag" content="DevOps">
+    <meta property="article:tag" content="Git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Simple Delpoyment Workflow">
+<meta name="twitter:description" content="Simple delpoyment workflow with git.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://moloxiao.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Simple Delpoyment Workflow",
+      "item": "https://moloxiao.github.io/posts/simple-deployment-workflow/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Simple Delpoyment Workflow",
+  "name": "Simple Delpoyment Workflow",
+  "description": "Simple delpoyment workflow with git.",
+  "keywords": [
+    "DevOps", "Git"
+  ],
+  "articleBody": "Vercel and similar platforms have dramatically lowered the complexity of deploying web applications. For many individual developers or simple projects, sophisticated CI/CD pipelines and branching strategies may be overkill.\nIn this blog post, we’ll walk through a lightweight Git-based deployment workflow that’s easy to manage, beginner-friendly, and perfectly suited for small- to medium-sized projects.\n1. Workflow Overview This workflow assumes you’re using Vercel and Git (either via CLI or VS Code). The idea is to:\nUse only the main branch to trigger production deployments Do daily development in a temporary developer branch Merge into main once a development cycle is completed and tested Repeat the process in the next cycle Why this works well:\nAvoids frequent preview deployments Keeps your production deployments clean and controlled No need to configure GitHub Actions or Vercel CLI 2. Step-by-Step Workflow (Git CLI vs. VS Code) Step Goal Git Command Line VS Code Source Control 1 Pull the latest main branch git checkout maingit pull origin main SCM Panel → … menu → Checkout to... → Select main, then Pull 2 Start a new developer branch git checkout -b developer SCM Panel → … menu → Create new branch → Name developer 3 Write code \u0026 commit git add .git commit -m \"feat: xxx\" Stage changes with + button → Add commit message → Click ✓ 4 Push the dev branch git push origin developer Click “Publish Branch” or “Push” button in bottom bar 5 Test the feature locally (Manual testing) (Manual testing) 6 Merge to main git checkout maingit merge developer Checkout main in SCM → Click Merge into main 7 Push to main → deploy! git push origin main Click “Push” on main branch 8 Delete the developer branch git branch -d developergit push origin --delete developer SCM Panel → … menu → Delete Branch (local \u0026 remote) 3. Example - Git Workflow Using VSCode Source Control Prerequisites :\nYou have a Git repository initialized. You are currently on the main branch. Phase Step Description VSCode Action Git Behind the Scenes 1. Create Branch 1.1 Make sure you are on the main branch Click bottom-left branch name → select main git checkout main 1.2 Create developer branch Click branch name → Create new branch... → name it developer git checkout -b developer 1.3 Automatically switch to developer VSCode switches branch after creation (Part of previous command) 2. Daily Commit 2.1 Make code changes Edit your files in VSCode (Working directory changes only) 2.2 View file changes Click Source Control (Git icon in sidebar) (No git command yet) 2.3 Add a commit message Enter a message like Added user login (Prepare for commit) 2.4 Commit changes Click ✔️ checkmark git add + git commit -m \"message\" 2.5 (Optional) Push to remote Click Sync Changes or Push git push origin developer 3. Merge to main 3.1 Switch to main Click branch name → choose main git checkout main 3.2 Merge from developer Click branch name → Merge Branch... → select developer git merge developer 3.3 Handle merge commit Commit if prompted git commit (if auto-merge needs it) 3.4 Push merged main Click Sync Changes or Push git push origin main 4. Clean Branch 4.1 Delete old developer branch Terminal git branch -d developer 4.2 Delete remote branch (if needed) Terminal git push origin --delete developer Summary :\nUse a fresh developer branch each phase to keep history clean Merge only after confirming a completed phase Always start a new phase by creating developer from the latest main 4. Summary This lightweight Git-based workflow is ideal for solo developers and small teams using platforms like Vercel. Here’s what makes it work:\nYou only deploy from main, which keeps your live site safe and stable. You isolate day-to-day development in a temporary developer branch. You don’t need GitHub Actions or Vercel CLI for this setup. You gain a clean, repeatable, and understandable development rhythm. You can always upgrade this workflow later with feature branches, GitHub Actions, or CI checks as your project evolves.\nHappy coding!\n",
+  "wordCount" : "669",
+  "inLanguage": "en",
+  "datePublished": "2025-04-30T20:00:01+13:00",
+  "dateModified": "2025-04-30T20:00:01+13:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moloxiao.github.io/posts/simple-deployment-workflow/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shan's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moloxiao.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -80,9 +137,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <a href="https://moloxiao.github.io/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -106,7 +163,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                <a href="https://moloxiao.github.io/privacy-policy/" title="Privacy Policy">
                     <span>Privacy Policy</span>
                 </a>
             </li>
@@ -348,15 +405,15 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/devops/">DevOps</a></li>
-      <li><a href="http://localhost:1313/tags/git/">Git</a></li>
+      <li><a href="https://moloxiao.github.io/tags/devops/">DevOps</a></li>
+      <li><a href="https://moloxiao.github.io/tags/git/">Git</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+        <span>&copy; 2025 <a href="https://moloxiao.github.io/">Shan&#39;s blog</a></span> · 
 
     <span>
         Powered by

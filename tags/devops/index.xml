@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>DevOps on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/devops/</link>
+    <link>https://moloxiao.github.io/tags/devops/</link>
     <description>Recent content in DevOps on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 May 2025 20:02:09 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Character-Indexed Object Problem in Laravel Docker APIs</title>
-      <link>http://localhost:1313/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</link>
+      <link>https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</link>
       <pubDate>Sun, 18 May 2025 20:02:09 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/</guid>
       <description>This is a character-indexed object issue encountered in a Laravel &#43; Docker &#43; Nginx deployment environment, where the API, instead of returning a valid JSON object, occasionally responds with an object whose keys are string indices and whose values are the individual characters of the intended JSON string.</description>
     </item>
     <item>
       <title>Simple Delpoyment Workflow</title>
-      <link>http://localhost:1313/posts/simple-deployment-workflow/</link>
+      <link>https://moloxiao.github.io/posts/simple-deployment-workflow/</link>
       <pubDate>Wed, 30 Apr 2025 20:00:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/simple-deployment-workflow/</guid>
+      <guid>https://moloxiao.github.io/posts/simple-deployment-workflow/</guid>
       <description>Simple delpoyment workflow with git.</description>
     </item>
   </channel>

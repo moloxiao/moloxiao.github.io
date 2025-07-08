@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Coding on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/coding/</link>
+    <link>https://moloxiao.github.io/tags/coding/</link>
     <description>Recent content in Coding on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Apr 2025 20:00:00 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Json web token</title>
-      <link>http://localhost:1313/posts/json-web-token/</link>
+      <link>https://moloxiao.github.io/posts/json-web-token/</link>
       <pubDate>Mon, 14 Apr 2025 20:00:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/json-web-token/</guid>
+      <guid>https://moloxiao.github.io/posts/json-web-token/</guid>
       <description>JWT (JSON Web Token) is a popular way to handle cross-domain authentication. In this post, I’ll go over how it works and how to use it.</description>
     </item>
     <item>
       <title>Designing and Delivering a Customizable Front-End UI System for End Users : 1</title>
-      <link>http://localhost:1313/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</link>
+      <link>https://moloxiao.github.io/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</link>
       <pubDate>Mon, 07 Apr 2025 15:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</guid>
+      <guid>https://moloxiao.github.io/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</guid>
       <description>&lt;h1 id=&#34;1-delivery-method&#34;&gt;1 Delivery method&lt;/h1&gt;
 &lt;p&gt;We have to choice for users:&lt;/p&gt;
 &lt;ul&gt;
@@ -33,25 +33,24 @@ The current analysis is based on the documentation of AdminMart and the template
     </item>
     <item>
       <title>You Do Not Need Learn Everything in the Code</title>
-      <link>http://localhost:1313/posts/you-do-not-need-learn-everything-in-the-code/</link>
+      <link>https://moloxiao.github.io/posts/you-do-not-need-learn-everything-in-the-code/</link>
       <pubDate>Thu, 19 Dec 2024 10:40:54 +1300</pubDate>
-      <guid>http://localhost:1313/posts/you-do-not-need-learn-everything-in-the-code/</guid>
+      <guid>https://moloxiao.github.io/posts/you-do-not-need-learn-everything-in-the-code/</guid>
       <description>You Do Not Need Learn Everything in the Code. Which is impossible. Pick a tech stack and learn as much as you can about that group of technologies. </description>
     </item>
     <item>
       <title>How to Write Code Using AI Assistance</title>
-      <link>http://localhost:1313/posts/how-to-write-code-using-ai-assistance/</link>
+      <link>https://moloxiao.github.io/posts/how-to-write-code-using-ai-assistance/</link>
       <pubDate>Wed, 11 Sep 2024 10:53:23 +1200</pubDate>
-      <guid>http://localhost:1313/posts/how-to-write-code-using-ai-assistance/</guid>
+      <guid>https://moloxiao.github.io/posts/how-to-write-code-using-ai-assistance/</guid>
       <description>how to write code Using AI-assistance By Andrew Ng. This is Shan&amp;#39;s notes. </description>
     </item>
     <item>
       <title>Application Integration : it&#39;s all about the adapter</title>
-      <link>http://localhost:1313/posts/application-integration/</link>
+      <link>https://moloxiao.github.io/posts/application-integration/</link>
       <pubDate>Tue, 13 Aug 2024 10:53:43 +1200</pubDate>
-      <guid>http://localhost:1313/posts/application-integration/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/2024-08-13-01.webp&#34; alt=&#34;Header&#34;  /&gt;
-
+      <guid>https://moloxiao.github.io/posts/application-integration/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Header&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/2024-08-13-01.webp&#34;&gt;
 Integration development is not a standardized term, so there isn&amp;rsquo;t a dedicated page for it on Wikipedia.&lt;br&gt;
 In this article, it defines &lt;strong&gt;application integration&lt;/strong&gt; as the process of enabling individual applications to communicate with each other.&lt;/p&gt;
 &lt;p&gt;For me, &lt;strong&gt;integration means adapter&lt;/strong&gt;. Let me explain it.&lt;/p&gt;

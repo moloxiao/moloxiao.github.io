@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>JWT on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/jwt/</link>
+    <link>https://moloxiao.github.io/tags/jwt/</link>
     <description>Recent content in JWT on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Apr 2025 20:00:00 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Json web token</title>
-      <link>http://localhost:1313/posts/json-web-token/</link>
+      <link>https://moloxiao.github.io/posts/json-web-token/</link>
       <pubDate>Mon, 14 Apr 2025 20:00:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/json-web-token/</guid>
+      <guid>https://moloxiao.github.io/posts/json-web-token/</guid>
       <description>JWT (JSON Web Token) is a popular way to handle cross-domain authentication. In this post, I’ll go over how it works and how to use it.</description>
     </item>
     <item>
       <title>Qucik Start : Laravel</title>
-      <link>http://localhost:1313/posts/qucik-start-laravel/</link>
+      <link>https://moloxiao.github.io/posts/qucik-start-laravel/</link>
       <pubDate>Wed, 19 Feb 2025 20:20:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/qucik-start-laravel/</guid>
+      <guid>https://moloxiao.github.io/posts/qucik-start-laravel/</guid>
       <description>My notes when I learn Laravel create a API project use JWT. My first use in 2025-02-19, rewrite in 2025-04-01.</description>
     </item>
   </channel>

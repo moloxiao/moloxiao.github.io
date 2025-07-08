@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Test on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/test/</link>
+    <link>https://moloxiao.github.io/tags/test/</link>
     <description>Recent content in Test on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Apr 2025 16:10:00 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SaaS Test 2 : Test Case</title>
-      <link>http://localhost:1313/posts/saas-test-2/</link>
+      <link>https://moloxiao.github.io/posts/saas-test-2/</link>
       <pubDate>Sun, 20 Apr 2025 16:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/saas-test-2/</guid>
+      <guid>https://moloxiao.github.io/posts/saas-test-2/</guid>
       <description>&lt;h2 id=&#34;1-principle&#34;&gt;1 Principle&lt;/h2&gt;
 &lt;h2 id=&#34;-what-each-testing-layer-should-do&#34;&gt;✅ What Each Testing Layer Should Do&lt;/h2&gt;
 &lt;table&gt;
@@ -100,9 +100,9 @@
     </item>
     <item>
       <title>SaaS Test 1 : Phased Testing Strategy for a SaaS System</title>
-      <link>http://localhost:1313/posts/saas-test-1/</link>
+      <link>https://moloxiao.github.io/posts/saas-test-1/</link>
       <pubDate>Sun, 20 Apr 2025 15:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/saas-test-1/</guid>
+      <guid>https://moloxiao.github.io/posts/saas-test-1/</guid>
       <description>This document outlines a practical, phased approach to testing login and registration features in a SaaS application. It balances manual testing and E2E automation based on development stage.</description>
     </item>
   </channel>

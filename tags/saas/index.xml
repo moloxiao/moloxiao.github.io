@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SaaS on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/saas/</link>
+    <link>https://moloxiao.github.io/tags/saas/</link>
     <description>Recent content in SaaS on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Apr 2025 16:10:00 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/saas/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/saas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SaaS Test 2 : Test Case</title>
-      <link>http://localhost:1313/posts/saas-test-2/</link>
+      <link>https://moloxiao.github.io/posts/saas-test-2/</link>
       <pubDate>Sun, 20 Apr 2025 16:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/saas-test-2/</guid>
+      <guid>https://moloxiao.github.io/posts/saas-test-2/</guid>
       <description>&lt;h2 id=&#34;1-principle&#34;&gt;1 Principle&lt;/h2&gt;
 &lt;h2 id=&#34;-what-each-testing-layer-should-do&#34;&gt;✅ What Each Testing Layer Should Do&lt;/h2&gt;
 &lt;table&gt;
@@ -100,23 +100,23 @@
     </item>
     <item>
       <title>SaaS Test 1 : Phased Testing Strategy for a SaaS System</title>
-      <link>http://localhost:1313/posts/saas-test-1/</link>
+      <link>https://moloxiao.github.io/posts/saas-test-1/</link>
       <pubDate>Sun, 20 Apr 2025 15:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/saas-test-1/</guid>
+      <guid>https://moloxiao.github.io/posts/saas-test-1/</guid>
       <description>This document outlines a practical, phased approach to testing login and registration features in a SaaS application. It balances manual testing and E2E automation based on development stage.</description>
     </item>
     <item>
       <title>Json web token</title>
-      <link>http://localhost:1313/posts/json-web-token/</link>
+      <link>https://moloxiao.github.io/posts/json-web-token/</link>
       <pubDate>Mon, 14 Apr 2025 20:00:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/json-web-token/</guid>
+      <guid>https://moloxiao.github.io/posts/json-web-token/</guid>
       <description>JWT (JSON Web Token) is a popular way to handle cross-domain authentication. In this post, I’ll go over how it works and how to use it.</description>
     </item>
     <item>
       <title>Designing and Delivering a Customizable Front-End UI System for End Users : 1</title>
-      <link>http://localhost:1313/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</link>
+      <link>https://moloxiao.github.io/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</link>
       <pubDate>Mon, 07 Apr 2025 15:10:00 +1300</pubDate>
-      <guid>http://localhost:1313/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</guid>
+      <guid>https://moloxiao.github.io/posts/designing-and-delivering-a-customizable-front-end-ui-system-for-end-users-1/</guid>
       <description>&lt;h1 id=&#34;1-delivery-method&#34;&gt;1 Delivery method&lt;/h1&gt;
 &lt;p&gt;We have to choice for users:&lt;/p&gt;
 &lt;ul&gt;
@@ -130,37 +130,35 @@ The current analysis is based on the documentation of AdminMart and the template
     </item>
     <item>
       <title>Qucik Start : Laravel</title>
-      <link>http://localhost:1313/posts/qucik-start-laravel/</link>
+      <link>https://moloxiao.github.io/posts/qucik-start-laravel/</link>
       <pubDate>Wed, 19 Feb 2025 20:20:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/qucik-start-laravel/</guid>
+      <guid>https://moloxiao.github.io/posts/qucik-start-laravel/</guid>
       <description>My notes when I learn Laravel create a API project use JWT. My first use in 2025-02-19, rewrite in 2025-04-01.</description>
     </item>
     <item>
       <title> My Tech Stack Selection - 2025 - SaaS</title>
-      <link>http://localhost:1313/posts/my-tech-stack-selection-2025-saas/</link>
+      <link>https://moloxiao.github.io/posts/my-tech-stack-selection-2025-saas/</link>
       <pubDate>Wed, 01 Jan 2025 20:01:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/my-tech-stack-selection-2025-saas/</guid>
+      <guid>https://moloxiao.github.io/posts/my-tech-stack-selection-2025-saas/</guid>
       <description>My default tech stack selection for typical SaaS systems in 2025.</description>
     </item>
     <item>
       <title>New Features in Resume Manager 2</title>
-      <link>http://localhost:1313/posts/new-features-in-resume-manager-2/</link>
+      <link>https://moloxiao.github.io/posts/new-features-in-resume-manager-2/</link>
       <pubDate>Tue, 06 Aug 2024 15:46:24 +1200</pubDate>
-      <guid>http://localhost:1313/posts/new-features-in-resume-manager-2/</guid>
+      <guid>https://moloxiao.github.io/posts/new-features-in-resume-manager-2/</guid>
       <description>&lt;p&gt;Hello, all my friends. Thank you for all your ideas and feedback, help this product better.&lt;br&gt;
 We&amp;rsquo;re back! The last update was &lt;strong&gt;18 days ago&lt;/strong&gt;. This week I use &lt;strong&gt;6 hours&lt;/strong&gt; to add new feature : &lt;strong&gt;Job Application Task Manager&lt;/strong&gt;. &lt;a href=&#34;https://resumemanager.pages.dev/&#34;&gt;Click here to experience it now&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here are some of the main interfaces :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;New Dashboard&lt;/strong&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/resume_manager_2_01.png&#34; alt=&#34;new dashboard&#34;  /&gt;
-&lt;br&gt;
+&lt;img alt=&#34;new dashboard&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/resume_manager_2_01.png&#34;&gt;&lt;br&gt;
 Because we added the job application manager, the dashboard has changed.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Job Application List&lt;/strong&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/resume_manager_2_02.png&#34; alt=&#34;Job Application List&#34;  /&gt;
-&lt;br&gt;
+&lt;img alt=&#34;Job Application List&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/resume_manager_2_02.png&#34;&gt;&lt;br&gt;
 We can add new job applications and change the application status on this page.&lt;/p&gt;</description>
     </item>
   </channel>

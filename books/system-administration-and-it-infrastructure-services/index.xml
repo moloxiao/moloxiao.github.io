@@ -2,27 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>System Administration and IT Infrastructure Services on Shan&#39;s blog</title>
-    <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/</link>
+    <link>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/</link>
     <description>Recent content in System Administration and IT Infrastructure Services on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Aug 2024 19:12:12 +1200</lastBuildDate>
-    <atom:link href="http://localhost:1313/books/system-administration-and-it-infrastructure-services/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Preface</title>
-      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/preface/</link>
+      <link>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/preface/</link>
       <pubDate>Wed, 21 Aug 2024 10:53:43 +1200</pubDate>
-      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/preface/</guid>
+      <guid>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/preface/</guid>
       <description>&lt;p&gt;I wrote this book while preparing for a System Administration job. It serves as a structured summary of my previous work, developed through studying Google&amp;rsquo;s course on &amp;lsquo;&lt;a href=&#34;https://www.coursera.org/learn/system-administration-it-infrastructure-services&#34;&gt;System Administration and IT Infrastructure Services&lt;/a&gt;&amp;rsquo; and it also functions as a quick-reference guide.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;I&amp;#39;m trying to understand what success looks like and how we can achieve it, so that we can repeat those patterns over and over again.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/books/saaiis/success.png&#34; alt=&#34;Active Directory&#34;  /&gt;
-&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img alt=&#34;Active Directory&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/books/saaiis/success.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>What is System Administration</title>
-      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/what-is-system-administration/</link>
+      <link>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/what-is-system-administration/</link>
       <pubDate>Wed, 21 Aug 2024 11:30:43 +1200</pubDate>
-      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/what-is-system-administration/</guid>
+      <guid>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/what-is-system-administration/</guid>
       <description>&lt;p&gt;The basics of system administration :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;organizational policies&lt;/li&gt;
@@ -55,9 +54,9 @@
     </item>
     <item>
       <title>Network and infrastructure services</title>
-      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/</link>
+      <link>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/</link>
       <pubDate>Wed, 21 Aug 2024 11:30:43 +1200</pubDate>
-      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/</guid>
+      <guid>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/networking-and-infrastructure-services/</guid>
       <description>&lt;p&gt;We will cover what IT infrastructure services are and what their role is in system administration. We&amp;rsquo;ll also learn about server operating systems, virtualization, network services, DNS for web services, and how to troubleshoot network services.&lt;/p&gt;
 &lt;h1 id=&#34;physical-infrastructure-services&#34;&gt;Physical infrastructure services&lt;/h1&gt;
 &lt;ul&gt;
@@ -78,9 +77,9 @@
     </item>
     <item>
       <title>Software and Platform Services</title>
-      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/software-and-platform-services/</link>
+      <link>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/software-and-platform-services/</link>
       <pubDate>Thu, 22 Aug 2024 14:17:43 +1200</pubDate>
-      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/software-and-platform-services/</guid>
+      <guid>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/software-and-platform-services/</guid>
       <description>&lt;p&gt;Software services are the services that employs use that allow them to do their daily job functions. This can include applications like Word processors, Internet browsers, email clients, chat clients, and so on.&lt;/p&gt;
 &lt;h1 id=&#34;software-service&#34;&gt;Software Service&lt;/h1&gt;
 &lt;p&gt;Communication Services  :&lt;br&gt;
@@ -96,9 +95,9 @@ The 5 best team chat apps for the workplace :&lt;/p&gt;
     </item>
     <item>
       <title>Directory Service</title>
-      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/directory-service/</link>
+      <link>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/directory-service/</link>
       <pubDate>Thu, 22 Aug 2024 16:40:12 +1200</pubDate>
-      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/directory-service/</guid>
+      <guid>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/directory-service/</guid>
       <description>&lt;p&gt;we&amp;rsquo;ll cover how two of the most popular directory services, &lt;strong&gt;Active Directory&lt;/strong&gt; and &lt;strong&gt;OpenLDAP&lt;/strong&gt;, work in action. We&amp;rsquo;ll explore the concept of centralized management and how this can help SysAdmins maintain and support all the different parts of an IT infrastructure.&lt;/p&gt;
 &lt;h1 id=&#34;introduction-to-directory-services&#34;&gt;Introduction to Directory Services&lt;/h1&gt;
 &lt;p&gt;What is a Directory Service?&lt;/p&gt;
@@ -110,21 +109,20 @@ The 5 best team chat apps for the workplace :&lt;/p&gt;
     </item>
     <item>
       <title>Data Recovery and Backups</title>
-      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/data-recovery-and-backups/</link>
+      <link>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/data-recovery-and-backups/</link>
       <pubDate>Fri, 23 Aug 2024 09:30:12 +1200</pubDate>
-      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/data-recovery-and-backups/</guid>
+      <guid>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/data-recovery-and-backups/</guid>
       <description>&lt;p&gt;we&amp;rsquo;re going to arm you with tools you need to be prepared for these accidents, so you can minimize the impact and loss of data.&lt;br&gt;
 Data recovery, in general terms, is the process of trying to restore data after an unexpected event that results in data loss or corruption.&lt;/p&gt;
 &lt;h1 id=&#34;planning-for-data-recovery&#34;&gt;Planning for Data Recovery&lt;/h1&gt;
 &lt;p&gt;Backing Up Your Data :  you should only be backing up data that&amp;rsquo;s absolutely necessary for operations and can be found in another source.&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/books/saaiis/backup-data.png&#34; alt=&#34;backup-data&#34;  /&gt;
-&lt;/p&gt;</description>
+&lt;img alt=&#34;backup-data&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/books/saaiis/backup-data.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>System Administration Consultation</title>
-      <link>http://localhost:1313/books/system-administration-and-it-infrastructure-services/system-administration-consultation/</link>
+      <link>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/system-administration-consultation/</link>
       <pubDate>Fri, 23 Aug 2024 19:12:12 +1200</pubDate>
-      <guid>http://localhost:1313/books/system-administration-and-it-infrastructure-services/system-administration-consultation/</guid>
+      <guid>https://moloxiao.github.io/books/system-administration-and-it-infrastructure-services/system-administration-consultation/</guid>
       <description>&lt;h2 id=&#34;scenario-1&#34;&gt;Scenario 1&lt;/h2&gt;
 &lt;p&gt;You’re doing systems administration work for Network Funtime Company. Evaluate their current IT infrastructure needs and limitations, then provide at least five process improvements and rationale behind those improvements. Write a 200-400 word process review for this consultation. Remember, there’s no right or wrong answer, but make sure to provide your reasoning.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Software Company&lt;/strong&gt; :&lt;/p&gt;

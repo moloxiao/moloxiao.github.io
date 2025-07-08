@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Nextjs on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/nextjs/</link>
+    <link>https://moloxiao.github.io/tags/nextjs/</link>
     <description>Recent content in Nextjs on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 04 Mar 2025 11:04:01 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/nextjs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/nextjs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nextjs FAQ</title>
-      <link>http://localhost:1313/posts/2025-03-04-nextjs-faq/</link>
+      <link>https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/</link>
       <pubDate>Tue, 04 Mar 2025 11:04:01 +1300</pubDate>
-      <guid>http://localhost:1313/posts/2025-03-04-nextjs-faq/</guid>
+      <guid>https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/</guid>
       <description>.</description>
     </item>
     <item>
       <title>How to Fix Replicate Run Error Readablestream in Nextjs</title>
-      <link>http://localhost:1313/posts/how-to-fix-replicate-run-error-readablestream-in-nextjs/</link>
+      <link>https://moloxiao.github.io/posts/how-to-fix-replicate-run-error-readablestream-in-nextjs/</link>
       <pubDate>Thu, 05 Dec 2024 18:53:31 +1300</pubDate>
-      <guid>http://localhost:1313/posts/how-to-fix-replicate-run-error-readablestream-in-nextjs/</guid>
+      <guid>https://moloxiao.github.io/posts/how-to-fix-replicate-run-error-readablestream-in-nextjs/</guid>
       <description>Fix the error when using the Replicate Node.js client in a Next.js application to retrieve the URL response.</description>
     </item>
   </channel>

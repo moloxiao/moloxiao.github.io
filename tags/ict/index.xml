@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ICT on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/ict/</link>
+    <link>https://moloxiao.github.io/tags/ict/</link>
     <description>Recent content in ICT on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Oct 2024 10:04:36 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ict/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/ict/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding It Consultant Levels</title>
-      <link>http://localhost:1313/posts/understanding-it-consultant-levels/</link>
+      <link>https://moloxiao.github.io/posts/understanding-it-consultant-levels/</link>
       <pubDate>Thu, 10 Oct 2024 10:04:36 +1300</pubDate>
-      <guid>http://localhost:1313/posts/understanding-it-consultant-levels/</guid>
+      <guid>https://moloxiao.github.io/posts/understanding-it-consultant-levels/</guid>
       <description>Understanding IT Consultant Levels: A Breakdown with AWS, Microsoft, and Google Certifications</description>
     </item>
   </channel>

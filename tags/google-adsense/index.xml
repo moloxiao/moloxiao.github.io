@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Google Adsense on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/google-adsense/</link>
+    <link>https://moloxiao.github.io/tags/google-adsense/</link>
     <description>Recent content in Google Adsense on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Jul 2024 10:14:57 +1200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/google-adsense/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/google-adsense/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting a blog accepted by Google AdSense</title>
-      <link>http://localhost:1313/posts/getting-a-blog-accepted-by-google-adsense/</link>
+      <link>https://moloxiao.github.io/posts/getting-a-blog-accepted-by-google-adsense/</link>
       <pubDate>Thu, 04 Jul 2024 10:14:57 +1200</pubDate>
-      <guid>http://localhost:1313/posts/getting-a-blog-accepted-by-google-adsense/</guid>
+      <guid>https://moloxiao.github.io/posts/getting-a-blog-accepted-by-google-adsense/</guid>
       <description>Getting a blog accepted by Google AdSense.</description>
     </item>
     <item>
       <title>Create a blog using Hugo</title>
-      <link>http://localhost:1313/posts/2024-07-02-create-a-blog-using-hugo/</link>
+      <link>https://moloxiao.github.io/posts/2024-07-02-create-a-blog-using-hugo/</link>
       <pubDate>Tue, 02 Jul 2024 20:57:29 +1200</pubDate>
-      <guid>http://localhost:1313/posts/2024-07-02-create-a-blog-using-hugo/</guid>
+      <guid>https://moloxiao.github.io/posts/2024-07-02-create-a-blog-using-hugo/</guid>
       <description>How I created my blog using Hugo and the tools I used.</description>
     </item>
   </channel>

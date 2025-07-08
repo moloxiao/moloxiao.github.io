@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Job on Shan&#39;s blog</title>
-    <link>http://localhost:1313/tags/job/</link>
+    <link>https://moloxiao.github.io/tags/job/</link>
     <description>Recent content in Job on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Sep 2024 09:14:29 +1200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/job/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://moloxiao.github.io/tags/job/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Customize Your Resume According to the Job Description</title>
-      <link>http://localhost:1313/posts/customize-your-resume-according-to-the-job-description/</link>
+      <link>https://moloxiao.github.io/posts/customize-your-resume-according-to-the-job-description/</link>
       <pubDate>Thu, 05 Sep 2024 09:14:29 +1200</pubDate>
-      <guid>http://localhost:1313/posts/customize-your-resume-according-to-the-job-description/</guid>
+      <guid>https://moloxiao.github.io/posts/customize-your-resume-according-to-the-job-description/</guid>
       <description>&lt;p&gt;In the current &lt;a href=&#34;https://resumemanager.pages.dev/&#34;&gt;Resume Manager&lt;/a&gt; application, the module I use the most on a daily basis is the job application module, with its core feature being the tracking of resume submissions. Moving forward, I want to enhance the ability to match resumes with job requirements. This will involve the following steps:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Analysis of the recruitment process and the needs of each stage&lt;/li&gt;
@@ -126,11 +126,10 @@
     </item>
     <item>
       <title>How to Prepare for Data Jobs</title>
-      <link>http://localhost:1313/posts/how-to-prepare-for-data-jobs/</link>
+      <link>https://moloxiao.github.io/posts/how-to-prepare-for-data-jobs/</link>
       <pubDate>Wed, 28 Aug 2024 20:45:47 +1200</pubDate>
-      <guid>http://localhost:1313/posts/how-to-prepare-for-data-jobs/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/2024-08/data-engineer-resume.webp&#34; alt=&#34;Add Your Domain to Cloudflare&#34;  /&gt;
-&lt;/p&gt;
+      <guid>https://moloxiao.github.io/posts/how-to-prepare-for-data-jobs/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Add Your Domain to Cloudflare&#34; loading=&#34;lazy&#34; src=&#34;https://moloxiao.github.io/images/2024-08/data-engineer-resume.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Preparing for data jobs means writing a good resume and passing the job interview.&lt;/p&gt;
 &lt;p&gt;I want to take immediate action, so I&amp;rsquo;ve set the following principles:&lt;/p&gt;
 &lt;ol&gt;
@@ -141,9 +140,9 @@
     </item>
     <item>
       <title>Shan&#39;s Responses to Common Interview Questions</title>
-      <link>http://localhost:1313/posts/shan-responses-to-common-interview-questions/</link>
+      <link>https://moloxiao.github.io/posts/shan-responses-to-common-interview-questions/</link>
       <pubDate>Wed, 24 Jul 2024 15:36:34 +1200</pubDate>
-      <guid>http://localhost:1313/posts/shan-responses-to-common-interview-questions/</guid>
+      <guid>https://moloxiao.github.io/posts/shan-responses-to-common-interview-questions/</guid>
       <description>Shan&amp;#39;s suggest Responses to Common Interview Questions.</description>
     </item>
   </channel>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Nextjs FAQ | Shan&#39;s blog</title>
 <meta name="keywords" content="NEXTJS">
 <meta name="description" content=".">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/2025-03-04-nextjs-faq/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a8501b4e1544bf104a4e2647be64df3637f95b6ac25a4298047d87fe0eacffa1.css" integrity="sha256-qFAbThVEvxBKTiZHvmTfNjf5W2rCWkKYBH2H/g6s/6E=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://moloxiao.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://moloxiao.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://moloxiao.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://moloxiao.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://moloxiao.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2025-03-04-nextjs-faq/">
+<link rel="alternate" hreflang="en" href="https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,14 +55,70 @@
         }
 
     </style>
-</noscript>
-    
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8639536784870126"
-     crossorigin="anonymous"></script>
-     <script async src="https://cse.google.com/cse.js?cx=f2f2dcda81a0143d0">
-    </script>
-     
+</noscript><meta property="og:url" content="https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/">
+  <meta property="og:site_name" content="Shan&#39;s blog">
+  <meta property="og:title" content="Nextjs FAQ">
+  <meta property="og:description" content=".">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-04T11:04:01+13:00">
+    <meta property="article:modified_time" content="2025-03-04T11:04:01+13:00">
+    <meta property="article:tag" content="Nextjs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nextjs FAQ">
+<meta name="twitter:description" content=".">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://moloxiao.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Nextjs FAQ",
+      "item": "https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Nextjs FAQ",
+  "name": "Nextjs FAQ",
+  "description": ".",
+  "keywords": [
+    "NEXTJS"
+  ],
+  "articleBody": "When to Use Direct API Calls vs. Next.js Server Proxy Use Next.js API Routes when:\nYou need to hide API keys or other secrets You want to aggregate multiple API calls You need to transform data before sending it to the client Your API requires complex authentication that’s better handled server-side Direct API calls might be acceptable when:\nThe API is public and requires no sensitive credentials You’re working with a simple prototype The backend already handles CORS and is specifically designed for browser access You need real-time updates (although you could still use WebSockets through Next.js) Why and when use React Context React Context is designed to solve the “Props Drilling” problem, where deeply nested components need access to shared data, but passing props through multiple levels becomes cumbersome. It allows global state sharing, making it useful for themes, authentication, and localization.\nAuthContext Example\nCreate AuthContext with a Provider Stores user state and provides login/logout functions. Uses useContext to allow any component to access authentication data.\nWrap Application with AuthProvider Ensures all child components can use authentication state.\nConsume AuthContext in Components Example: Navbar accesses user, login, and logout functions via useAuth().\nKey Benefits\nEliminates unnecessary prop-passing. Provides a structured way to manage global state. Improves maintainability and readability of code. Pitfalls Collection 1 Next.js Link Prefetching Behavior Next.js Link component automatically prefetches page data when links enter the viewport in production, but this feature is disabled in development mode. This can lead to unexpected 404 errors in production if the linked pages don’t exist - a common issue that can be resolved by adding prefetch={false} to disable this behavior.\nHow to Avoid the “Stuck on Redirecting” Issue After Login in Next.js In Next.js (especially when deployed on Vercel with SSR), you may encounter a problem where, after a successful login, the page displays “Redirecting…” but never actually navigates to your dashboard. This happens because router.push(\"/dashboard\") only updates the client-side route—it does not trigger a full page reload, so cookies or JWT tokens set by your login API may not be immediately available to your authentication context or SSR logic. As a result, your app thinks you are still not logged in, and you get stuck on the “Redirecting” screen.\nBest Practice:\nAfter a successful login, use window.location.href for navigation instead of router.push. This forces a full page reload, ensuring that authentication cookies or tokens are correctly read by both the browser and your app’s authentication provider.\nExample (TypeScript) async function onSubmit(values: LoginFormValues) { setLoginState(LoginState.SUBMITTING); const loginResult = await login(values.email, values.password); if (loginResult) { setLoginState(LoginState.SUCCESS); // This reloads the page, syncing cookies/tokens for auth window.location.href = \"/dashboard\"; return; } else { setLoginState(LoginState.ERROR); } } ",
+  "wordCount" : "445",
+  "inLanguage": "en",
+  "datePublished": "2025-03-04T11:04:01+13:00",
+  "dateModified": "2025-03-04T11:04:01+13:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shan's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moloxiao.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -80,9 +136,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <a href="https://moloxiao.github.io/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -106,7 +162,7 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                <a href="https://moloxiao.github.io/privacy-policy/" title="Privacy Policy">
                     <span>Privacy Policy</span>
                 </a>
             </li>
@@ -191,14 +247,14 @@ After a successful login, use <code>window.location.href</code> for navigation i
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/nextjs/">Nextjs</a></li>
+      <li><a href="https://moloxiao.github.io/tags/nextjs/">Nextjs</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+        <span>&copy; 2025 <a href="https://moloxiao.github.io/">Shan&#39;s blog</a></span> · 
 
     <span>
         Powered by
