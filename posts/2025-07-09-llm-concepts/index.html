@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>LLM concepts | Shan&#39;s blog</title>
+<meta name="keywords" content="LLM, AI">
+<meta name="description" content="Summarize LLMs from the following aspects: lifecycle, historical evolution, core concepts, and model architectures of varying complexity.">
+<meta name="author" content="">
+<link rel="canonical" href="https://moloxiao.github.io/posts/2025-07-09-llm-concepts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://moloxiao.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://moloxiao.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://moloxiao.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://moloxiao.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://moloxiao.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://moloxiao.github.io/posts/2025-07-09-llm-concepts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://moloxiao.github.io/posts/2025-07-09-llm-concepts/">
+  <meta property="og:site_name" content="Shan&#39;s blog">
+  <meta property="og:title" content="LLM concepts">
+  <meta property="og:description" content="Summarize LLMs from the following aspects: lifecycle, historical evolution, core concepts, and model architectures of varying complexity.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-09T08:00:00+12:00">
+    <meta property="article:modified_time" content="2025-07-09T08:00:00+12:00">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LLM concepts">
+<meta name="twitter:description" content="Summarize LLMs from the following aspects: lifecycle, historical evolution, core concepts, and model architectures of varying complexity.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://moloxiao.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "LLM concepts",
+      "item": "https://moloxiao.github.io/posts/2025-07-09-llm-concepts/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "LLM concepts",
+  "name": "LLM concepts",
+  "description": "Summarize LLMs from the following aspects: lifecycle, historical evolution, core concepts, and model architectures of varying complexity.",
+  "keywords": [
+    "LLM", "AI"
+  ],
+  "articleBody": "1 Basic concepts An LLM goes through two main phases(Lifecycle of an LLM): Training and Inference:\nPre-training : it learns to predict the next word or token from large amounts of unlabeled text. Fine-tuning : The model is adapted to specific tasks or domains using labeled datasets. Post-training(Alignment) : it learns useful behaviors such as following instructions, tool use, and reasoning. Inference : The trained model responds to user inputs in real time without updating its internal parameters. Foundational Techniques that Underpin LLM Architecture :\nModule / Capability Key Paper Authors Contribution to LLMs Deep Representation (CNN) ImageNet Classification with Deep Convolutional Neural Networks (2012) Alex Krizhevsky et al. Demonstrated the power of deep learning via CNNs on large-scale data Residual Connection Deep Residual Learning for Image Recognition (2015) Kaiming He et al. Enabled training of very deep networks; essential in Transformer sublayers Sequence Modeling (RNN) Sequence to Sequence Learning with Neural Networks (2014) Ilya Sutskever et al. Introduced encoder-decoder architecture for NLP tasks Attention Mechanism Attention Is All You Need (2017) Vaswani et al. Introduced the Transformer, replacing recurrence with self-attention Normalization Layer Normalization (2016) Jimmy Ba et al. Improved training stability in sequence models Language Representation BERT: Pre-training of Deep Bidirectional Transformers (2018) Devlin et al. Enabled bidirectional contextual language understanding Generative Pretraining Improving Language Understanding by Generative Pre-Training (2018) Radford et al. (OpenAI) Introduced GPT framework for generative language modeling Scaling Laws Scaling Laws for Neural Language Models (2020) Jared Kaplan et al. (OpenAI) Quantified model performance growth with scale in parameters and data 1.0 Initial input processing Concept Description Problem Solved Tokenization Breaks text into tokens such as subwords, characters, or word pieces Converts natural language into discrete units understandable by models Vocabulary A predefined set of tokens Reduces Out-Of-Vocabulary (OOV) issues and standardizes encoding 1.1 Vector Representation (Embedding Space) Component Description Problem Solved Token Embedding Lookup Each token is mapped to a high-dimensional vector (e.g., 768 or 1536 dimensions) Captures basic semantic relationships between tokens Sentence/Paragraph Pooling Techniques like Mean Pooling, Attention Pooling Aggregates token-level vectors into sentence-level representation Multilingual Embedding Alignment is a capability that must be actively built during the training process through the use of specific data, model architectures, and objective functions—it is not something the model acquires naturally on its own. Its implementation relies on training strategies such as shared tokenizers, multilingual corpora, contrastive learning, and parallel sentence alignment mechanisms.\n1.2 Contextual Modeling and Semantic Understanding (Transformer Backbone) Component Description Problem Solved Multi-layer Transformer Encoder Multi-head self-attention mechanism to encode context Understand long-range dependencies, capture syntax and semantics Feed-Forward Network (FFN) Enhances non-linear representation ability Improves diversity and depth of model representations Residual Connection \u0026 LayerNorm Stabilizes training, alleviates gradient vanishing Improves trainability of deep networks 1.3 Output Decoding / Generation Component Description Problem Solved Linear Projection + Softmax Maps the Transformer output to a probability distribution over the vocabulary Enables prediction and generation of the next token Greedy / Beam / Sampling Decoding Strategies to select the next word/token from the probability distribution Controls the quality, diversity, and coherence of generated text LLM Solution from simple to complect ",
+  "wordCount" : "518",
+  "inLanguage": "en",
+  "datePublished": "2025-07-09T08:00:00+12:00",
+  "dateModified": "2025-07-09T08:00:00+12:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moloxiao.github.io/posts/2025-07-09-llm-concepts/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shan's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moloxiao.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://moloxiao.github.io/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://moloxiao.github.io/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      LLM concepts
+    </h1>
+    <div class="post-description">
+      Summarize LLMs from the following aspects: lifecycle, historical evolution, core concepts, and model architectures of varying complexity.
+    </div>
+    <div class="post-meta"><span title='2025-07-09 08:00:00 +1200 NZST'>July 9, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="1-basic-concepts">1 Basic concepts<a hidden class="anchor" aria-hidden="true" href="#1-basic-concepts">#</a></h1>
+<p>An LLM goes through two main phases(Lifecycle of an LLM): <strong>Training</strong> and <strong>Inference</strong>:</p>
+<ul>
+<li><strong>Pre-training</strong> : it learns to predict the next word or token from large amounts of unlabeled text.</li>
+<li><strong>Fine-tuning</strong> : The model is adapted to specific tasks or domains using labeled datasets.</li>
+<li><strong>Post-training</strong>(Alignment) : it learns useful behaviors such as following instructions, tool use, and reasoning.</li>
+<li><strong>Inference</strong> : The trained model responds to user inputs in real time without updating its internal parameters.</li>
+</ul>
+<p>Foundational Techniques that Underpin LLM Architecture :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Module / Capability</th>
+          <th>Key Paper</th>
+          <th>Authors</th>
+          <th>Contribution to LLMs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Deep Representation (CNN)</td>
+          <td><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">ImageNet Classification with Deep Convolutional Neural Networks (2012)</a></td>
+          <td>Alex Krizhevsky et al.</td>
+          <td>Demonstrated the power of deep learning via CNNs on large-scale data</td>
+      </tr>
+      <tr>
+          <td>Residual Connection</td>
+          <td><a href="https://arxiv.org/abs/1512.03385">Deep Residual Learning for Image Recognition (2015)</a></td>
+          <td>Kaiming He et al.</td>
+          <td>Enabled training of very deep networks; essential in Transformer sublayers</td>
+      </tr>
+      <tr>
+          <td>Sequence Modeling (RNN)</td>
+          <td><a href="https://arxiv.org/abs/1409.3215">Sequence to Sequence Learning with Neural Networks (2014)</a></td>
+          <td>Ilya Sutskever et al.</td>
+          <td>Introduced encoder-decoder architecture for NLP tasks</td>
+      </tr>
+      <tr>
+          <td>Attention Mechanism</td>
+          <td><a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need (2017)</a></td>
+          <td>Vaswani et al.</td>
+          <td>Introduced the Transformer, replacing recurrence with self-attention</td>
+      </tr>
+      <tr>
+          <td>Normalization</td>
+          <td><a href="https://arxiv.org/abs/1607.06450">Layer Normalization (2016)</a></td>
+          <td>Jimmy Ba et al.</td>
+          <td>Improved training stability in sequence models</td>
+      </tr>
+      <tr>
+          <td>Language Representation</td>
+          <td><a href="https://arxiv.org/abs/1810.04805">BERT: Pre-training of Deep Bidirectional Transformers (2018)</a></td>
+          <td>Devlin et al.</td>
+          <td>Enabled bidirectional contextual language understanding</td>
+      </tr>
+      <tr>
+          <td>Generative Pretraining</td>
+          <td><a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">Improving Language Understanding by Generative Pre-Training (2018)</a></td>
+          <td>Radford et al. (OpenAI)</td>
+          <td>Introduced GPT framework for generative language modeling</td>
+      </tr>
+      <tr>
+          <td>Scaling Laws</td>
+          <td><a href="https://arxiv.org/abs/2001.08361">Scaling Laws for Neural Language Models (2020)</a></td>
+          <td>Jared Kaplan et al. (OpenAI)</td>
+          <td>Quantified model performance growth with scale in parameters and data</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="10-initial-input-processing">1.0 Initial input processing<a hidden class="anchor" aria-hidden="true" href="#10-initial-input-processing">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Concept</th>
+          <th>Description</th>
+          <th>Problem Solved</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Tokenization</td>
+          <td>Breaks text into tokens such as subwords, characters, or word pieces</td>
+          <td>Converts natural language into discrete units understandable by models</td>
+      </tr>
+      <tr>
+          <td>Vocabulary</td>
+          <td>A predefined set of tokens</td>
+          <td>Reduces Out-Of-Vocabulary (OOV) issues and standardizes encoding</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="11-vector-representation-embedding-space">1.1 Vector Representation (Embedding Space)<a hidden class="anchor" aria-hidden="true" href="#11-vector-representation-embedding-space">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Description</th>
+          <th>Problem Solved</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Token Embedding Lookup</td>
+          <td>Each token is mapped to a high-dimensional vector (e.g., 768 or 1536 dimensions)</td>
+          <td>Captures basic semantic relationships between tokens</td>
+      </tr>
+      <tr>
+          <td>Sentence/Paragraph Pooling</td>
+          <td>Techniques like Mean Pooling, Attention Pooling</td>
+          <td>Aggregates token-level vectors into sentence-level representation</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Multilingual Embedding Alignment</strong> is a capability that must be actively built during the training process through the use of specific data, model architectures, and objective functions—it is not something the model acquires naturally on its own. Its implementation relies on training strategies such as shared tokenizers, multilingual corpora, contrastive learning, and parallel sentence alignment mechanisms.</p>
+<h2 id="12-contextual-modeling-and-semantic-understanding-transformer-backbone">1.2 Contextual Modeling and Semantic Understanding (Transformer Backbone)<a hidden class="anchor" aria-hidden="true" href="#12-contextual-modeling-and-semantic-understanding-transformer-backbone">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Description</th>
+          <th>Problem Solved</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Multi-layer Transformer Encoder</td>
+          <td>Multi-head self-attention mechanism to encode context</td>
+          <td>Understand long-range dependencies, capture syntax and semantics</td>
+      </tr>
+      <tr>
+          <td>Feed-Forward Network (FFN)</td>
+          <td>Enhances non-linear representation ability</td>
+          <td>Improves diversity and depth of model representations</td>
+      </tr>
+      <tr>
+          <td>Residual Connection &amp; LayerNorm</td>
+          <td>Stabilizes training, alleviates gradient vanishing</td>
+          <td>Improves trainability of deep networks</td>
+      </tr>
+      <tr>
+          <td><img alt="transformer" loading="lazy" src="/images/2025-07/transformer.png"></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="13-output-decoding--generation">1.3 Output Decoding / Generation<a hidden class="anchor" aria-hidden="true" href="#13-output-decoding--generation">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Description</th>
+          <th>Problem Solved</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Linear Projection + Softmax</td>
+          <td>Maps the Transformer output to a probability distribution over the vocabulary</td>
+          <td>Enables prediction and generation of the next token</td>
+      </tr>
+      <tr>
+          <td>Greedy / Beam / Sampling Decoding</td>
+          <td>Strategies to select the next word/token from the probability distribution</td>
+          <td>Controls the quality, diversity, and coherence of generated text</td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="llm-solution-from-simple-to-complect">LLM Solution from simple to complect<a hidden class="anchor" aria-hidden="true" href="#llm-solution-from-simple-to-complect">#</a></h1>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://moloxiao.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://moloxiao.github.io/tags/ai/">AI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://moloxiao.github.io/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

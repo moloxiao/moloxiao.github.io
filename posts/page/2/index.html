@@ -139,6 +139,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Designing Better Web Request Interactions
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Designing Better Web Request Interactions with MUI When designing web applications, handling user interactions during network requests is crucial for delivering a smooth, responsive, and professional experience. In this blog post, we’ll explore the purpose behind request interaction design, the six recommended interaction patterns (with Material-UI components), and how to apply them to typical scenarios.
+1. Purpose: Core Goals of Web Request Interaction Design Clearly Communicate System Status: Users should always know whether an action is processing, succeeded, or failed. Reduce User Anxiety During Waiting: Use visual cues to make waiting times feel shorter. Prevent Duplicate Operations: Disable controls during requests to avoid repeated submissions. Maintain Responsive Interfaces: Even during slow backend operations, keep the frontend feeling fluid. Guide Users Through Complex Flows: Break down complex operations into clear, manageable steps. 2. Interaction Patterns and Key Components Pattern Key MUI Components Main Purpose Loading Indicators CircularProgress, LinearProgress, LoadingButton Show ongoing processing status Disable Controls disabled attribute Prevent repeated clicks or submissions Feedback Mechanism Snackbar &#43; Alert Clearly notify success or failure Skeleton Loading Skeleton Maintain layout and reduce perceived waiting time Full-Screen Loading Mask Backdrop &#43; CircularProgress Block all interactions during critical operations Progressive Steps Stepper Guide users step-by-step through complex flows 3. Pattern Application Across Typical Scenarios Scenario Loading Indicator Disable Controls Feedback Mechanism Skeleton Loading Full-Screen Mask Progressive Steps Form Submission ✅ ✅ ✅ File Upload ✅ ✅ ✅ ✅ Delete Confirmation ✅ (small delete) ✅ ✅ (batch refresh) Registration/Login ✅ ✅ ✅ Bulk Data Loading ✅ ✅ Multi-Step Process ✅ (per step) ✅ (per step) ✅ (per step) ✅ 4. Typical Scenario Examples Scenario Description Form Submission When a user submits a form, the button shows a loading state, the form is disabled, and a Snackbar provides success or failure feedback. File Upload During file uploads, a Backdrop with a loading spinner blocks user interactions. Upon completion or failure, a Snackbar notification is shown. Delete Confirmation For a single delete action, a loading state can be shown on the button. For bulk deletes, a Skeleton screen can temporarily replace the refreshed data. Registration/Login Submitting login or registration forms triggers a LoadingButton, disables the inputs, and gives clear success or error feedback. Bulk Data Loading When loading lists or dashboards, use Skeleton components as placeholders until real data arrives. Multi-Step Process Use a Stepper to break registration, checkout, or onboarding into multiple steps, with loading indicators and feedback at each stage. By combining the right interaction patterns based on user actions, you can greatly enhance the perceived quality and responsiveness of your web application.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-28 20:02:09 +1300 +1300'>April 28, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Designing Better Web Request Interactions" href="https://moloxiao.github.io/posts/designing-better-web-request-interactions/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">SaaS Test 2 : Test Case
     </h2>
   </header>
@@ -262,21 +276,6 @@ Caching Mechanism : Direct env() usage: When you use env() directly in your appl
   </div>
   <footer class="entry-footer"><span title='2025-03-04 11:04:01 +1300 NZDT'>March 4, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Laravel FAQ" href="https://moloxiao.github.io/posts/laravel-faq/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Nextjs FAQ
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>When to Use Direct API Calls vs. Next.js Server Proxy Use Next.js API Routes when:
-You need to hide API keys or other secrets You want to aggregate multiple API calls You need to transform data before sending it to the client Your API requires complex authentication that’s better handled server-side Direct API calls might be acceptable when:
-The API is public and requires no sensitive credentials You’re working with a simple prototype The backend already handles CORS and is specifically designed for browser access You need real-time updates (although you could still use WebSockets through Next.js) Why and when use React Context React Context is designed to solve the “Props Drilling” problem, where deeply nested components need access to shared data, but passing props through multiple levels becomes cumbersome. It allows global state sharing, making it useful for themes, authentication, and localization.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-04 11:04:01 +1300 NZDT'>March 4, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Nextjs FAQ" href="https://moloxiao.github.io/posts/2025-03-04-nextjs-faq/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
