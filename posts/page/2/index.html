@@ -139,6 +139,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Simple Delpoyment Workflow
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Vercel and similar platforms have dramatically lowered the complexity of deploying web applications. For many individual developers or simple projects, sophisticated CI/CD pipelines and branching strategies may be overkill.
+In this blog post, we’ll walk through a lightweight Git-based deployment workflow that’s easy to manage, beginner-friendly, and perfectly suited for small- to medium-sized projects.
+1. Workflow Overview This workflow assumes you’re using Vercel and Git (either via CLI or VS Code). The idea is to:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-30 20:00:01 +1300 +1300'>April 30, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Simple Delpoyment Workflow" href="https://moloxiao.github.io/posts/simple-deployment-workflow/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Designing Better Web Request Interactions
     </h2>
   </header>
@@ -262,20 +277,6 @@ PTE Academic Test Structure Summary Part Section / Task Type Estimated Time Numb
   </div>
   <footer class="entry-footer"><span title='2025-03-19 20:02:09 +1300 NZDT'>March 19, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Why Does Git Commits Start with `feat:`?" href="https://moloxiao.github.io/posts/2025-03-19-why-does-git-commits-start-with-feat/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Laravel FAQ
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>FAQ Q-1 config &amp; env In Laravel, there are several important differences between directly using the env() function and accessing environment variables through the config() function:
-Caching Mechanism : Direct env() usage: When you use env() directly in your application code, Laravel reads from the .env file on every request, which is not cached. Using config(): Laravel can cache configuration files (via php artisan config:cache command) to improve performance. When configurations are cached, the .env file is no longer read, and the system uses the cached configuration values instead. Production Best Practices : Laravel officially recommends using env() in configuration files and then using config() in your application code. This is because when you run config:cache in production, code that directly uses env() will not be able to retrieve environment variable values. php artisan config:cache # every time when update .env we need run this Deployment Laravel offers two official deployment services:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-04 11:04:01 +1300 NZDT'>March 4, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Laravel FAQ" href="https://moloxiao.github.io/posts/laravel-faq/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

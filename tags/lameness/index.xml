@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lameness on Shan&#39;s blog</title>
+    <link>https://moloxiao.github.io/tags/lameness/</link>
+    <description>Recent content in Lameness on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Jul 2025 10:00:00 +1200</lastBuildDate>
+    <atom:link href="https://moloxiao.github.io/tags/lameness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lameness Real-Time System logs</title>
+      <link>https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/</link>
+      <pubDate>Mon, 28 Jul 2025 10:00:00 +1200</pubDate>
+      <guid>https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/</guid>
+      <description>&lt;p&gt;This is my side project, and I&amp;rsquo;m using it to document the logs during the prototyping phase. I&amp;rsquo;m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I&amp;rsquo;m trying to answer these questions :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Using current open-source methods, what level of accuracy can be achieved for specific problem detection?&lt;/li&gt;
+&lt;li&gt;What are the typical optimization strategies, and what is the ROI for each?&lt;/li&gt;
+&lt;li&gt;Does a deep understanding of fundamental principles, like CNNs, lead to improved accuracy? What specific aspects benefit from this knowledge?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;1-logs--plans&#34;&gt;1 Logs &amp;amp; Plans&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Week&lt;/th&gt;
+          &lt;th&gt;Phase&lt;/th&gt;
+          &lt;th&gt;Checkpoint&lt;/th&gt;
+          &lt;th&gt;Key Deliverables&lt;/th&gt;
+          &lt;th&gt;Acceptance Criteria&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;Data Annotation &amp;amp; Initial Model Training&lt;/td&gt;
+          &lt;td&gt;Completion of DLC labeling and initial YOLO Pose training&lt;/td&gt;
+          &lt;td&gt;20–50 images annotated with DLC, initial YOLO Pose model trained&lt;/td&gt;
+          &lt;td&gt;Annotation error &amp;lt; 5 pixels;&lt;!-- raw HTML omitted --&gt;YOLO Pose mAP ≥ 70%&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;Lameness Detection Algorithm Development &amp;amp; Validation&lt;/td&gt;
+          &lt;td&gt;Implementation and initial video testing of lameness detection algorithm&lt;/td&gt;
+          &lt;td&gt;First version of lameness detection algorithm tested on videos&lt;/td&gt;
+          &lt;td&gt;Detection accuracy ≥ 70%;&lt;!-- raw HTML omitted --&gt;At least 10 video samples (5–8 seconds each) tested&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;6&lt;/td&gt;
+          &lt;td&gt;Automated Data Processing Pipeline Setup&lt;/td&gt;
+          &lt;td&gt;Initial automation pipeline developed&lt;/td&gt;
+          &lt;td&gt;Automatic video capture → Upload to S3 → Automated processing &amp;amp; notification&lt;/td&gt;
+          &lt;td&gt;Pipeline success rate ≥ 90%;&lt;!-- raw HTML omitted --&gt;Processing delay ≤ 10 mins;&lt;!-- raw HTML omitted --&gt;Logging functionality enabled&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;System Integration &amp;amp; Final Validation&lt;/td&gt;
+          &lt;td&gt;Complete system test, optimization, and stability verification&lt;/td&gt;
+          &lt;td&gt;Comprehensive technical documentation and user manual completed&lt;/td&gt;
+          &lt;td&gt;Overall accuracy ≥ 75%;&lt;!-- raw HTML omitted --&gt;System stability ≥ 95%;&lt;!-- raw HTML omitted --&gt;Processing delay ≤ 10 mins;&lt;!-- raw HTML omitted --&gt;Clear and extensible documentation&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;11-week-12--data-annotation--initial-model-training&#34;&gt;1.1 Week 1~2 : Data Annotation &amp;amp; Initial Model Training&lt;/h2&gt;
+&lt;p&gt;Our goal is :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

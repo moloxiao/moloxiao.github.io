@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Lameness Real-Time System logs | Shan&#39;s blog</title>
+<meta name="keywords" content="Lameness, CV">
+<meta name="description" content="This is my side project, and I&rsquo;m using it to document the logs during the prototyping phase. I&rsquo;m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I&rsquo;m trying to answer these questions :
+
+Using current open-source methods, what level of accuracy can be achieved for specific problem detection?
+What are the typical optimization strategies, and what is the ROI for each?
+Does a deep understanding of fundamental principles, like CNNs, lead to improved accuracy? What specific aspects benefit from this knowledge?
+
+1 Logs &amp; Plans
+
+  
+      
+          Week
+          Phase
+          Checkpoint
+          Key Deliverables
+          Acceptance Criteria
+      
+  
+  
+      
+          2
+          Data Annotation &amp; Initial Model Training
+          Completion of DLC labeling and initial YOLO Pose training
+          20–50 images annotated with DLC, initial YOLO Pose model trained
+          Annotation error &lt; 5 pixels;YOLO Pose mAP ≥ 70%
+      
+      
+          4
+          Lameness Detection Algorithm Development &amp; Validation
+          Implementation and initial video testing of lameness detection algorithm
+          First version of lameness detection algorithm tested on videos
+          Detection accuracy ≥ 70%;At least 10 video samples (5–8 seconds each) tested
+      
+      
+          6
+          Automated Data Processing Pipeline Setup
+          Initial automation pipeline developed
+          Automatic video capture → Upload to S3 → Automated processing &amp; notification
+          Pipeline success rate ≥ 90%;Processing delay ≤ 10 mins;Logging functionality enabled
+      
+      
+          8
+          System Integration &amp; Final Validation
+          Complete system test, optimization, and stability verification
+          Comprehensive technical documentation and user manual completed
+          Overall accuracy ≥ 75%;System stability ≥ 95%;Processing delay ≤ 10 mins;Clear and extensible documentation
+      
+  
+
+1.1 Week 1~2 : Data Annotation &amp; Initial Model Training
+Our goal is :">
+<meta name="author" content="">
+<link rel="canonical" href="https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://moloxiao.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://moloxiao.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://moloxiao.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://moloxiao.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://moloxiao.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/">
+  <meta property="og:site_name" content="Shan&#39;s blog">
+  <meta property="og:title" content="Lameness Real-Time System logs">
+  <meta property="og:description" content="This is my side project, and I’m using it to document the logs during the prototyping phase. I’m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I’m trying to answer these questions :
+Using current open-source methods, what level of accuracy can be achieved for specific problem detection? What are the typical optimization strategies, and what is the ROI for each? Does a deep understanding of fundamental principles, like CNNs, lead to improved accuracy? What specific aspects benefit from this knowledge? 1 Logs &amp; Plans Week Phase Checkpoint Key Deliverables Acceptance Criteria 2 Data Annotation &amp; Initial Model Training Completion of DLC labeling and initial YOLO Pose training 20–50 images annotated with DLC, initial YOLO Pose model trained Annotation error &lt; 5 pixels;YOLO Pose mAP ≥ 70% 4 Lameness Detection Algorithm Development &amp; Validation Implementation and initial video testing of lameness detection algorithm First version of lameness detection algorithm tested on videos Detection accuracy ≥ 70%;At least 10 video samples (5–8 seconds each) tested 6 Automated Data Processing Pipeline Setup Initial automation pipeline developed Automatic video capture → Upload to S3 → Automated processing &amp; notification Pipeline success rate ≥ 90%;Processing delay ≤ 10 mins;Logging functionality enabled 8 System Integration &amp; Final Validation Complete system test, optimization, and stability verification Comprehensive technical documentation and user manual completed Overall accuracy ≥ 75%;System stability ≥ 95%;Processing delay ≤ 10 mins;Clear and extensible documentation 1.1 Week 1~2 : Data Annotation &amp; Initial Model Training Our goal is :">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-28T10:00:00+12:00">
+    <meta property="article:modified_time" content="2025-07-28T10:00:00+12:00">
+    <meta property="article:tag" content="Lameness">
+    <meta property="article:tag" content="CV">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lameness Real-Time System logs">
+<meta name="twitter:description" content="This is my side project, and I&rsquo;m using it to document the logs during the prototyping phase. I&rsquo;m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I&rsquo;m trying to answer these questions :
+
+Using current open-source methods, what level of accuracy can be achieved for specific problem detection?
+What are the typical optimization strategies, and what is the ROI for each?
+Does a deep understanding of fundamental principles, like CNNs, lead to improved accuracy? What specific aspects benefit from this knowledge?
+
+1 Logs &amp; Plans
+
+  
+      
+          Week
+          Phase
+          Checkpoint
+          Key Deliverables
+          Acceptance Criteria
+      
+  
+  
+      
+          2
+          Data Annotation &amp; Initial Model Training
+          Completion of DLC labeling and initial YOLO Pose training
+          20–50 images annotated with DLC, initial YOLO Pose model trained
+          Annotation error &lt; 5 pixels;YOLO Pose mAP ≥ 70%
+      
+      
+          4
+          Lameness Detection Algorithm Development &amp; Validation
+          Implementation and initial video testing of lameness detection algorithm
+          First version of lameness detection algorithm tested on videos
+          Detection accuracy ≥ 70%;At least 10 video samples (5–8 seconds each) tested
+      
+      
+          6
+          Automated Data Processing Pipeline Setup
+          Initial automation pipeline developed
+          Automatic video capture → Upload to S3 → Automated processing &amp; notification
+          Pipeline success rate ≥ 90%;Processing delay ≤ 10 mins;Logging functionality enabled
+      
+      
+          8
+          System Integration &amp; Final Validation
+          Complete system test, optimization, and stability verification
+          Comprehensive technical documentation and user manual completed
+          Overall accuracy ≥ 75%;System stability ≥ 95%;Processing delay ≤ 10 mins;Clear and extensible documentation
+      
+  
+
+1.1 Week 1~2 : Data Annotation &amp; Initial Model Training
+Our goal is :">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://moloxiao.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Lameness Real-Time System logs",
+      "item": "https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Lameness Real-Time System logs",
+  "name": "Lameness Real-Time System logs",
+  "description": "This is my side project, and I\u0026rsquo;m using it to document the logs during the prototyping phase. I\u0026rsquo;m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I\u0026rsquo;m trying to answer these questions :\nUsing current open-source methods, what level of accuracy can be achieved for specific problem detection? What are the typical optimization strategies, and what is the ROI for each? Does a deep understanding of fundamental principles, like CNNs, lead to improved accuracy? What specific aspects benefit from this knowledge? 1 Logs \u0026amp; Plans Week Phase Checkpoint Key Deliverables Acceptance Criteria 2 Data Annotation \u0026amp; Initial Model Training Completion of DLC labeling and initial YOLO Pose training 20–50 images annotated with DLC, initial YOLO Pose model trained Annotation error \u0026lt; 5 pixels;YOLO Pose mAP ≥ 70% 4 Lameness Detection Algorithm Development \u0026amp; Validation Implementation and initial video testing of lameness detection algorithm First version of lameness detection algorithm tested on videos Detection accuracy ≥ 70%;At least 10 video samples (5–8 seconds each) tested 6 Automated Data Processing Pipeline Setup Initial automation pipeline developed Automatic video capture → Upload to S3 → Automated processing \u0026amp; notification Pipeline success rate ≥ 90%;Processing delay ≤ 10 mins;Logging functionality enabled 8 System Integration \u0026amp; Final Validation Complete system test, optimization, and stability verification Comprehensive technical documentation and user manual completed Overall accuracy ≥ 75%;System stability ≥ 95%;Processing delay ≤ 10 mins;Clear and extensible documentation 1.1 Week 1~2 : Data Annotation \u0026amp; Initial Model Training Our goal is :\n",
+  "keywords": [
+    "Lameness", "CV"
+  ],
+  "articleBody": "This is my side project, and I’m using it to document the logs during the prototyping phase. I’m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I’m trying to answer these questions :\nUsing current open-source methods, what level of accuracy can be achieved for specific problem detection? What are the typical optimization strategies, and what is the ROI for each? Does a deep understanding of fundamental principles, like CNNs, lead to improved accuracy? What specific aspects benefit from this knowledge? 1 Logs \u0026 Plans Week Phase Checkpoint Key Deliverables Acceptance Criteria 2 Data Annotation \u0026 Initial Model Training Completion of DLC labeling and initial YOLO Pose training 20–50 images annotated with DLC, initial YOLO Pose model trained Annotation error \u003c 5 pixels;YOLO Pose mAP ≥ 70% 4 Lameness Detection Algorithm Development \u0026 Validation Implementation and initial video testing of lameness detection algorithm First version of lameness detection algorithm tested on videos Detection accuracy ≥ 70%;At least 10 video samples (5–8 seconds each) tested 6 Automated Data Processing Pipeline Setup Initial automation pipeline developed Automatic video capture → Upload to S3 → Automated processing \u0026 notification Pipeline success rate ≥ 90%;Processing delay ≤ 10 mins;Logging functionality enabled 8 System Integration \u0026 Final Validation Complete system test, optimization, and stability verification Comprehensive technical documentation and user manual completed Overall accuracy ≥ 75%;System stability ≥ 95%;Processing delay ≤ 10 mins;Clear and extensible documentation 1.1 Week 1~2 : Data Annotation \u0026 Initial Model Training Our goal is :\nAnnotation error \u003c 5 pixels; YOLO Pose mAP ≥ 70% Q1 : How is the 70% mAP target determined?, Q2:What is the potential for further improvement in model accuracy? , Q3:What are the real barriers to commercialization\nlogs :\nSeq Date Do Cost Explain 1 07-28 2 weeks plan 2 hours 2 DLC training data 3 change to yolo pose format yolo pose 11 3 yolo training yolo pose 11 FAQ Q1 : How is the 70% mAP target determined? The 70% mAP (mean Average Precision) target is a realistic and widely adopted benchmark for initial pose estimation model validation in the animal behavior analysis domain.\nThis target is based on:\nIndustry experience: Both academic literature and commercial implementations (e.g., CattleEye, Herd-i) show that with 20–50 well-annotated images, a YOLO Pose model typically achieves 65–75% mAP after initial training. Model capability: YOLOv11-Pose is a lightweight yet powerful architecture. When trained on accurate DeepLabCut (DLC) annotations, it reliably produces reasonable results, even with small datasets. Startup phase needs: A 70% mAP is high enough to demonstrate proof-of-concept validity but does not require exhaustive data labeling or model tuning, making it ideal for rapid iteration. In summary, it’s a practical baseline for technical validation, not an upper limit.\nQ2 : What is the potential for further improvement in model accuracy? there is substantial room for improvement after the initial 70% baseline — especially by increasing data size and training diversity.\nEffort Area Typical Improvement Increasing dataset to 100–200 images +10–15% mAP (up to ~85%) Better lighting and camera positioning +3–5% mAP Model tuning and hyperparameter optimization +2–4% mAP Advanced augmentations or backbone upgrades +2–5% mAP Once the model reaches 85–90% mAP, further gains become harder and more expensive, due to:\nDiminishing returns on annotation and training effort Limited visual information quality from real-world farm conditions Natural variance in animal behavior and environment Above 90% mAP is possible but often not justified unless the application demands near-perfect precision. Commercial systems typically balance between performance and operational cost.\nQ3 : What are the real barriers to commercialization Reaching 80–85% mAP is technically feasible with existing tools, true commercialization challenges lie beyond model accuracy.\nReal Barriers:\nBarrier Description Robustness \u0026 Generalization Adapting to different farm layouts, cow breeds, lighting, weather, and movement variability System reliability Long-term stable operation with minimal maintenance in rough farm environments Low-cost deployment Reducing the total cost of ownership: camera setup, compute hardware, and cloud storage ROI justification Convincing farm operators that the system delivers tangible, timely financial benefits UX and integration Easy-to-use interfaces, simple report generation, seamless farm system integration To succeed as a startup, focus not on reinventing the algorithm, but on:\nFast deployment, low maintenance : Plug-and-play camera kits, minimal calibration Cost-effective edge computing : Perform pose detection on edge devices to reduce cloud dependence Clear ROI for farmers : Simple dashboards showing actionable alerts (e.g., “This cow may be lame”), backed by historical comparison Data feedback loop : Build tools that allow farmers to confirm or correct detection, feeding back into the model to improve accuracy over time Modular architecture : Make your system easy to upgrade with better models, more sensors, or additional features later on TODO : Q4 : some basic information about yolo ",
+  "wordCount" : "794",
+  "inLanguage": "en",
+  "datePublished": "2025-07-28T10:00:00+12:00",
+  "dateModified": "2025-07-28T10:00:00+12:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shan's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moloxiao.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://moloxiao.github.io/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://moloxiao.github.io/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Lameness Real-Time System logs
+    </h1>
+    <div class="post-meta"><span title='2025-07-28 10:00:00 +1200 NZST'>July 28, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>This is my side project, and I&rsquo;m using it to document the logs during the prototyping phase. I&rsquo;m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I&rsquo;m trying to answer these questions :</p>
+<ol>
+<li>Using current open-source methods, what level of accuracy can be achieved for specific problem detection?</li>
+<li>What are the typical optimization strategies, and what is the ROI for each?</li>
+<li>Does a deep understanding of fundamental principles, like CNNs, lead to improved accuracy? What specific aspects benefit from this knowledge?</li>
+</ol>
+<h1 id="1-logs--plans">1 Logs &amp; Plans<a hidden class="anchor" aria-hidden="true" href="#1-logs--plans">#</a></h1>
+<table>
+  <thead>
+      <tr>
+          <th>Week</th>
+          <th>Phase</th>
+          <th>Checkpoint</th>
+          <th>Key Deliverables</th>
+          <th>Acceptance Criteria</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2</td>
+          <td>Data Annotation &amp; Initial Model Training</td>
+          <td>Completion of DLC labeling and initial YOLO Pose training</td>
+          <td>20–50 images annotated with DLC, initial YOLO Pose model trained</td>
+          <td>Annotation error &lt; 5 pixels;<!-- raw HTML omitted -->YOLO Pose mAP ≥ 70%</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Lameness Detection Algorithm Development &amp; Validation</td>
+          <td>Implementation and initial video testing of lameness detection algorithm</td>
+          <td>First version of lameness detection algorithm tested on videos</td>
+          <td>Detection accuracy ≥ 70%;<!-- raw HTML omitted -->At least 10 video samples (5–8 seconds each) tested</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>Automated Data Processing Pipeline Setup</td>
+          <td>Initial automation pipeline developed</td>
+          <td>Automatic video capture → Upload to S3 → Automated processing &amp; notification</td>
+          <td>Pipeline success rate ≥ 90%;<!-- raw HTML omitted -->Processing delay ≤ 10 mins;<!-- raw HTML omitted -->Logging functionality enabled</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>System Integration &amp; Final Validation</td>
+          <td>Complete system test, optimization, and stability verification</td>
+          <td>Comprehensive technical documentation and user manual completed</td>
+          <td>Overall accuracy ≥ 75%;<!-- raw HTML omitted -->System stability ≥ 95%;<!-- raw HTML omitted -->Processing delay ≤ 10 mins;<!-- raw HTML omitted -->Clear and extensible documentation</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="11-week-12--data-annotation--initial-model-training">1.1 Week 1~2 : Data Annotation &amp; Initial Model Training<a hidden class="anchor" aria-hidden="true" href="#11-week-12--data-annotation--initial-model-training">#</a></h2>
+<p>Our goal is :</p>
+<ul>
+<li>Annotation error &lt; 5 pixels;</li>
+<li>YOLO Pose mAP ≥ 70%</li>
+</ul>
+<p><a href="#q1--how-is-the-70-map-target-determined">Q1 : How is the 70% mAP target determined?</a>, <a href="#q2--what-is-the-potential-for-further-improvement-in-model-accuracy">Q2:What is the potential for further improvement in model accuracy? </a>, <a href="#q3--what-are-the-real-barriers-to-commercialization">Q3:What are the real barriers to commercialization</a></p>
+<p>logs :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Seq</th>
+          <th>Date</th>
+          <th>Do</th>
+          <th>Cost</th>
+          <th>Explain</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>07-28</td>
+          <td>2 weeks plan</td>
+          <td>2 hours</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td></td>
+          <td>DLC training data</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td></td>
+          <td>change to yolo pose format</td>
+          <td></td>
+          <td>yolo pose 11</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td></td>
+          <td>yolo training</td>
+          <td></td>
+          <td>yolo pose 11</td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="faq">FAQ<a hidden class="anchor" aria-hidden="true" href="#faq">#</a></h1>
+<h2 id="q1--how-is-the-70-map-target-determined">Q1 : How is the 70% mAP target determined?<a hidden class="anchor" aria-hidden="true" href="#q1--how-is-the-70-map-target-determined">#</a></h2>
+<p>The 70% mAP (mean Average Precision) target is a realistic and widely adopted benchmark for initial pose estimation model validation in the animal behavior analysis domain.</p>
+<p>This target is based on:</p>
+<ul>
+<li>Industry experience: Both academic literature and commercial implementations (e.g., CattleEye, Herd-i) show that with 20–50 well-annotated images, a YOLO Pose model typically achieves 65–75% mAP after initial training.</li>
+<li>Model capability: YOLOv11-Pose is a lightweight yet powerful architecture. When trained on accurate DeepLabCut (DLC) annotations, it reliably produces reasonable results, even with small datasets.</li>
+<li>Startup phase needs: A 70% mAP is high enough to demonstrate proof-of-concept validity but does not require exhaustive data labeling or model tuning, making it ideal for rapid iteration.</li>
+</ul>
+<p>In summary, it’s a practical baseline for technical validation, not an upper limit.</p>
+<h2 id="q2--what-is-the-potential-for-further-improvement-in-model-accuracy">Q2 : What is the potential for further improvement in model accuracy?<a hidden class="anchor" aria-hidden="true" href="#q2--what-is-the-potential-for-further-improvement-in-model-accuracy">#</a></h2>
+<p>there is substantial room for improvement after the initial 70% baseline — especially by increasing data size and training diversity.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Effort Area</th>
+          <th>Typical Improvement</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Increasing dataset to 100–200 images</td>
+          <td>+10–15% mAP (up to ~85%)</td>
+      </tr>
+      <tr>
+          <td>Better lighting and camera positioning</td>
+          <td>+3–5% mAP</td>
+      </tr>
+      <tr>
+          <td>Model tuning and hyperparameter optimization</td>
+          <td>+2–4% mAP</td>
+      </tr>
+      <tr>
+          <td>Advanced augmentations or backbone upgrades</td>
+          <td>+2–5% mAP</td>
+      </tr>
+  </tbody>
+</table>
+<p>Once the model reaches 85–90% mAP, further gains become harder and more expensive, due to:</p>
+<ul>
+<li>Diminishing returns on annotation and training effort</li>
+<li>Limited visual information quality from real-world farm conditions</li>
+<li>Natural variance in animal behavior and environment</li>
+</ul>
+<p><strong>Above 90% mAP is possible</strong> but often not justified unless the application demands near-perfect precision. Commercial systems typically balance between performance and operational cost.</p>
+<h2 id="q3--what-are-the-real-barriers-to-commercialization">Q3 : What are the real barriers to commercialization<a hidden class="anchor" aria-hidden="true" href="#q3--what-are-the-real-barriers-to-commercialization">#</a></h2>
+<p>Reaching 80–85% mAP is technically feasible with existing tools, true commercialization challenges lie beyond model accuracy.<br>
+Real Barriers:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Barrier</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Robustness &amp; Generalization</strong></td>
+          <td>Adapting to different farm layouts, cow breeds, lighting, weather, and movement variability</td>
+      </tr>
+      <tr>
+          <td><strong>System reliability</strong></td>
+          <td>Long-term stable operation with minimal maintenance in rough farm environments</td>
+      </tr>
+      <tr>
+          <td><strong>Low-cost deployment</strong></td>
+          <td>Reducing the total cost of ownership: camera setup, compute hardware, and cloud storage</td>
+      </tr>
+      <tr>
+          <td><strong>ROI justification</strong></td>
+          <td>Convincing farm operators that the system delivers tangible, timely financial benefits</td>
+      </tr>
+      <tr>
+          <td><strong>UX and integration</strong></td>
+          <td>Easy-to-use interfaces, simple report generation, seamless farm system integration</td>
+      </tr>
+  </tbody>
+</table>
+<p>To succeed as a startup, focus not on reinventing the algorithm, but on:</p>
+<ol>
+<li><strong>Fast deployment, low maintenance</strong> : Plug-and-play camera kits, minimal calibration</li>
+<li><strong>Cost-effective edge computing</strong> : Perform pose detection on edge devices to reduce cloud dependence</li>
+<li><strong>Clear ROI for farmers</strong> : Simple dashboards showing actionable alerts (e.g., “This cow may be lame”), backed by historical comparison</li>
+<li><strong>Data feedback loop</strong> : Build tools that allow farmers to confirm or correct detection, feeding back into the model to improve accuracy over time</li>
+<li><strong>Modular architecture</strong> : Make your system easy to upgrade with better models, more sensors, or additional features later on</li>
+</ol>
+<h2 id="todo--q4--some-basic-information-about-yolo">TODO : Q4 : some basic information about yolo<a hidden class="anchor" aria-hidden="true" href="#todo--q4--some-basic-information-about-yolo">#</a></h2>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://moloxiao.github.io/tags/lameness/">Lameness</a></li>
+      <li><a href="https://moloxiao.github.io/tags/cv/">CV</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://moloxiao.github.io/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
