@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DLC on Shan&#39;s blog</title>
+    <link>https://moloxiao.github.io/tags/dlc/</link>
+    <description>Recent content in DLC on Shan&#39;s blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jul 2025 10:00:00 +1200</lastBuildDate>
+    <atom:link href="https://moloxiao.github.io/tags/dlc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DLC to YOLO</title>
+      <link>https://moloxiao.github.io/posts/2025-07-29-dlc-to-yolo/</link>
+      <pubDate>Wed, 30 Jul 2025 10:00:00 +1200</pubDate>
+      <guid>https://moloxiao.github.io/posts/2025-07-29-dlc-to-yolo/</guid>
+      <description>Converting DLC annotation format to YOLO Pose training format.</description>
+    </item>
+  </channel>
+</rss>

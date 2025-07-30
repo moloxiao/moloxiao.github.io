@@ -6,8 +6,15 @@
     <description>Recent content in YOLO on Shan&#39;s blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jul 2024 14:52:22 +1200</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jul 2025 10:00:00 +1200</lastBuildDate>
     <atom:link href="https://moloxiao.github.io/tags/yolo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DLC to YOLO</title>
+      <link>https://moloxiao.github.io/posts/2025-07-29-dlc-to-yolo/</link>
+      <pubDate>Wed, 30 Jul 2025 10:00:00 +1200</pubDate>
+      <guid>https://moloxiao.github.io/posts/2025-07-29-dlc-to-yolo/</guid>
+      <description>Converting DLC annotation format to YOLO Pose training format.</description>
+    </item>
     <item>
       <title>Use Yolo to Analyze Youth Football Matches</title>
       <link>https://moloxiao.github.io/posts/use-yolo-to-analyze-youth-football-matches/</link>

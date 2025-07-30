@@ -28,34 +28,6 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
 </noscript><meta property="og:url" content="https://moloxiao.github.io/posts/">
   <meta property="og:site_name" content="Shan&#39;s blog">
   <meta property="og:title" content="Posts">
@@ -82,14 +54,10 @@
 </script>
 </head>
 
-<body class="list" id="top">
+<body class="list dark" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
     }
 
 </script>
@@ -136,6 +104,21 @@
     Posts
   </h1>
 </header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">The Character-Indexed Object Problem in Laravel Docker APIs
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. Problem Description In a typical Laravel &#43; Docker API deployment, you may notice an odd, intermittent bug: when accessing the same API endpoint multiple times in a row, the returned JSON response is sometimes corrupted. Instead of a normal structure like this:
+{ &#34;success&#34;: true, &#34;data&#34;: [ { &#34;id&#34;: 1, &#34;name&#34;: &#34;Test&#34; } ], &#34;statusCode&#34;: 200 } You might occasionally get something like this:
+{ &#34;0&#34;: &#34;{&#34;, &#34;1&#34;: &#34;s&#34;, &#34;2&#34;: &#34;u&#34;, // ... } This bizarre issue usually happens after the container has been running for some time, even if you have already updated your PHP configuration to disable error output in production. Initially, everything seems fine, but after a day or two, the corruption becomes frequent.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-18 20:02:09 +1300 +1300'>May 18, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to The Character-Indexed Object Problem in Laravel Docker APIs" href="https://moloxiao.github.io/posts/2025-05-18-the-character-indexed-object-problem-in-laravel-docker-apis/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">
@@ -263,20 +246,6 @@ PTE Academic Test Structure Summary Part Section / Task Type Estimated Time Numb
   </div>
   <footer class="entry-footer"><span title='2025-03-19 20:02:09 +1300 NZDT'>March 19, 2025</span></footer>
   <a class="entry-link" aria-label="post link to My Plan and Log for Pte Test" href="https://moloxiao.github.io/posts/2025-03-19-my-plan-and-log-for-pte-test/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Why Does Git Commits Start with `feat:`?
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Have you ever seen feat: at the beginning of Git commit messages when using Copilot or other AI-assisted tools? If you’re wondering why developers use this format, the answer lies in Conventional Commits—a structured way of writing commit messages that improves project maintainability and automation.
-1. What is Conventional Commits? Conventional Commits is a standardized format for Git commit messages, designed to make change history clearer and more structured. A typical commit follows this pattern:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-19 20:02:09 +1300 NZDT'>March 19, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Why Does Git Commits Start with `feat:`?" href="https://moloxiao.github.io/posts/2025-03-19-why-does-git-commits-start-with-feat/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

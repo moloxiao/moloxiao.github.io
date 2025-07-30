@@ -30,34 +30,6 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
 </noscript><meta property="og:url" content="https://moloxiao.github.io/">
   <meta property="og:site_name" content="Shan&#39;s blog">
   <meta property="og:title" content="Shan&#39;s blog">
@@ -82,14 +54,10 @@
 </script>
 </head>
 
-<body class="list" id="top">
+<body class="list dark" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
     }
 
 </script>
@@ -131,6 +99,23 @@
     </nav>
 </header>
 <main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Relational Databases and Normalization
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Two-dimensional data is the most commonly used form of information representation by humans. In 1970, Edgar F. Codd first introduced how to efficiently use two-dimensional data to represent transactions, laying the foundation for modern databases.
+The core of this theory is: normalization.
+Let’s demonstrate how database normalization helps us build a better two-dimensional data model through an example.
+1 Scenario We have a system that tracks students registering for courses at a technical institute. Each student has a unique ID, and each course has a unique course number, course name, and instructor. We need to design a normalized database structure.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-09 15:01:22 +1200 NZST'>September 9, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Relational Databases and Normalization" href="https://moloxiao.github.io/posts/relational-databases-and-normalization/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">
@@ -269,23 +254,6 @@ Change Nameservers In the DNS Management page, find the “Nameservers” sectio
   </div>
   <footer class="entry-footer"><span title='2024-08-06 20:00:29 +1200 NZST'>August 6, 2024</span></footer>
   <a class="entry-link" aria-label="post link to How to Move Your GoDaddy Domain to Cloudflare a Step by Step Guide" href="https://moloxiao.github.io/posts/how-to-move-your-godaddy-domain-to-cloudflare-a-step-by-step-guide/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">New Features in Resume Manager 2
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Hello, all my friends. Thank you for all your ideas and feedback, help this product better.
-We’re back! The last update was 18 days ago. This week I use 6 hours to add new feature : Job Application Task Manager. Click here to experience it now.
-Here are some of the main interfaces :
-New Dashboard Because we added the job application manager, the dashboard has changed.
-Job Application List We can add new job applications and change the application status on this page.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-08-06 15:46:24 +1200 NZST'>August 6, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to New Features in Resume Manager 2" href="https://moloxiao.github.io/posts/new-features-in-resume-manager-2/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

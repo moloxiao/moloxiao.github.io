@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>DLC to YOLO | Shan&#39;s blog</title>
+<meta name="keywords" content="CV, YOLO, DLC">
+<meta name="description" content="Converting DLC annotation format to YOLO Pose training format.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/2025-07-29-vision-pose-training-pipeline/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2025-07-29-vision-pose-training-pipeline/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shan&#39;s blog (Alt + H)">Shan&#39;s blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      DLC to YOLO
+    </h1>
+    <div class="post-description">
+      Converting DLC annotation format to YOLO Pose training format.
+    </div>
+    <div class="post-meta"><span title='2025-07-30 10:00:00 +1200 NZST'>July 30, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>We use DLC (DeepLabCut) to label keypoint data and train the model using YOLO Pose. Since the data format required by YOLO Pose is different from DLC&rsquo;s output, we need to convert it.<br>
+With the help of AI today, it&rsquo;s quite easy to generate code for format conversion. Here&rsquo;s how we approached it:</p>
+<ol>
+<li>Interacted with AI to understand the differences between the DLC format and the YOLO format</li>
+<li>Defined the desired format for YOLO training data</li>
+<li>Asked AI to generate the conversion code based on the required format</li>
+</ol>
+<p>We found that:</p>
+<ol>
+<li><strong>Clearly describing our requirements produced better results than directly using existing third-party libraries（deeplabcut2yolo）.</strong></li>
+<li>Claude performed much better than GPT-o3 during the execution phase. We used GPT-o3 for clarifying concepts and Claude Sonnet 4 for generating the actual code.</li>
+</ol>
+<h1 id="1--dataset-declaration-yolo-pose">1  Dataset declaration (YOLO-Pose)<a hidden class="anchor" aria-hidden="true" href="#1--dataset-declaration-yolo-pose">#</a></h1>
+<p>cow9.yml example :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Dataset root directory (absolute or relative)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">path</span>: <span style="color:#ae81ff">/path/to/cowpose            </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Image subsets (relative to `path`)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">train</span>: <span style="color:#ae81ff">images/train      </span> <span style="color:#75715e"># ~80 % of images for training</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">val</span>:   <span style="color:#ae81ff">images/val        </span> <span style="color:#75715e"># ~20 % of images for validation</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Keypoint shape: [&lt;num_keypoints&gt;, &lt;coords_per_point&gt;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 9  → the model expects **nine** anatomical points per cow</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3  → each point supplies (x, y, visibility)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kpt_shape</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">3</span>]         
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Number of object classes</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">nc</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">names</span>: {<span style="color:#f92672">0</span>: <span style="color:#ae81ff">cow}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Optional: name each keypoint for easier debugging/visualisation</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">keypoints</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Nose</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Poll</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Withers</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">MidThoracic</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Sacrum</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">TailBase</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">LF_Knee</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">RF_Knee</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">LH_Hock</span>
+</span></span></code></pre></div><h1 id="2-recommended-directory-layout-for-a-yolo-pose-project">2 Recommended directory layout for a YOLO-Pose project<a hidden class="anchor" aria-hidden="true" href="#2-recommended-directory-layout-for-a-yolo-pose-project">#</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>cowpose/                    # ← dataset root (matches `path:` in cow9.yml)
+</span></span><span style="display:flex;"><span>│
+</span></span><span style="display:flex;"><span>├── cow9.yml                # dataset declaration you just defined
+</span></span><span style="display:flex;"><span>│
+</span></span><span style="display:flex;"><span>├── images/                 # all raw images live here
+</span></span><span style="display:flex;"><span>│   ├── train/              # ~80 % of images used for training
+</span></span><span style="display:flex;"><span>│   │   ├── 00001.jpg
+</span></span><span style="display:flex;"><span>│   │   ├── 00002.jpg
+</span></span><span style="display:flex;"><span>│   │   └── …
+</span></span><span style="display:flex;"><span>│   └── val/                # ~20 % reserved for validation
+</span></span><span style="display:flex;"><span>│       ├── 00081.jpg
+</span></span><span style="display:flex;"><span>│       ├── 00082.jpg
+</span></span><span style="display:flex;"><span>│       └── …
+</span></span><span style="display:flex;"><span>│
+</span></span><span style="display:flex;"><span>└── labels/                 # annotation files (one *.txt per image)
+</span></span><span style="display:flex;"><span>    ├── train/              # mirrors images/train
+</span></span><span style="display:flex;"><span>    │   ├── 00001.txt
+</span></span><span style="display:flex;"><span>    │   ├── 00002.txt
+</span></span><span style="display:flex;"><span>    │   └── …
+</span></span><span style="display:flex;"><span>    └── val/                # mirrors images/val
+</span></span><span style="display:flex;"><span>        ├── 00081.txt
+</span></span><span style="display:flex;"><span>        ├── 00082.txt
+</span></span><span style="display:flex;"><span>        └── …
+</span></span></code></pre></div><h1 id="3-data-schema">3 data schema<a hidden class="anchor" aria-hidden="true" href="#3-data-schema">#</a></h1>
+<p>Key terms in YOLO-Pose(in one line of a YOLO-Pose label file when you train with nine cow keypoints. Total values per line: 32 → 1 class + 4 box + 9 × 3 keypoints) :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Order #</th>
+          <th>Field (or triplet)</th>
+          <th>Type / Range</th>
+          <th>Example value*</th>
+          <th>What it represents</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><code>class_id</code></td>
+          <td>integer, 0 – <em>(nc−1)</em></td>
+          <td><code>0</code></td>
+          <td>Object class (only <em>cow</em> ⇒ 0).</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><code>xc</code></td>
+          <td>float, 0 – 1</td>
+          <td><code>0.426654</code></td>
+          <td><strong>Normalized</strong> x-coordinate of bbox centre:  $(x_{\min}+x_{\max})/2 ÷ W$.</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><code>yc</code></td>
+          <td>float, 0 – 1</td>
+          <td><code>0.525709</code></td>
+          <td><strong>Normalized</strong> y-coordinate of bbox centre:  $(y_{\min}+y_{\max})/2 ÷ H$.</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><code>w</code></td>
+          <td>float, 0 – 1</td>
+          <td><code>0.442191</code></td>
+          <td><strong>Normalized</strong> bbox width: $(x_{\max}-x_{\min}) ÷ W$.</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><code>h</code></td>
+          <td>float, 0 – 1</td>
+          <td><code>0.321108</code></td>
+          <td><strong>Normalized</strong> bbox height: $(y_{\max}-y_{\min}) ÷ H$.</td>
+      </tr>
+      <tr>
+          <td>6 – 8</td>
+          <td><code>x₁ y₁ v₁</code></td>
+          <td>float float int</td>
+          <td><code>0.357977 0.686263 2</code></td>
+          <td>Keypoint <strong>1</strong> (Nose)<!-- raw HTML omitted -->· <code>x₁</code>, <code>y₁</code> are normalized coords.<!-- raw HTML omitted -->· <code>v₁</code>: visibility (0 = not labelled, 1 = labelled + occluded, 2 = labelled + visible).</td>
+      </tr>
+      <tr>
+          <td>9 – 11</td>
+          <td><code>x₂ y₂ v₂</code></td>
+          <td>…</td>
+          <td><code>0.255559 0.685086 2</code></td>
+          <td>Keypoint <strong>2</strong> (Poll / Forehead).</td>
+      </tr>
+      <tr>
+          <td>12 – 14</td>
+          <td><code>x₃ y₃ v₃</code></td>
+          <td>…</td>
+          <td><code>0.520147 0.677394 2</code></td>
+          <td>Keypoint <strong>3</strong> (Withers).</td>
+      </tr>
+      <tr>
+          <td>15 – 17</td>
+          <td><code>x₄ y₄ v₄</code></td>
+          <td>…</td>
+          <td><code>0.449342 0.674126 2</code></td>
+          <td>Keypoint <strong>4</strong> (Mid-Thoracic).</td>
+      </tr>
+      <tr>
+          <td>18 – 20</td>
+          <td><code>x₅ y₅ v₅</code></td>
+          <td>…</td>
+          <td><code>0.597750 0.490424 2</code></td>
+          <td>Keypoint <strong>5</strong> (Sacrum / Hip).</td>
+      </tr>
+      <tr>
+          <td>21 – 23</td>
+          <td><code>x₆ y₆ v₆</code></td>
+          <td>…</td>
+          <td><code>0.571397 0.378995 2</code></td>
+          <td>Keypoint <strong>6</strong> (Tail Base).</td>
+      </tr>
+      <tr>
+          <td>24 – 26</td>
+          <td><code>x₇ y₇ v₇</code></td>
+          <td>…</td>
+          <td><code>0.467102 0.365154 2</code></td>
+          <td>Keypoint <strong>7</strong> (LF Knee).</td>
+      </tr>
+      <tr>
+          <td>27 – 29</td>
+          <td><code>x₈ y₈ v₈</code></td>
+          <td>…</td>
+          <td><code>0.333540 0.379604 2</code></td>
+          <td>Keypoint <strong>8</strong> (RF Knee).</td>
+      </tr>
+      <tr>
+          <td>30 – 32</td>
+          <td><code>x₉ y₉ v₉</code></td>
+          <td>…</td>
+          <td><code>0.364341 0.386302 2</code></td>
+          <td>Keypoint <strong>9</strong> (LH Hock).</td>
+      </tr>
+  </tbody>
+</table>
+<p>Notes :</p>
+<ul>
+<li>All coordinates are divided by the original image width (W) or height (H) to fall in 0–1.</li>
+<li>Visibility (v) defaults to 2 for any point you labelled in DeepLabCut (because DLC lacks an occlusion flag). Use 0 when the point is totally missing; use 1 only if you maintain a separate occlusion note during annotation.</li>
+</ul>
+<p>example :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>0 0.426654 0.525709 0.442191 0.421108 0.357977 0.686263 1 0.255559 0.685086 1 0.520147 0.677394 1 0.449342 0.674126 1 0.597750 0.490424 1 0.571397 0.378995 1 0.467102 0.365154 1 0.333540 0.379604 1 0.364341 0.386302 1
+</span></span></code></pre></div><p>DLC data example :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csv" data-lang="csv"><span style="display:flex;"><span><span style="color:#e6db74">scorer</span>,,,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>,<span style="color:#e6db74">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">bodyparts</span>,,,<span style="color:#e6db74">left-hind-hoof</span>,<span style="color:#e6db74">left-hind-hoof</span>,<span style="color:#e6db74">right-hind-hoof</span>,<span style="color:#e6db74">right-hind-hoof</span>,<span style="color:#e6db74">left-front-hoof</span>,<span style="color:#e6db74">left-front-hoof</span>,<span style="color:#e6db74">right-front-hoof</span>,<span style="color:#e6db74">right-front-hoof</span>,<span style="color:#e6db74">nose</span>,<span style="color:#e6db74">nose</span>,<span style="color:#e6db74">forehead</span>,<span style="color:#e6db74">forehead</span>,<span style="color:#e6db74">withers</span>,<span style="color:#e6db74">withers</span>,<span style="color:#e6db74">sacrum</span>,<span style="color:#e6db74">sacrum</span>,<span style="color:#e6db74">caudal-thoracic-vertebrae</span>,<span style="color:#e6db74">caudal-thoracic-vertebrae</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">coords</span>,,,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>,<span style="color:#e6db74">x</span>,<span style="color:#e6db74">y</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">labeled-data</span>,<span style="color:#e6db74">lameness_04</span>,<span style="color:#e6db74">img008.png</span>,<span style="color:#e6db74">305.7119460098037</span>,<span style="color:#e6db74">329.40613572346876</span>,<span style="color:#e6db74">218.2472520962378</span>,<span style="color:#e6db74">328.8413760636557</span>,<span style="color:#e6db74">444.20572821716405</span>,<span style="color:#e6db74">325.1492441008955</span>,<span style="color:#e6db74">383.7382585794964</span>,<span style="color:#e6db74">323.58067554640536</span>,<span style="color:#e6db74">510.4782101036082</span>,<span style="color:#e6db74">235.4035860252773</span>,<span style="color:#e6db74">487.9731233462359</span>,<span style="color:#e6db74">181.91747074476908</span>,<span style="color:#e6db74">398.9046999571733</span>,<span style="color:#e6db74">175.27411879049947</span>,<span style="color:#e6db74">284.84279482190146</span>,<span style="color:#e6db74">182.20974459876092</span>,<span style="color:#e6db74">311.14744168116783</span>,<span style="color:#e6db74">185.42475699267123</span>
+</span></span></code></pre></div><h1 id="4-dlc---yolo-example">4 DLC -&gt; YOLO example<a hidden class="anchor" aria-hidden="true" href="#4-dlc---yolo-example">#</a></h1>
+<p>example code(This is a single, non-production script, making it easy to review the key steps.) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Create YOLO-Pose txt labels from DLC CollectedData_2.csv
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Keeps 9 keypoints: nose, forehead, withers, sacrum, caudal-thoracic-vertebrae,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">left-hind-hoof, right-hind-hoof, left-front-hoof, right-front-hoof
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> cv2
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> tqdm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">setup_paths</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Setup input and output paths.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    root <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;/Users/moloxiao/Desktop/low-512-2-2025-07-21&#34;</span>)
+</span></span><span style="display:flex;"><span>    csv_file <span style="color:#f92672">=</span> root <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;labeled-data/lameness_04/CollectedData_2.csv&#34;</span>
+</span></span><span style="display:flex;"><span>    img_dir <span style="color:#f92672">=</span> root <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;labeled-data/lameness_04&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Output directories for train/val splits</span>
+</span></span><span style="display:flex;"><span>    data_root <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;/Users/moloxiao/Documents/code/ml/invercargill/data/cow1&#34;</span>)
+</span></span><span style="display:flex;"><span>    train_label_dir <span style="color:#f92672">=</span> data_root <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;labels/train&#34;</span>
+</span></span><span style="display:flex;"><span>    val_label_dir <span style="color:#f92672">=</span> data_root <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;labels/val&#34;</span>
+</span></span><span style="display:flex;"><span>    train_label_dir<span style="color:#f92672">.</span>mkdir(parents<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    val_label_dir<span style="color:#f92672">.</span>mkdir(parents<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> csv_file, img_dir, train_label_dir, val_label_dir
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_keypoints_config</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Get keypoints configuration and validation files.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Files for validation split</span>
+</span></span><span style="display:flex;"><span>    val_files <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;img238&#34;</span>, <span style="color:#e6db74">&#34;img261&#34;</span>, <span style="color:#e6db74">&#34;img282&#34;</span>, <span style="color:#e6db74">&#34;img305&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># keypoints to keep (order = output order - must match cow5.yml)</span>
+</span></span><span style="display:flex;"><span>    kp_keep <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;left-hind-hoof&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;right-hind-hoof&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;left-front-hoof&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;right-front-hoof&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;nose&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;forehead&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;withers&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;sacrum&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;caudal-thoracic-vertebrae&#34;</span>,
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> val_files, kp_keep
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_and_validate_csv</span>(csv_file, kp_keep):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Load DLC CSV file and create column lookup.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Read DLC CSV (3-row header)</span>
+</span></span><span style="display:flex;"><span>    df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(csv_file, header<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># First 3 columns hold metadata; the 3rd column is the image filename</span>
+</span></span><span style="display:flex;"><span>    filename_series <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>iloc[:, <span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(str)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Map (bodypart, coord) → actual column label</span>
+</span></span><span style="display:flex;"><span>    lookup <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>columns[<span style="color:#ae81ff">3</span>:]:
+</span></span><span style="display:flex;"><span>        bp, coord <span style="color:#f92672">=</span> col[<span style="color:#ae81ff">1</span>], col[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>lower()  <span style="color:#75715e"># (&#39;&#39;, bodypart, x|y)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bp <span style="color:#f92672">and</span> coord <span style="color:#f92672">in</span> (<span style="color:#e6db74">&#34;x&#34;</span>, <span style="color:#e6db74">&#34;y&#34;</span>):
+</span></span><span style="display:flex;"><span>            lookup[(bp, coord)] <span style="color:#f92672">=</span> col
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate all required keypoints are present</span>
+</span></span><span style="display:flex;"><span>    missing <span style="color:#f92672">=</span> [(p, c) <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> kp_keep <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> (<span style="color:#e6db74">&#34;x&#34;</span>, <span style="color:#e6db74">&#34;y&#34;</span>) <span style="color:#66d9ef">if</span> (p, c) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> lookup]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> missing:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Missing columns: </span><span style="color:#e6db74">{</span>missing<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> df, filename_series, lookup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_keypoints</span>(row, lookup, kp_keep, img_width, img_height):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Extract and normalize keypoints from a row.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    xs, ys, vs <span style="color:#f92672">=</span> [], [], []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> part <span style="color:#f92672">in</span> kp_keep:
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> row[lookup[(part, <span style="color:#e6db74">&#34;x&#34;</span>)]]
+</span></span><span style="display:flex;"><span>        y <span style="color:#f92672">=</span> row[lookup[(part, <span style="color:#e6db74">&#34;y&#34;</span>)]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> np<span style="color:#f92672">.</span>isnan(x) <span style="color:#f92672">or</span> np<span style="color:#f92672">.</span>isnan(y):
+</span></span><span style="display:flex;"><span>            xs<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0.0</span>)
+</span></span><span style="display:flex;"><span>            ys<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0.0</span>)
+</span></span><span style="display:flex;"><span>            vs<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># not labelled</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            xs<span style="color:#f92672">.</span>append(min(max(x <span style="color:#f92672">/</span> img_width, <span style="color:#ae81ff">0.0</span>), <span style="color:#ae81ff">1.0</span>))
+</span></span><span style="display:flex;"><span>            ys<span style="color:#f92672">.</span>append(min(max(y <span style="color:#f92672">/</span> img_height, <span style="color:#ae81ff">0.0</span>), <span style="color:#ae81ff">1.0</span>))
+</span></span><span style="display:flex;"><span>            vs<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 2 means visible</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> xs, ys, vs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_bounding_box</span>(xs, ys, vs, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">0.05</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Calculate bounding box around visible keypoints.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Find visible points</span>
+</span></span><span style="display:flex;"><span>    vis <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i, v <span style="color:#f92672">in</span> enumerate(vs) <span style="color:#66d9ef">if</span> v <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> vis:
+</span></span><span style="display:flex;"><span>        xmin, xmax <span style="color:#f92672">=</span> min(xs[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> vis), max(xs[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> vis)
+</span></span><span style="display:flex;"><span>        ymin, ymax <span style="color:#f92672">=</span> min(ys[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> vis), max(ys[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> vis)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:  <span style="color:#75715e"># no visible keypoints</span>
+</span></span><span style="display:flex;"><span>        xmin <span style="color:#f92672">=</span> ymin <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>
+</span></span><span style="display:flex;"><span>        xmax <span style="color:#f92672">=</span> ymax <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Add padding</span>
+</span></span><span style="display:flex;"><span>    xmin, ymin <span style="color:#f92672">=</span> max(<span style="color:#ae81ff">0.0</span>, xmin <span style="color:#f92672">-</span> padding), max(<span style="color:#ae81ff">0.0</span>, ymin <span style="color:#f92672">-</span> padding)
+</span></span><span style="display:flex;"><span>    xmax, ymax <span style="color:#f92672">=</span> min(<span style="color:#ae81ff">1.0</span>, xmax <span style="color:#f92672">+</span> padding), min(<span style="color:#ae81ff">1.0</span>, ymax <span style="color:#f92672">+</span> padding)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Calculate center and dimensions</span>
+</span></span><span style="display:flex;"><span>    cx, cy <span style="color:#f92672">=</span> (xmin <span style="color:#f92672">+</span> xmax) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, (ymin <span style="color:#f92672">+</span> ymax) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    bw, bh <span style="color:#f92672">=</span> (xmax <span style="color:#f92672">-</span> xmin), (ymax <span style="color:#f92672">-</span> ymin)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> cx, cy, bw, bh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_yolo_line</span>(xs, ys, vs, cx, cy, bw, bh, class_id<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Create YOLO format line with bbox and keypoints.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    line <span style="color:#f92672">=</span> [class_id, cx, cy, bw, bh]  <span style="color:#75715e"># class_id = 0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> x, y, v <span style="color:#f92672">in</span> zip(xs, ys, vs):
+</span></span><span style="display:flex;"><span>        line <span style="color:#f92672">+=</span> [x, y, v]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> line
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">save_label_file</span>(line, filename, val_files, train_label_dir, val_label_dir):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Save YOLO label file to appropriate directory.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    file_stem <span style="color:#f92672">=</span> Path(filename)<span style="color:#f92672">.</span>stem
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> file_stem <span style="color:#f92672">in</span> val_files:
+</span></span><span style="display:flex;"><span>        output_dir <span style="color:#f92672">=</span> val_label_dir
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        output_dir <span style="color:#f92672">=</span> train_label_dir
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    label_content <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>v<span style="color:#e6db74">:</span><span style="color:#e6db74">.6f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">if</span> isinstance(v, float) <span style="color:#66d9ef">else</span> str(v) <span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> line) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    (output_dir <span style="color:#f92672">/</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>file_stem<span style="color:#e6db74">}</span><span style="color:#e6db74">.txt&#34;</span>)<span style="color:#f92672">.</span>write_text(label_content)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_images</span>(df, filename_series, lookup, kp_keep, img_dir, val_files, train_label_dir, val_label_dir):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Process all images and create YOLO label files.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Writing YOLO label files …&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> fname, (_, row) <span style="color:#f92672">in</span> tqdm(zip(filename_series, df<span style="color:#f92672">.</span>iterrows()),
+</span></span><span style="display:flex;"><span>                                total<span style="color:#f92672">=</span>len(df), unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;img&#34;</span>):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        img_path <span style="color:#f92672">=</span> img_dir <span style="color:#f92672">/</span> fname
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> img_path<span style="color:#f92672">.</span>exists():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34; image missing, skip: </span><span style="color:#e6db74">{</span>img_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get image dimensions</span>
+</span></span><span style="display:flex;"><span>        h, w <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(str(img_path))<span style="color:#f92672">.</span>shape[:<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Extract keypoints</span>
+</span></span><span style="display:flex;"><span>        xs, ys, vs <span style="color:#f92672">=</span> extract_keypoints(row, lookup, kp_keep, w, h)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Calculate bounding box</span>
+</span></span><span style="display:flex;"><span>        cx, cy, bw, bh <span style="color:#f92672">=</span> calculate_bounding_box(xs, ys, vs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Create YOLO line</span>
+</span></span><span style="display:flex;"><span>        line <span style="color:#f92672">=</span> create_yolo_line(xs, ys, vs, cx, cy, bw, bh)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Save label file</span>
+</span></span><span style="display:flex;"><span>        save_label_file(line, fname, val_files, train_label_dir, val_label_dir)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Main function to orchestrate the label creation process.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Setup paths</span>
+</span></span><span style="display:flex;"><span>    csv_file, img_dir, train_label_dir, val_label_dir <span style="color:#f92672">=</span> setup_paths()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Get configuration</span>
+</span></span><span style="display:flex;"><span>    val_files, kp_keep <span style="color:#f92672">=</span> get_keypoints_config()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Load and validate CSV</span>
+</span></span><span style="display:flex;"><span>    df, filename_series, lookup <span style="color:#f92672">=</span> load_and_validate_csv(csv_file, kp_keep)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Process all images</span>
+</span></span><span style="display:flex;"><span>    process_images(df, filename_series, lookup, kp_keep, img_dir, val_files, train_label_dir, val_label_dir)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34; finished — labels saved to </span><span style="color:#e6db74">{</span>train_label_dir<span style="color:#e6db74">}</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">{</span>val_label_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/cv/">CV</a></li>
+      <li><a href="http://localhost:1313/tags/yolo/">YOLO</a></li>
+      <li><a href="http://localhost:1313/tags/dlc/">DLC</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shan&#39;s blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

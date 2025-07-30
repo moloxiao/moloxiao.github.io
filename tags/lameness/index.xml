@@ -13,7 +13,9 @@
       <link>https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/</link>
       <pubDate>Mon, 28 Jul 2025 10:00:00 +1200</pubDate>
       <guid>https://moloxiao.github.io/posts/2025-07-28-lameness-real-time-system-logs/</guid>
-      <description>&lt;p&gt;This is my side project, and I&amp;rsquo;m using it to document the logs during the prototyping phase. I&amp;rsquo;m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I&amp;rsquo;m trying to answer these questions :&lt;/p&gt;
+      <description>&lt;blockquote&gt;
+&lt;p&gt;last update : 2025-07-31
+This is my side project, and I&amp;rsquo;m using it to document the logs during the prototyping phase. I&amp;rsquo;m trying to build a simple and low-cost camera-based system to help automate the detection of lameness in cows. I&amp;rsquo;m trying to answer these questions :&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;Using current open-source methods, what level of accuracy can be achieved for specific problem detection?&lt;/li&gt;
 &lt;li&gt;What are the typical optimization strategies, and what is the ROI for each?&lt;/li&gt;
